@@ -1,0 +1,1202 @@
+[
+    {
+        "question": "In a 1D population spread process with constant initial population density of 63 individuals/km\u00b2 and Dirichlet boundary conditions with 67 individuals/km\u00b2 at x=0 and 44 individuals/km\u00b2 at x=L, what is the population density (individuals/km\u00b2) at x=70 km after 10 years? (D=0.81, L=86 km)",
+        "options": [
+            "[14.187529149250707, 20.013998259177733)",
+            "[20.013998259177733, 25.93675960120543)",
+            "[25.93675960120543, 95.56450842745528)",
+            "[95.56450842745528, 108.7686933031274)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 60 mol/L and Periodic boundary conditions, what is the concentration (mol/L) at (x,y)=(2,5) cm after 496 seconds? (D=0.0001, Lx=3 cm, Ly=8 cm)",
+        "options": [
+            "[3.1568314279773446, 7.355708505501103)",
+            "[7.355708505501103, 72.77577627056831)",
+            "[72.77577627056831, 90.22079565322)",
+            "[90.22079565322, 94.21708778338984)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 85 individuals/km\u00b2 and Dirichlet boundary conditions with 47 individuals/km\u00b2 at x=0 and 88 individuals/km\u00b2 at x=L, what is the maximum gradient of population density (individuals/km\u00b2) per km after 5 years? (D=0.6, L=69 km)",
+        "options": [
+            "[-4.680493195058405, -0.6545610499760954)",
+            "[-0.6545610499760954, -0.28651566511082915)",
+            "[-0.28651566511082915, 9.582995451051922)",
+            "[9.582995451051922, 11.484355381340418)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D population spread process with checkerboard pattern with alternating 100 individuals/km\u00b2 and 0 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the average population density (individuals/km\u00b2) after 8 years? (D=0.88, Lx=96 km, Ly=8 km)",
+        "options": [
+            "[14.891107840142695, 15.04391147920539)",
+            "[15.04391147920539, 33.926544408362034)",
+            "[33.926544408362034, 91.71767881427846)",
+            "[91.71767881427846, 103.94596188775023)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of concentration (mol/L) per cm after 670 seconds? (D=0.0007, Lx=9 cm, Ly=10 cm)",
+        "options": [
+            32.384,
+            36.431999999999995,
+            40.48,
+            44.528
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Periodic boundary conditions, what is the minimum concentration (mol/L) after 868 seconds? (D=0.0009, Lx=4 cm, Ly=5 cm)",
+        "options": [
+            35.0,
+            40.0,
+            45.0,
+            50.0
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 83 \u00b0C and Dirichlet boundary conditions with 29, 40, 43, and 66 \u00b0C at left, right, bottom, and top boundaries, what is the temperature (\u00b0C) at (x,y)=(68,0) cm after 460 seconds? (D=0.54, Lx=93 cm, Ly=5 cm)",
+        "options": [
+            "[6.03115637307215, 49.32991607059343)",
+            "[49.32991607059343, 64.92599794747473)",
+            "[64.92599794747473, 66.95130774462936)",
+            "[66.95130774462936, 81.91572038910729)"
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 24 individuals/km\u00b2 for x < L/2 and 85 individuals/km\u00b2 for x \u2265 L/2 and Dirichlet boundary conditions with 39 individuals/km\u00b2 at x=0 and 90 individuals/km\u00b2 at x=L, what is the minimum population density (individuals/km\u00b2) after 8 years? (D=0.31, L=35 km)",
+        "options": [
+            19.36,
+            21.78,
+            24.2,
+            26.619999999999997
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 55 individuals/km\u00b2 for x < L/2 and 53 individuals/km\u00b2 for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the population density (individuals/km\u00b2) at x=2 km after 3 years? (D=0.68, L=24 km)",
+        "options": [
+            "[21.158738343283204, 49.15746212460391)",
+            "[49.15746212460391, 86.96447988958343)",
+            "[86.96447988958343, 94.44962960029585)",
+            "[94.44962960029585, 103.95406331673487)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 3 \u00b0C and Periodic boundary conditions, what is the minimum temperature (\u00b0C) after 93 seconds? (D=0.61, Lx=48 cm, Ly=7 cm)",
+        "options": [
+            "[-1.4379928333872254, -1.1420819076508693)",
+            "[-1.1420819076508693, -0.8715643942517144)",
+            "[-0.8715643942517144, 8.153210124546499)",
+            "[8.153210124546499, 10.139816782622711)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the minimum concentration (mol/L) after 968 seconds? (D=0.0004, Lx=10 cm, Ly=9 cm)",
+        "options": [
+            0.01,
+            0.04,
+            0.02,
+            0.0
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 27 mol/L for x < L/2 and 21 mol/L for x \u2265 L/2 and Dirichlet boundary conditions with 32 mol/L at x=0 and 15 mol/L at x=L, what is the maximum gradient of concentration (mol/L) per cm after 73 seconds? (D=0.0009, L=8 cm)",
+        "options": [
+            "[-4.473911000304103, 1.1981847842726534)",
+            "[1.1981847842726534, 5.934868894328327)",
+            "[5.934868894328327, 12.917545774002004)",
+            "[12.917545774002004, 13.24534292076798)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 57 \u00b0C and Periodic boundary conditions, what is the maximum temperature (\u00b0C) after 303 seconds? (D=0.83, Lx=35 cm, Ly=10 cm)",
+        "options": [
+            39.9,
+            45.6,
+            51.3,
+            57.0
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 100 mol/L and Periodic boundary conditions, what is the maximum gradient of concentration (mol/L) per cm after 405 seconds? (D=0.0005, L=2 cm)",
+        "options": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 86 \u00b0C and Dirichlet boundary conditions with 31 \u00b0C at x=0 and 77 \u00b0C at x=L, what is the maximum temperature (\u00b0C) after 190 seconds? (D=0.41, L=67 cm)",
+        "options": [
+            "[6.45009843945482, 16.632686353258926)",
+            "[16.632686353258926, 61.7655287931297)",
+            "[61.7655287931297, 136.93898619581654)",
+            "[136.93898619581654, 171.14806258998425)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D heat conduction process with step function with 63 \u00b0C for x < L/2 and 56 \u00b0C for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the average temperature (\u00b0C) after 433 seconds? (D=0.85, L=69 cm)",
+        "options": [
+            "[12.155538700475262, 16.800350854089697)",
+            "[16.800350854089697, 32.55575235045515)",
+            "[32.55575235045515, 66.6848337782288)",
+            "[66.6848337782288, 101.49810151473707)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 33 \u00b0C and Periodic boundary conditions, what is the temperature (\u00b0C) at (x,y)=(38,8) cm after 86 seconds? (D=0.22, Lx=71 cm, Ly=8 cm)",
+        "options": [
+            "[5.34759940521058, 6.097809705012037)",
+            "[6.097809705012037, 15.618549782086317)",
+            "[15.618549782086317, 22.475594473791094)",
+            "[22.475594473791094, 62.77968590958528)"
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the maximum concentration (mol/L) after 777 seconds? (D=0.0002, Lx=1 cm, Ly=5 cm)",
+        "options": [
+            54.33,
+            59.763,
+            65.196,
+            70.62899999999999
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 23 individuals/km\u00b2 and Periodic boundary conditions, what is the maximum gradient of population density (individuals/km\u00b2) per km after 8 years? (D=0.56, L=77 km)",
+        "options": [
+            "[-4.894940044443723, -4.4122068523294)",
+            "[-4.4122068523294, -2.1309151899040275)",
+            "[-2.1309151899040275, 2.409672990420982)",
+            "[2.409672990420982, 3.305012538546465)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 11 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of population density (individuals/km\u00b2) per km after 5 years? (D=0.27, L=28 km)",
+        "options": [
+            -0.2,
+            -0.1,
+            0.0,
+            0.1
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 20 \u00b0C and Dirichlet boundary conditions with 43, 56, 83, and 41 \u00b0C at left, right, bottom, and top boundaries, what is the temperature (\u00b0C) at (x,y)=(25,4) cm after 390 seconds? (D=0.34, Lx=80 cm, Ly=5 cm)",
+        "options": [
+            41.103,
+            45.67,
+            50.237,
+            54.804
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 38 individuals/km\u00b2 for x < L/2 and 14 individuals/km\u00b2 for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the minimum population density (individuals/km\u00b2) after 4 years? (D=0.35, L=65 km)",
+        "options": [
+            "[-2.305912712540554, 12.391629855001975)",
+            "[12.391629855001975, 16.59042907510377)",
+            "[16.59042907510377, 20.28355052545389)",
+            "[20.28355052545389, 32.09721593846275)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 32 mol/L and Dirichlet boundary conditions with 10 mol/L at x=0 and 76 mol/L at x=L, what is the maximum concentration (mol/L) after 655 seconds? (D=0.0004, L=1 cm)",
+        "options": [
+            60.8,
+            68.4,
+            76.0,
+            83.6
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 72 individuals/km\u00b2 and Periodic boundary conditions, what is the average population density (individuals/km\u00b2) after 4 years? (D=0.86, L=44 km)",
+        "options": [
+            57.6,
+            64.8,
+            72.0,
+            79.2
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Dirichlet boundary conditions with 8, 14, 73, and 21 \u00b0C at left, right, bottom, and top boundaries, what is the minimum temperature (\u00b0C) after 356 seconds? (D=0.21, Lx=65 cm, Ly=6 cm)",
+        "options": [
+            8.0,
+            8.9,
+            7.1,
+            10.4
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Periodic boundary conditions, what is the minimum temperature (\u00b0C) after 516 seconds? (D=0.74, Lx=33 cm, Ly=7 cm)",
+        "options": [
+            "[-2.1000704363487992e+278, -2.0991371803297147e+278)",
+            "[-2.0991371803297147e+278, -1.8707058088922014e+278)",
+            "[-1.8707058088922014e+278, -5.676094876184513e+277)",
+            "[-5.676094876184513e+277, -1.4147742882632244e+277)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 91 individuals/km\u00b2 for x < L/2 and 92 individuals/km\u00b2 for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the population density (individuals/km\u00b2) at x=65 km after 8 years? (D=0.78, L=90 km)",
+        "options": [
+            "[6.998957307448208, 32.49235576723324)",
+            "[32.49235576723324, 103.68782996111456)",
+            "[103.68782996111456, 172.4295982451933)",
+            "[172.4295982451933, 184.8436102782964)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 29 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the minimum temperature (\u00b0C) after 264 seconds? (D=0.65, L=65 cm)",
+        "options": [
+            "[8.261862937451834, 12.303419764844849)",
+            "[12.303419764844849, 13.465800444984225)",
+            "[13.465800444984225, 24.064037699459554)",
+            "[24.064037699459554, 58.77601372047443)"
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 66 individuals/km\u00b2 for x < L/2 and 47 individuals/km\u00b2 for x \u2265 L/2 and Periodic boundary conditions, what is the maximum gradient of population density (individuals/km\u00b2) per km after 1 years? (D=0.27, L=75 km)",
+        "options": [
+            3.29,
+            2.13,
+            2.51,
+            1.57
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D population spread process with checkerboard pattern with alternating 100 individuals/km\u00b2 and 0 individuals/km\u00b2 and Dirichlet boundary conditions with 23, 61, 43, and 30 individuals/km\u00b2 at left, right, bottom, and top boundaries, what is the minimum population density (individuals/km\u00b2) after 4 years? (D=0.62, Lx=13 km, Ly=10 km)",
+        "options": [
+            "[6.13347268118055, 26.680139922558652)",
+            "[26.680139922558652, 31.20724892970232)",
+            "[31.20724892970232, 46.30775851007754)",
+            "[46.30775851007754, 50.06249794496932)"
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D population spread process with checkerboard pattern with alternating 100 individuals/km\u00b2 and 0 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the population density (individuals/km\u00b2) at (x,y)=(43,8) km after 6 years? (D=0.74, Lx=69 km, Ly=10 km)",
+        "options": [
+            "[16.48532051705874, 43.153047090449924)",
+            "[43.153047090449924, 61.749474080215144)",
+            "[61.749474080215144, 98.46595294454511)",
+            "[98.46595294454511, 129.1350412349536)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 59 mol/L for x < L/2 and 6 mol/L for x \u2265 L/2 and Dirichlet boundary conditions with 75 mol/L at x=0 and 81 mol/L at x=L, what is the minimum concentration (mol/L) after 787 seconds? (D=0.0006, L=4 cm)",
+        "options": [
+            28.602,
+            31.78,
+            34.958,
+            38.136
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 9 \u00b0C and Periodic boundary conditions, what is the temperature (\u00b0C) at (x,y)=(87,6) cm after 367 seconds? (D=0.95, Lx=91 cm, Ly=8 cm)",
+        "options": [
+            9.0,
+            8.1,
+            9.9,
+            11.7
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 17 \u00b0C and Periodic boundary conditions, what is the average temperature (\u00b0C) after 206 seconds? (D=0.72, Lx=72 cm, Ly=5 cm)",
+        "options": [
+            15.3,
+            17.0,
+            18.7,
+            20.4
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 63 individuals/km\u00b2 and Dirichlet boundary conditions with 67 individuals/km\u00b2 at x=0 and 44 individuals/km\u00b2 at x=L, what is the maximum population density (individuals/km\u00b2) after 10 years? (D=0.81, L=86 km)",
+        "options": [
+            53.6,
+            60.3,
+            67.0,
+            73.7
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 95 mol/L for x < L/2 and 67 mol/L for x \u2265 L/2 and Dirichlet boundary conditions with 87 mol/L at x=0 and 53 mol/L at x=L, what is the concentration (mol/L) at x=1 cm after 655 seconds? (D=0.0007, L=5 cm)",
+        "options": [
+            "[27.983009193415498, 30.70444819141754)",
+            "[30.70444819141754, 64.67472709040663)",
+            "[64.67472709040663, 149.23569345060554)",
+            "[149.23569345060554, 150.31140146977418)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 62 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the average temperature (\u00b0C) after 481 seconds? (D=0.37, L=85 cm)",
+        "options": [
+            62.0,
+            68.2,
+            74.4,
+            80.6
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Periodic boundary conditions, what is the minimum temperature (\u00b0C) after 590 seconds? (D=0.33, Lx=31 cm, Ly=5 cm)",
+        "options": [
+            "[-4.204708944621605e+274, -3.3176772115580317e+274)",
+            "[-3.3176772115580317e+274, -1.957908264781666e+274)",
+            "[-1.957908264781666e+274, -1.6753907094412604e+274)",
+            "[-1.6753907094412604e+274, -9.428529133605669e+273)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 31 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the maximum population density (individuals/km\u00b2) after 5 years? (D=0.41, L=90 km)",
+        "options": [
+            "[-0.06672925427935539, 5.853633384958688)",
+            "[5.853633384958688, 35.15588678851121)",
+            "[35.15588678851121, 49.369511979478034)",
+            "[49.369511979478034, 51.66250405488574)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 91 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the minimum temperature (\u00b0C) after 452 seconds? (D=0.11, L=65 cm)",
+        "options": [
+            "[-3.957943861844285, 1.5011026039543847)",
+            "[1.5011026039543847, 40.431806760101644)",
+            "[40.431806760101644, 141.53379066461616)",
+            "[141.53379066461616, 157.2082836188023)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 60 mol/L for x < L/2 and 0 mol/L for x \u2265 L/2 and Dirichlet boundary conditions with 46 mol/L at x=0 and 52 mol/L at x=L, what is the average concentration (mol/L) after 741 seconds? (D=0.0003, L=7 cm)",
+        "options": [
+            34.99,
+            38.489000000000004,
+            41.988,
+            45.487
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 99 mol/L for x < L/2 and 92 mol/L for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the average concentration (mol/L) after 90 seconds? (D=0.0003, L=1 cm)",
+        "options": [
+            95.5,
+            105.05,
+            114.6,
+            124.15
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 26 individuals/km\u00b2 and Dirichlet boundary conditions with 56, 93, 45, and 18 individuals/km\u00b2 at left, right, bottom, and top boundaries, what is the maximum population density (individuals/km\u00b2) after 7 years? (D=0.3, Lx=76 km, Ly=10 km)",
+        "options": [
+            74.4,
+            83.7,
+            93.0,
+            102.3
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 69 mol/L and Periodic boundary conditions, what is the maximum gradient of concentration (mol/L) per cm after 615 seconds? (D=0.0008, L=1 cm)",
+        "options": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 14 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the population density (individuals/km\u00b2) at (x,y)=(4,1) km after 1 years? (D=0.24, Lx=54 km, Ly=10 km)",
+        "options": [
+            9.8,
+            11.2,
+            12.6,
+            14.0
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 56 mol/L for x < L/2 and 2 mol/L for x \u2265 L/2 and Dirichlet boundary conditions with 73 mol/L at x=0 and 55 mol/L at x=L, what is the average concentration (mol/L) after 995 seconds? (D=0.001, L=3 cm)",
+        "options": [
+            44.392,
+            49.941,
+            55.49,
+            61.039
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 60 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the minimum concentration (mol/L) after 634 seconds? (D=0.0009, Lx=7 cm, Ly=10 cm)",
+        "options": [
+            60.0,
+            66.0,
+            72.0,
+            78.0
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the concentration (mol/L) at (x,y)=(1,8) cm after 489 seconds? (D=0.0003, Lx=1 cm, Ly=8 cm)",
+        "options": [
+            60.1,
+            66.11,
+            72.12,
+            78.13
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 30 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of temperature (\u00b0C) per cm after 351 seconds? (D=0.54, Lx=60 cm, Ly=10 cm)",
+        "options": [
+            -0.2,
+            -0.1,
+            0.0,
+            0.1
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 34 mol/L and Dirichlet boundary conditions with 38 mol/L at x=0 and 69 mol/L at x=L, what is the concentration (mol/L) at x=0 cm after 222 seconds? (D=0.0001, L=7 cm)",
+        "options": [
+            "[6.700269963977583, 20.09695547435372)",
+            "[20.09695547435372, 20.495848304851755)",
+            "[20.495848304851755, 23.09893313246386)",
+            "[23.09893313246386, 62.248615656708154)"
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 28 mol/L and Dirichlet boundary conditions with 13 mol/L at x=0 and 6 mol/L at x=L, what is the maximum concentration (mol/L) after 253 seconds? (D=0.0007, L=4 cm)",
+        "options": [
+            19.502,
+            22.288,
+            25.073999999999998,
+            27.86
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 71 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the average population density (individuals/km\u00b2) after 5 years? (D=0.63, Lx=59 km, Ly=7 km)",
+        "options": [
+            63.9,
+            71.0,
+            78.1,
+            85.2
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 31 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the population density (individuals/km\u00b2) at x=30 km after 5 years? (D=0.41, L=90 km)",
+        "options": [
+            "[-3.1742545160624758, 28.80647627604159)",
+            "[28.80647627604159, 34.413177881846096)",
+            "[34.413177881846096, 47.95800637488118)",
+            "[47.95800637488118, 60.87858831442362)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 70 individuals/km\u00b2 and Dirichlet boundary conditions with 99 individuals/km\u00b2 at x=0 and 2 individuals/km\u00b2 at x=L, what is the population density (individuals/km\u00b2) at x=11 km after 2 years? (D=0.62, L=18 km)",
+        "options": [
+            "[22.360416420899448, 47.73136667698927)",
+            "[47.73136667698927, 82.26292421175523)",
+            "[82.26292421175523, 132.29024938890478)",
+            "[132.29024938890478, 138.49661361720376)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 80 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the population density (individuals/km\u00b2) at (x,y)=(62,3) km after 4 years? (D=0.99, Lx=68 km, Ly=7 km)",
+        "options": [
+            72.0,
+            80.0,
+            88.0,
+            96.0
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 23 \u00b0C and Dirichlet boundary conditions with 23 \u00b0C at x=0 and 60 \u00b0C at x=L, what is the average temperature (\u00b0C) after 191 seconds? (D=0.13, L=31 cm)",
+        "options": [
+            21.749,
+            24.856,
+            27.963,
+            31.07
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 62 mol/L and Dirichlet boundary conditions with 74, 35, 77, and 72 mol/L at left, right, bottom, and top boundaries, what is the average concentration (mol/L) after 102 seconds? (D=0.0009, Lx=7 cm, Ly=5 cm)",
+        "options": [
+            56.565,
+            62.85,
+            69.135,
+            75.42
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 19 individuals/km\u00b2 and Periodic boundary conditions, what is the minimum population density (individuals/km\u00b2) after 2 years? (D=0.22, Lx=36 km, Ly=9 km)",
+        "options": [
+            15.2,
+            17.1,
+            19.0,
+            20.9
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of temperature (\u00b0C) per cm after 188 seconds? (D=0.68, Lx=94 cm, Ly=6 cm)",
+        "options": [
+            3.5,
+            2.3,
+            2.9,
+            3.9
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 38 individuals/km\u00b2 and Periodic boundary conditions, what is the average population density (individuals/km\u00b2) after 9 years? (D=0.64, L=83 km)",
+        "options": [
+            30.4,
+            34.2,
+            38.0,
+            41.8
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D population spread process with checkerboard pattern with alternating 100 individuals/km\u00b2 and 0 individuals/km\u00b2 and Periodic boundary conditions, what is the minimum population density (individuals/km\u00b2) after 5 years? (D=0.82, Lx=67 km, Ly=6 km)",
+        "options": [
+            "[-2.05719246735719, 8.589066440558733)",
+            "[8.589066440558733, 46.31125519376281)",
+            "[46.31125519376281, 63.17760371736545)",
+            "[63.17760371736545, 67.9681800418131)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 80 mol/L for x < L/2 and 5 mol/L for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the maximum concentration (mol/L) after 363 seconds? (D=0.0009, L=3 cm)",
+        "options": [
+            72.26,
+            79.486,
+            86.712,
+            93.93800000000002
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 37 mol/L for x < L/2 and 13 mol/L for x \u2265 L/2 and Dirichlet boundary conditions with 0 mol/L at x=0 and 83 mol/L at x=L, what is the maximum gradient of concentration (mol/L) per cm after 222 seconds? (D=0.0004, L=4 cm)",
+        "options": [
+            "[57.565706576857664, 69.36795767316964)",
+            "[69.36795767316964, 97.51986284072073)",
+            "[97.51986284072073, 190.11392938500597)",
+            "[190.11392938500597, 218.00749460740883)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Dirichlet boundary conditions with 31, 92, 86, and 71 mol/L at left, right, bottom, and top boundaries, what is the maximum gradient of concentration (mol/L) per cm after 487 seconds? (D=0.0007, Lx=9 cm, Ly=9 cm)",
+        "options": [
+            53.592,
+            61.248000000000005,
+            68.904,
+            76.56
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 53 individuals/km\u00b2 and Dirichlet boundary conditions with 9 individuals/km\u00b2 at x=0 and 42 individuals/km\u00b2 at x=L, what is the maximum gradient of population density (individuals/km\u00b2) per km after 5 years? (D=0.67, L=11 km)",
+        "options": [
+            "[-2.4060107881033392, 10.489610209236844)",
+            "[10.489610209236844, 12.103869089650996)",
+            "[12.103869089650996, 22.83064878483139)",
+            "[22.83064878483139, 33.705023465903935)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Dirichlet boundary conditions with 12, 7, 16, and 69 \u00b0C at left, right, bottom, and top boundaries, what is the maximum temperature (\u00b0C) after 438 seconds? (D=0.7, Lx=93 cm, Ly=9 cm)",
+        "options": [
+            "[12.140657203537842, 17.49651696587426)",
+            "[17.49651696587426, 51.892265019113516)",
+            "[51.892265019113516, 58.1028813062129)",
+            "[58.1028813062129, 126.16053241376059)"
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 71 individuals/km\u00b2 and Dirichlet boundary conditions with 44 individuals/km\u00b2 at x=0 and 75 individuals/km\u00b2 at x=L, what is the maximum population density (individuals/km\u00b2) after 3 years? (D=0.76, L=26 km)",
+        "options": [
+            52.5,
+            60.0,
+            67.5,
+            75.0
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 82 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of concentration (mol/L) per cm after 52 seconds? (D=0.0004, L=5 cm)",
+        "options": [
+            -0.1,
+            0.0,
+            0.1,
+            0.2
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 78 individuals/km\u00b2 and Periodic boundary conditions, what is the maximum gradient of population density (individuals/km\u00b2) per km after 1 years? (D=0.8, Lx=15 km, Ly=9 km)",
+        "options": [
+            "[-4.549739360464685, -3.6384282434349555)",
+            "[-3.6384282434349555, -1.337459978623487)",
+            "[-1.337459978623487, 4.078002934525393)",
+            "[4.078002934525393, 4.8180299673994025)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 20 individuals/km\u00b2 and Periodic boundary conditions, what is the average population density (individuals/km\u00b2) after 1 years? (D=0.73, L=10 km)",
+        "options": [
+            16.0,
+            18.0,
+            20.0,
+            22.0
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 7 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the maximum concentration (mol/L) after 824 seconds? (D=0.0004, L=4 cm)",
+        "options": [
+            7.7,
+            6.1,
+            7.0,
+            7.7
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the temperature (\u00b0C) at (x,y)=(0,2) cm after 225 seconds? (D=0.73, Lx=41 cm, Ly=5 cm)",
+        "options": [
+            6.552532019181151e+223,
+            7.207785221099266e+223,
+            7.863038423017381e+223,
+            8.518291624935497e+223
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D heat conduction process with step function with 18 \u00b0C for x < L/2 and 70 \u00b0C for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the minimum temperature (\u00b0C) after 559 seconds? (D=0.44, L=39 cm)",
+        "options": [
+            "[7.900760626199769, 11.370458734415674)",
+            "[11.370458734415674, 46.4526586322397)",
+            "[46.4526586322397, 62.47045775463595)",
+            "[62.47045775463595, 64.45212012488764)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with step function with 76 \u00b0C for x < L/2 and 73 \u00b0C for x \u2265 L/2 and Periodic boundary conditions, what is the maximum temperature (\u00b0C) after 99 seconds? (D=0.76, L=64 cm)",
+        "options": [
+            75.26,
+            82.786,
+            90.31200000000001,
+            97.83800000000001
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 69 individuals/km\u00b2 for x < L/2 and 93 individuals/km\u00b2 for x \u2265 L/2 and Dirichlet boundary conditions with 93 individuals/km\u00b2 at x=0 and 85 individuals/km\u00b2 at x=L, what is the maximum population density (individuals/km\u00b2) after 9 years? (D=0.62, L=72 km)",
+        "options": [
+            83.7,
+            93.0,
+            102.3,
+            111.6
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Dirichlet boundary conditions with 13, 1, 55, and 5 \u00b0C at left, right, bottom, and top boundaries, what is the minimum temperature (\u00b0C) after 363 seconds? (D=0.83, Lx=37 cm, Ly=6 cm)",
+        "options": [
+            "[-6.789844765930478e+285, -3.3161628026884034e+285)",
+            "[-3.3161628026884034e+285, -1.3688566401386566e+285)",
+            "[-1.3688566401386566e+285, -8.817603832036649e+284)",
+            "[-8.817603832036649e+284, -5.8151914795132434e+284)"
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 85 individuals/km\u00b2 and Dirichlet boundary conditions with 47 individuals/km\u00b2 at x=0 and 88 individuals/km\u00b2 at x=L, what is the population density (individuals/km\u00b2) at x=12 km after 5 years? (D=0.6, L=69 km)",
+        "options": [
+            "[17.773094098257488, 69.67410319386758)",
+            "[69.67410319386758, 129.04169697670807)",
+            "[129.04169697670807, 135.98171428765914)",
+            "[135.98171428765914, 157.37818091702087)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum temperature (\u00b0C) after 192 seconds? (D=0.48, Lx=78 cm, Ly=7 cm)",
+        "options": [
+            45.099,
+            50.11,
+            55.121,
+            60.132
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with step function with 42 mol/L for x < L/2 and 52 mol/L for x \u2265 L/2 and Dirichlet boundary conditions with 78 mol/L at x=0 and 45 mol/L at x=L, what is the concentration (mol/L) at x=1 cm after 798 seconds? (D=0.0002, L=1 cm)",
+        "options": [
+            45.0,
+            49.5,
+            54.0,
+            58.5
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 75 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of temperature (\u00b0C) per cm after 542 seconds? (D=0.39, L=80 cm)",
+        "options": [
+            -0.1,
+            0.0,
+            0.1,
+            0.2
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 42 individuals/km\u00b2 and Periodic boundary conditions, what is the maximum population density (individuals/km\u00b2) after 7 years? (D=0.36, Lx=82 km, Ly=9 km)",
+        "options": [
+            33.6,
+            37.8,
+            42.0,
+            46.2
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D heat conduction process with step function with 73 \u00b0C for x < L/2 and 23 \u00b0C for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of temperature (\u00b0C) per cm after 406 seconds? (D=0.77, L=68 cm)",
+        "options": [
+            "[-3.6548682227437665, -3.106349941705398)",
+            "[-3.106349941705398, 2.2691653329259283)",
+            "[2.2691653329259283, 4.080473859786855)",
+            "[4.080473859786855, 6.204882627734571)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 63 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum temperature (\u00b0C) after 380 seconds? (D=0.64, L=26 cm)",
+        "options": [
+            44.099999999999994,
+            50.4,
+            56.7,
+            63.0
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 17 \u00b0C and Periodic boundary conditions, what is the temperature (\u00b0C) at (x,y)=(24,5) cm after 580 seconds? (D=0.59, Lx=66 cm, Ly=6 cm)",
+        "options": [
+            15.3,
+            17.0,
+            18.7,
+            20.4
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 16 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the temperature (\u00b0C) at x=15 cm after 502 seconds? (D=0.28, L=40 cm)",
+        "options": [
+            12.8,
+            14.4,
+            16.0,
+            17.6
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 96 individuals/km\u00b2 for x < L/2 and 32 individuals/km\u00b2 for x \u2265 L/2 and Periodic boundary conditions, what is the population density (individuals/km\u00b2) at x=41 km after 2 years? (D=0.45, L=95 km)",
+        "options": [
+            76.44,
+            85.995,
+            95.55,
+            105.10499999999999
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 49 \u00b0C and Dirichlet boundary conditions with 8 \u00b0C at x=0 and 100 \u00b0C at x=L, what is the average temperature (\u00b0C) after 95 seconds? (D=0.55, L=60 cm)",
+        "options": [
+            "[-0.6302065865881374, 16.063096728834445)",
+            "[16.063096728834445, 47.03363180204717)",
+            "[47.03363180204717, 87.60877599492642)",
+            "[87.60877599492642, 92.3397190660975)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 69 mol/L and Dirichlet boundary conditions with 54 mol/L at x=0 and 99 mol/L at x=L, what is the minimum concentration (mol/L) after 359 seconds? (D=0.0006, L=10 cm)",
+        "options": [
+            54.0,
+            59.4,
+            64.8,
+            70.2
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 70 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of temperature (\u00b0C) per cm after 505 seconds? (D=0.91, Lx=23 cm, Ly=7 cm)",
+        "options": [
+            "[-4.078802749261926, -1.8962240645281487)",
+            "[-1.8962240645281487, -0.348433627362601)",
+            "[-0.348433627362601, 1.2822773079777905)",
+            "[1.2822773079777905, 2.6650151465902896)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 83 mol/L and Dirichlet boundary conditions with 67, 90, 95, and 70 mol/L at left, right, bottom, and top boundaries, what is the maximum gradient of concentration (mol/L) per cm after 609 seconds? (D=0.0008, Lx=9 cm, Ly=10 cm)",
+        "options": [
+            "[-3.8184789854053207, 14.985398643733042)",
+            "[14.985398643733042, 40.124309992823164)",
+            "[40.124309992823164, 47.920760783528856)",
+            "[47.920760783528856, 56.853593889458644)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with step function with 34 \u00b0C for x < L/2 and 89 \u00b0C for x \u2265 L/2 and Dirichlet boundary conditions with 4 \u00b0C at x=0 and 26 \u00b0C at x=L, what is the maximum gradient of temperature (\u00b0C) per cm after 459 seconds? (D=0.48, L=97 cm)",
+        "options": [
+            "[-3.2447258714438934, -1.4598860974058565)",
+            "[-1.4598860974058565, 1.5650971679389998)",
+            "[1.5650971679389998, 4.880337252015565)",
+            "[4.880337252015565, 7.74510166880739)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 20 individuals/km\u00b2 and Neumann boundary conditions (zero flux at boundaries), what is the average population density (individuals/km\u00b2) after 3 years? (D=0.28, Lx=66 km, Ly=8 km)",
+        "options": [
+            "[-4.958744072299485, -0.8674982286150401)",
+            "[-0.8674982286150401, 10.322711991647358)",
+            "[10.322711991647358, 16.787074571802375)",
+            "[16.787074571802375, 41.08417528966518)"
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 31 individuals/km\u00b2 for x < L/2 and 7 individuals/km\u00b2 for x \u2265 L/2 and Dirichlet boundary conditions with 69 individuals/km\u00b2 at x=0 and 40 individuals/km\u00b2 at x=L, what is the maximum population density (individuals/km\u00b2) after 10 years? (D=0.5, L=65 km)",
+        "options": [
+            "[27.910242023683026, 51.841230823888665)",
+            "[51.841230823888665, 79.89839485213756)",
+            "[79.89839485213756, 114.56391246541972)",
+            "[114.56391246541972, 142.7517435684957)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the maximum concentration (mol/L) after 1000 seconds? (D=0.0006, Lx=1 cm, Ly=10 cm)",
+        "options": [
+            "[-3.5049231554707703, 20.00626361945248)",
+            "[20.00626361945248, 37.74154059285945)",
+            "[37.74154059285945, 82.61383728899432)",
+            "[82.61383728899432, 97.32889694911078)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D heat conduction process with step function with 15 \u00b0C for x < L/2 and 66 \u00b0C for x \u2265 L/2 and Periodic boundary conditions, what is the temperature (\u00b0C) at x=74 cm after 494 seconds? (D=0.91, L=82 cm)",
+        "options": [
+            "[13.511415314980624, 14.403005913031373)",
+            "[14.403005913031373, 18.649340980577897)",
+            "[18.649340980577897, 51.97923159813069)",
+            "[51.97923159813069, 73.27720674388502)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D heat conduction process with step function with 0 \u00b0C for x < L/2 and 33 \u00b0C for x \u2265 L/2 and Dirichlet boundary conditions with 56 \u00b0C at x=0 and 71 \u00b0C at x=L, what is the minimum temperature (\u00b0C) after 493 seconds? (D=0.6, L=86 cm)",
+        "options": [
+            "[-1.7084017600054544, 5.1539237952494075)",
+            "[5.1539237952494075, 10.34855777493182)",
+            "[10.34855777493182, 34.264487865766995)",
+            "[34.264487865766995, 40.317084424567675)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 64 individuals/km\u00b2 and Dirichlet boundary conditions with 48, 58, 26, and 60 individuals/km\u00b2 at left, right, bottom, and top boundaries, what is the average population density (individuals/km\u00b2) after 7 years? (D=0.59, Lx=91 km, Ly=10 km)",
+        "options": [
+            "[15.74404901233882, 34.366218547403456)",
+            "[34.366218547403456, 36.97784141484444)",
+            "[36.97784141484444, 63.000096268177714)",
+            "[63.000096268177714, 86.8963751870595)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 26 individuals/km\u00b2 and Dirichlet boundary conditions with 56, 93, 45, and 18 individuals/km\u00b2 at left, right, bottom, and top boundaries, what is the population density (individuals/km\u00b2) at (x,y)=(57,10) km after 7 years? (D=0.3, Lx=76 km, Ly=10 km)",
+        "options": [
+            "[-0.4261256504134501, 24.06169318204728)",
+            "[24.06169318204728, 24.709786143253726)",
+            "[24.709786143253726, 30.69811176272469)",
+            "[30.69811176272469, 33.845942132278225)"
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Periodic boundary conditions, what is the average concentration (mol/L) after 990 seconds? (D=0.0009, Lx=8 cm, Ly=7 cm)",
+        "options": [
+            "[17.78811641112506, 31.820932895848202)",
+            "[31.820932895848202, 39.358241692176904)",
+            "[39.358241692176904, 40.164225649954275)",
+            "[40.164225649954275, 89.25205190738352)"
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 99 mol/L and Periodic boundary conditions, what is the average concentration (mol/L) after 53 seconds? (D=0.0005, L=6 cm)",
+        "options": [
+            "[26.86288264157261, 36.057291129257564)",
+            "[36.057291129257564, 116.48407661077549)",
+            "[116.48407661077549, 146.2460931687077)",
+            "[146.2460931687077, 191.63430542042488)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 74 mol/L and Dirichlet boundary conditions with 33 mol/L at x=0 and 57 mol/L at x=L, what is the concentration (mol/L) at x=1 cm after 166 seconds? (D=0.0007, L=8 cm)",
+        "options": [
+            "[31.926334713910094, 39.64143119855866)",
+            "[39.64143119855866, 50.8003101841553)",
+            "[50.8003101841553, 76.14615131173812)",
+            "[76.14615131173812, 110.31433103270152)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 60 individuals/km\u00b2 for x < L/2 and 30 individuals/km\u00b2 for x \u2265 L/2 and Neumann boundary conditions (zero flux at boundaries), what is the maximum population density (individuals/km\u00b2) after 9 years? (D=0.68, L=44 km)",
+        "options": [
+            60.0,
+            66.0,
+            72.0,
+            78.0
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 45 \u00b0C and Periodic boundary conditions, what is the temperature (\u00b0C) at (x,y)=(21,7) cm after 228 seconds? (D=0.71, Lx=65 cm, Ly=7 cm)",
+        "options": [
+            31.5,
+            36.0,
+            40.5,
+            45.0
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with checkerboard pattern with alternating 100 mol/L and 0 mol/L and Dirichlet boundary conditions with 65, 94, 20, and 13 mol/L at left, right, bottom, and top boundaries, what is the average concentration (mol/L) after 151 seconds? (D=0.0001, Lx=2 cm, Ly=7 cm)",
+        "options": [
+            "[3.275926785908098, 15.591252768317755)",
+            "[15.591252768317755, 27.613627289826134)",
+            "[27.613627289826134, 43.940979142407194)",
+            "[43.940979142407194, 95.71991987931409)"
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 61 mol/L and Periodic boundary conditions, what is the average concentration (mol/L) after 310 seconds? (D=0.0004, Lx=7 cm, Ly=5 cm)",
+        "options": [
+            "[10.589334110417838, 26.795469188378704)",
+            "[26.795469188378704, 29.15595668591415)",
+            "[29.15595668591415, 86.4574626909828)",
+            "[86.4574626909828, 112.24333654573657)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D population spread process with constant initial population density of 82 individuals/km\u00b2 and Periodic boundary conditions, what is the maximum gradient of population density (individuals/km\u00b2) per km after 7 years? (D=0.44, L=48 km)",
+        "options": [
+            "[-4.063968260982918, -0.6971745046980433)",
+            "[-0.6971745046980433, 0.8301304784724026)",
+            "[0.8301304784724026, 0.8757880712450499)",
+            "[0.8757880712450499, 4.395092073854916)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 67 mol/L and Dirichlet boundary conditions with 16, 43, 21, and 85 mol/L at left, right, bottom, and top boundaries, what is the concentration (mol/L) at (x,y)=(7,2) cm after 503 seconds? (D=0.0003, Lx=8 cm, Ly=5 cm)",
+        "options": [
+            "[24.7847606657934, 76.09703367172901)",
+            "[76.09703367172901, 80.81856299444274)",
+            "[80.81856299444274, 85.92905521871027)",
+            "[85.92905521871027, 99.77338900177438)"
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 3 \u00b0C and Periodic boundary conditions, what is the average temperature (\u00b0C) after 93 seconds? (D=0.61, Lx=48 cm, Ly=7 cm)",
+        "options": [
+            2.2,
+            3.0,
+            3.9,
+            3.5
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 61 mol/L and Periodic boundary conditions, what is the concentration (mol/L) at (x,y)=(3,1) cm after 310 seconds? (D=0.0004, Lx=7 cm, Ly=5 cm)",
+        "options": [
+            54.9,
+            61.0,
+            67.1,
+            73.2
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D population spread process with step function with 66 individuals/km\u00b2 for x < L/2 and 47 individuals/km\u00b2 for x \u2265 L/2 and Periodic boundary conditions, what is the population density (individuals/km\u00b2) at x=45 km after 1 years? (D=0.27, L=75 km)",
+        "options": [
+            "[7.821149038936291, 14.030871465918949)",
+            "[14.030871465918949, 15.396851176549863)",
+            "[15.396851176549863, 73.54220702052564)",
+            "[73.54220702052564, 99.02630074810699)"
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 75 mol/L and Dirichlet boundary conditions with 88 mol/L at x=0 and 4 mol/L at x=L, what is the maximum gradient of concentration (mol/L) per cm after 50 seconds? (D=0.0009, L=4 cm)",
+        "options": [
+            144.82,
+            159.302,
+            173.784,
+            188.266
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 46 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the minimum concentration (mol/L) after 904 seconds? (D=0.0002, Lx=6 cm, Ly=7 cm)",
+        "options": [
+            "[18.827282591127222, 55.56397879181197)",
+            "[55.56397879181197, 61.61153546144684)",
+            "[61.61153546144684, 65.07035192427796)",
+            "[65.07035192427796, 83.993021426006)"
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 53 mol/L and Periodic boundary conditions, what is the concentration (mol/L) at x=0 cm after 92 seconds? (D=0.0002, L=1 cm)",
+        "options": [
+            47.7,
+            53.0,
+            58.3,
+            63.6
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 38 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of concentration (mol/L) per cm after 411 seconds? (D=0.0006, Lx=10 cm, Ly=9 cm)",
+        "options": [
+            -0.30000000000000004,
+            -0.2,
+            -0.1,
+            0.0
+        ],
+        "correct": "D"
+    },
+    {
+        "question": "In a 2D chemical diffusion process with constant initial concentration of 20 mol/L and Periodic boundary conditions, what is the maximum concentration (mol/L) after 88 seconds? (D=0.0004, Lx=2 cm, Ly=10 cm)",
+        "options": [
+            16.0,
+            18.0,
+            20.0,
+            22.0
+        ],
+        "correct": "C"
+    },
+    {
+        "question": "In a 2D population spread process with constant initial population density of 19 individuals/km\u00b2 and Periodic boundary conditions, what is the maximum population density (individuals/km\u00b2) after 2 years? (D=0.22, Lx=36 km, Ly=9 km)",
+        "options": [
+            "[1.701123426648536, 12.280563842069439)",
+            "[12.280563842069439, 32.59444214324938)",
+            "[32.59444214324938, 33.32220781009078)",
+            "[33.32220781009078, 37.140471121947655)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D heat conduction process with constant initial temperature of 63 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of temperature (\u00b0C) per cm after 380 seconds? (D=0.64, L=26 cm)",
+        "options": [
+            "[-3.664126800712699, -2.2879556004155415)",
+            "[-2.2879556004155415, 1.5516063344696582)",
+            "[1.5516063344696582, 1.7168984449724047)",
+            "[1.7168984449724047, 4.131402664753678)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 1D chemical diffusion process with constant initial concentration of 72 mol/L and Neumann boundary conditions (zero flux at boundaries), what is the concentration (mol/L) at x=1 cm after 451 seconds? (D=0.0007, L=4 cm)",
+        "options": [
+            "[25.17761839116534, 52.81149768421054)",
+            "[52.81149768421054, 91.91157361976555)",
+            "[91.91157361976555, 110.55948729550262)",
+            "[110.55948729550262, 136.54742313772527)"
+        ],
+        "correct": "B"
+    },
+    {
+        "question": "In a 2D heat conduction process with checkerboard pattern with alternating 100 \u00b0C and 0 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum gradient of temperature (\u00b0C) per cm after 117 seconds? (D=0.48, Lx=52 cm, Ly=10 cm)",
+        "options": [
+            0.13,
+            0.11,
+            0.04,
+            0.08
+        ],
+        "correct": "A"
+    },
+    {
+        "question": "In a 2D heat conduction process with constant initial temperature of 5 \u00b0C and Neumann boundary conditions (zero flux at boundaries), what is the maximum temperature (\u00b0C) after 180 seconds? (D=0.54, Lx=76 cm, Ly=5 cm)",
+        "options": [
+            "[-2.8346027408376173, 1.4154647876056314)",
+            "[1.4154647876056314, 1.8192894250742704)",
+            "[1.8192894250742704, 7.827334044833412)",
+            "[7.827334044833412, 12.709986658427901)"
+        ],
+        "correct": "C"
+    }
+]

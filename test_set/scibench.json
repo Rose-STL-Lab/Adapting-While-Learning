@@ -1,0 +1,602 @@
+[
+    {
+        "problem_text": "The power output of a laser is measured in units of watts (W), where one watt is equal to one joule per second. $\\left(1 \\mathrm{~W}=1 \\mathrm{~J} \\cdot \\mathrm{s}^{-1}\\right.$.) What is the number of photons emitted per second by a $1.00 \\mathrm{~mW}$ nitrogen laser? The wavelength emitted by a nitrogen laser is $337 \\mathrm{~nm}$.",
+        "unit": " $\r\n10^{15} \\text { photon } \\cdot \\mathrm{s}^{-1}\r\n$",
+        "answer_number": "1.70"
+    },
+    {
+        "problem_text": "For the $\\mathrm{H}_2$ ground electronic state, $D_0=4.4781 \\mathrm{eV}$. Find $\\Delta H_0^{\\circ}$ for $\\mathrm{H}_2(g) \\rightarrow 2 \\mathrm{H}(g)$ in $\\mathrm{kJ} / \\mathrm{mol}$",
+        "unit": " $\\mathrm{~kJ} / \\mathrm{mol}$",
+        "answer_number": "432.07"
+    },
+    {
+        "problem_text": "Let $w$ be the variable defined as the number of heads that show when two coins are tossed simultaneously. Find $\\langle w\\rangle$.",
+        "unit": " ",
+        "answer_number": "1"
+    },
+    {
+        "problem_text": "A vessel of volume $22.4 \\mathrm{dm}^3$ contains $2.0 \\mathrm{~mol} \\mathrm{H}_2$ and $1.0 \\mathrm{~mol} \\mathrm{~N}_2$ at $273.15 \\mathrm{~K}$. Calculate their total pressure.",
+        "unit": "$\\mathrm{atm}$ ",
+        "answer_number": "3.0"
+    },
+    {
+        "problem_text": "Assume all gases are perfect unless stated otherwise. Note that 1 atm = 1.013 25 bar. Unless otherwise stated, thermochemical data are for 298.15 K.\r\nSilylene $\\left(\\mathrm{SiH}_2\\right)$ is a key intermediate in the thermal decomposition of silicon hydrides such as silane $\\left(\\mathrm{SiH}_4\\right)$ and disilane $\\left(\\mathrm{Si}_2 \\mathrm{H}_6\\right)$. Moffat et al. (J. Phys. Chem. 95, 145 (1991)) report $\\Delta_{\\mathrm{f}} H^{\\ominus}\\left(\\mathrm{SiH}_2\\right)=+274 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$. If $\\Delta_{\\mathrm{f}} H^{\\ominus}\\left(\\mathrm{SiH}_4\\right)=+34.3 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$ and $\\Delta_{\\mathrm{f}} H^{\\ominus}\\left(\\mathrm{Si}_2 \\mathrm{H}_6\\right)=+80.3 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$(CRC Handbook (2008)), compute the standard enthalpies of the following reaction:\r\n$\\mathrm{Si}_2 \\mathrm{H}_6(\\mathrm{g}) \\rightarrow \\mathrm{SiH}_2(\\mathrm{g})+\\mathrm{SiH}_4(\\mathrm{g})$",
+        "unit": "$\\mathrm{kJ} \\mathrm{mol}^{-1}$",
+        "answer_number": "228"
+    },
+    {
+        "problem_text": "A deuteron (nucleus of deuterium atom consisting of a proton and a neutron) with speed $14.9 \\mathrm{~km} / \\mathrm{s}$ collides elastically with a neutron at rest. Use the approximation that the deuteron is twice the mass of the neutron. If the deuteron is scattered through a $\\mathrm{LAB}$ angle $\\psi=10^{\\circ}$, what is the final speed of the deuteron?",
+        "unit": "$\\mathrm{~km} / \\mathrm{s}$",
+        "answer_number": "14.44"
+    },
+    {
+        "problem_text": "A gas at $250 \\mathrm{~K}$ and $15 \\mathrm{~atm}$ has a molar volume 12 per cent smaller than that calculated from the perfect gas law. Calculate the compression factor under these conditions.",
+        "unit": " ",
+        "answer_number": "0.88"
+    },
+    {
+        "problem_text": "A household lightbulb is a blackbody radiator. Many lightbulbs use tungsten filaments that are heated by an electric current. What temperature is needed so that $\\lambda_{\\max }=550 \\mathrm{~nm}$ ?",
+        "unit": " $\\mathrm{~K}$\r\n",
+        "answer_number": "5300"
+    },
+    {
+        "problem_text": "Find the volume of the described solid S. A tetrahedron with three mutually perpendicular faces and three mutually perpendicular edges with lengths $3 \\mathrm{~cm}$, $4 \\mathrm{~cm}$, and $5 \\mathrm{~cm}$",
+        "unit": " $\\mathrm{cm}^3$",
+        "answer_number": "10"
+    },
+    {
+        "problem_text": "In order to estimate the proportion, $p$, of a large class of college freshmen that had high school GPAs from 3.2 to 3.6 , inclusive, a sample of $n=50$ students was taken. It was found that $y=9$ students fell into this interval. Give a point estimate of $p$.",
+        "unit": " ",
+        "answer_number": "0.1800"
+    },
+    {
+        "problem_text": "The temperature of the fireball in a thermonuclear explosion can reach temperatures of approximately $10^7 \\mathrm{~K}$. What value of $\\lambda_{\\max }$ does this correspond to? ",
+        "unit": " $10^{-10} \\mathrm{~m}$\r\n",
+        "answer_number": "3"
+    },
+    {
+        "problem_text": "If $X$ is a random variable with mean 33 and variance 16, use Chebyshev's inequality to find A lower bound for $P(23 < X < 43)$.",
+        "unit": " ",
+        "answer_number": "0.84"
+    },
+    {
+        "problem_text": "A billiard ball of intial velocity $u_1$ collides with another billard ball (same mass) initially at rest. The first ball moves off at $\\psi = 45^\\circ$. For an elastic collision, say the velocities of both balls after the collision is $v_1 = v_2 = \\frac{u_1}{\\sqrt(2)}$. At what LAB angle does the second ball emerge?",
+        "unit": "$^\\circ$",
+        "answer_number": "45"
+    },
+    {
+        "problem_text": "Space vehicles traveling through Earth's radiation belts can intercept a significant number of electrons. The resulting charge buildup can damage electronic components and disrupt operations. Suppose a spherical metal satellite $1.3 \\mathrm{~m}$ in diameter accumulates $2.4 \\mu \\mathrm{C}$ of charge in one orbital revolution. Find the resulting surface charge density. ",
+        "unit": "$10^{-7} \\mathrm{C} / \\mathrm{m}^2 $ ",
+        "answer_number": "4.5"
+    },
+    {
+        "problem_text": "The orbit of Halley's comet, last seen in 1986 and due to return in 2062, is an ellipse with eccentricity 0.97 and one focus at the sun. The length of its major axis is $36.18 \\mathrm{AU}$. [An astronomical unit (AU) is the mean distance between the earth and the sun, about 93 million miles.] By finding a polar equation for the orbit of Halley's comet, what is the maximum distance from the comet to the sun?",
+        "unit": " $\\mathrm{AU}$",
+        "answer_number": "35.64"
+    },
+    {
+        "problem_text": "Assume all gases are perfect unless stated otherwise. Note that 1 atm = 1.01325 bar. Unless otherwise stated, thermochemical data are for 298.15 K. Take nitrogen to be a van der Waals gas with $a=1.352 \\mathrm{dm}^6 \\mathrm{~atm} \\mathrm{\\textrm {mol } ^ { - 2 }}$ and $b=0.0387 \\mathrm{dm}^3 \\mathrm{~mol}^{-1}$, and calculate $\\Delta H_{\\mathrm{m}}$ when the pressure on the gas is decreased from $500 \\mathrm{~atm}$ to $1.00 \\mathrm{~atm}$ at $300 \\mathrm{~K}$. For a van der Waals gas, $\\mu=\\{(2 a / R T)-b\\} / C_{p, \\mathrm{~m}}$. Assume $C_{p, \\mathrm{~m}}=\\frac{7}{2} R$.",
+        "unit": "$\\text{kJ}$ ",
+        "answer_number": "+3.60"
+    },
+    {
+        "problem_text": "The ${ }^7 \\mathrm{Li}^1 \\mathrm{H}$ ground electronic state has $D_0=2.4287 \\mathrm{eV}, \\nu_e / c=1405.65 \\mathrm{~cm}^{-1}$, and $\\nu_e x_e / c=23.20 \\mathrm{~cm}^{-1}$, where $c$ is the speed of light. (These last two quantities are usually designated $\\omega_e$ and $\\omega_e x_e$ in the literature.) Calculate $D_e$ for ${ }^7 \\mathrm{Li}^1 \\mathrm{H}$.",
+        "unit": " $\\mathrm{eV}$",
+        "answer_number": "2.5151"
+    },
+    {
+        "problem_text": "Let $A$ and $B$ be independent events with $P(A)=$ $1 / 4$ and $P(B)=2 / 3$. Compute $P(A \\cap B)$",
+        "unit": " ",
+        "answer_number": "0.166666666"
+    },
+    {
+        "problem_text": "What is the minimum escape velocity of a spacecraft from the moon?",
+        "unit": "$\\mathrm{~m} / \\mathrm{s}$ ",
+        "answer_number": "2380"
+    },
+    {
+        "problem_text": "Your swimming pool containing 60,000 gal of water has been contaminated by $5 \\mathrm{~kg}$ of a nontoxic dye that leaves a swimmer's skin an unattractive green. The pool's filtering system can take water from the pool, remove the dye, and return the water to the pool at a flow rate of $200 \\mathrm{gal} / \\mathrm{min}$. Find the time $T$ at which the concentration of dye first reaches the value $0.02 \\mathrm{~g} / \\mathrm{gal}$.",
+        "unit": " hour",
+        "answer_number": "7.136"
+    },
+    {
+        "problem_text": "Consider the initial value problem\r\n$$\r\ny^{\\prime}=t y(4-y) /(1+t), \\quad y(0)=y_0>0 .\r\n$$\r\nIf $y_0=2$, find the time $T$ at which the solution first reaches the value 3.99.",
+        "unit": " ",
+        "answer_number": "2.84367"
+    },
+    {
+        "problem_text": "Divide a line segment into two parts by selecting a point at random. Use your intuition to assign a probability to the event that the longer segment is at least two times longer than the shorter segment.",
+        "unit": " ",
+        "answer_number": "0.66666666666"
+    },
+    {
+        "problem_text": "During a storm, a crate of crepe is sliding across a slick, oily parking lot through a displacement $\\vec{d}=(-3.0 \\mathrm{~m}) \\hat{\\mathrm{i}}$ while a steady wind pushes against the crate with a force $\\vec{F}=(2.0 \\mathrm{~N}) \\hat{\\mathrm{i}}+(-6.0 \\mathrm{~N}) \\hat{\\mathrm{j}}$. If the crate has a kinetic energy of $10 \\mathrm{~J}$ at the beginning of displacement $\\vec{d}$, what is its kinetic energy at the end of $\\vec{d}$ ?",
+        "unit": " J",
+        "answer_number": "4.0"
+    },
+    {
+        "problem_text": "Assume that all gases are perfect and that data refer to 298 K unless otherwise stated. Find an expression for the fugacity coefficient of a gas that obeys the equation of state $p V_{\\mathrm{m}}=R T\\left(1+B / V_{\\mathrm{m}}+C / V_{\\mathrm{m}}^2\\right)$. Use the resulting expression to estimate the fugacity of argon at 1.00 atm and $100 \\mathrm{~K}$ using $B=-21.13 \\mathrm{~cm}^3 \\mathrm{~mol}^{-1}$ and $C=1054 \\mathrm{~cm}^6 \\mathrm{~mol}^{-2}$.",
+        "unit": "$\\text{atm}$ ",
+        "answer_number": "0.9974"
+    },
+    {
+        "problem_text": "A sled is pulled along a level path through snow by a rope. A 30-lb force acting at an angle of $40^{\\circ}$ above the horizontal moves the sled $80 \\mathrm{ft}$. Find the work done by the force.",
+        "unit": " $\\mathrm{ft-lb}$",
+        "answer_number": "1838.50666349"
+    },
+    {
+        "problem_text": " If $125 \\mathrm{~cm}^3$ of hydrogen gas effuses through a small hole in 135 seconds, how long will it take the same volume of oxygen gas to effuse under the same temperature and pressure?",
+        "unit": " $\\mathrm{s}$",
+        "answer_number": "537"
+    },
+    {
+        "problem_text": "What is the temperature of a two-level system of energy separation equivalent to $400 \\mathrm{~cm}^{-1}$ when the population of the upper state is one-third that of the lower state?",
+        "unit": " $ \\mathrm{~K}$",
+        "answer_number": "524"
+    },
+    {
+        "problem_text": "Let $X$ and $Y$ be independent with distributions $N(5,16)$ and $N(6,9)$, respectively. Evaluate $P(X>Y)=$ $P(X-Y>0)$.",
+        "unit": " ",
+        "answer_number": "0.4207"
+    },
+    {
+        "problem_text": "The promotion of an electron from the valence band into the conduction band in pure $\\mathrm{TIO}_2$ by light absorption requires a wavelength of less than $350 \\mathrm{~nm}$. Calculate the energy gap in electronvolts between the valence and conduction bands.",
+        "unit": " $\\mathrm{eV}$",
+        "answer_number": "3.54"
+    },
+    {
+        "problem_text": "A potato of mass $0.5 \\mathrm{~kg}$ moves under Earth's gravity with an air resistive force of $-k m v$. Find the terminal velocity if the potato is released from rest and $k=$ $0.01 \\mathrm{~s}^{-1}$. ",
+        "unit": "$\\mathrm{~m} / \\mathrm{s}$  ",
+        "answer_number": "1000"
+    },
+    {
+        "problem_text": "The nucleus of a plutonium-239 atom contains 94 protons. Assume that the nucleus is a sphere with radius $6.64 \\mathrm{fm}$ and with the charge of the protons uniformly spread through the sphere. At the surface of the nucleus, what are the magnitude of the electric field produced by the protons?",
+        "unit": "$10^{21} \\mathrm{~N} / \\mathrm{C}$ ",
+        "answer_number": "3.07"
+    },
+    {
+        "problem_text": "A system consisting of $82.5 \\mathrm{~g}$ of liquid water at $300 . \\mathrm{K}$ is heated using an immersion heater at a constant pressure of 1.00 bar. If a current of $1.75 \\mathrm{~A}$ passes through the $25.0 \\mathrm{ohm}$ resistor for 100 .s, what is the final temperature of the water?",
+        "unit": "$\\mathrm{~K}$",
+        "answer_number": "322"
+    },
+    {
+        "problem_text": "The tensile strength $X$ of paper, in pounds per square inch, has $\\mu=30$ and $\\sigma=3$. A random sample of size $n=100$ is taken from the distribution of tensile strengths. Compute the probability that the sample mean $\\bar{X}$ is greater than 29.5 pounds per square inch.",
+        "unit": " ",
+        "answer_number": "0.9522"
+    },
+    {
+        "problem_text": "Assume all gases are perfect unless stated otherwise. Unless otherwise stated, thermodynamic data are for 298.15 K. When a certain freon used in refrigeration was expanded adiabatically from an initial pressure of $32 \\mathrm{~atm}$ and $0^{\\circ} \\mathrm{C}$ to a final pressure of $1.00 \\mathrm{~atm}$, the temperature fell by $22 \\mathrm{~K}$. Calculate the Joule-Thomson coefficient, $\\mu$, at $0^{\\circ} \\mathrm{C}$, assuming it remains constant over this temperature range.",
+        "unit": "$\\mathrm{K} \\mathrm{atm}^{-1}$",
+        "answer_number": "0.71"
+    },
+    {
+        "problem_text": "Consider the initial value problem\r\n$$\r\n2 y^{\\prime \\prime}+3 y^{\\prime}-2 y=0, \\quad y(0)=1, \\quad y^{\\prime}(0)=-\\beta,\r\n$$\r\nwhere $\\beta>0$.\r\nFind the smallest value of $\\beta$ for which the solution has no minimum point.",
+        "unit": " ",
+        "answer_number": "2"
+    },
+    {
+        "problem_text": "Consider a tank used in certain hydrodynamic experiments. After one experiment the tank contains $200 \\mathrm{~L}$ of a dye solution with a concentration of $1 \\mathrm{~g} / \\mathrm{L}$. To prepare for the next experiment, the tank is to be rinsed with fresh water flowing in at a rate of $2 \\mathrm{~L} / \\mathrm{min}$, the well-stirred solution flowing out at the same rate. Find the time that will elapse before the concentration of dye in the tank reaches $1 \\%$ of its original value.",
+        "unit": " min",
+        "answer_number": "460.5"
+    },
+    {
+        "problem_text": "Let $X_1, X_2$ be a random sample of size $n=2$ from a distribution with pdf $f(x)=3 x^2, 0 < x < 1$. Determine $P\\left(\\max X_i < 3 / 4\\right)=P\\left(X_1<3 / 4, X_2<3 / 4\\right)$",
+        "unit": " ",
+        "answer_number": "0.178"
+    },
+    {
+        "problem_text": "Let $X$ equal the maximal oxygen intake of a human on a treadmill, where the measurements are in milliliters of oxygen per minute per kilogram of weight. Assume that, for a particular population, the mean of $X$ is $\\mu=$ 54.030 and the standard deviation is $\\sigma=5.8$. Let $\\bar{X}$ be the sample mean of a random sample of size $n=47$. Find $P(52.761 \\leq \\bar{X} \\leq 54.453)$, approximately.",
+        "unit": " ",
+        "answer_number": "0.6247"
+    },
+    {
+        "problem_text": "Assume all gases are perfect unless stated otherwise. Unless otherwise stated, thermodynamic data are for 298.15 K.  Given the reactions (1) and (2) below, determine $\\Delta_{\\mathrm{r}} H^{\\ominus}$ for reaction (3).\r\n\r\n(1) $\\mathrm{H}_2(\\mathrm{g})+\\mathrm{Cl}_2(\\mathrm{g}) \\rightarrow 2 \\mathrm{HCl}(\\mathrm{g})$, $\\Delta_{\\mathrm{r}} H^{\\ominus}=-184.62 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$\r\n\r\n(2) $2 \\mathrm{H}_2(\\mathrm{g})+\\mathrm{O}_2(\\mathrm{g}) \\rightarrow 2 \\mathrm{H}_2 \\mathrm{O}(\\mathrm{g})$, $\\Delta_{\\mathrm{r}} H^\\ominus=-483.64 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$\r\n\r\n(3) $4 \\mathrm{HCl}(\\mathrm{g})+\\mathrm{O}_2(\\mathrm{g}) \\rightarrow 2 \\mathrm{Cl}_2(\\mathrm{g})+2 \\mathrm{H}_2 \\mathrm{O}(\\mathrm{g})$",
+        "unit": "$\\mathrm{KJ} \\mathrm{mol}^{-1}$",
+        "answer_number": "-114.40"
+    },
+    {
+        "problem_text": "Assume that all gases are perfect and that data refer to 298.15 K unless otherwise stated. Calculate the Carnot efficiency of a primitive steam engine operating on steam at $100^{\\circ} \\mathrm{C}$ and discharging at $60^{\\circ} \\mathrm{C}$.",
+        "unit": " ",
+        "answer_number": "0.11"
+    },
+    {
+        "problem_text": "For $\\mathrm{N}_2$ at $298 \\mathrm{~K}$, what fraction of molecules has a speed between 200. and $300 . \\mathrm{m} / \\mathrm{s}$ ?",
+        "unit": " ",
+        "answer_number": "0.132"
+    },
+    {
+        "problem_text": "A fluid has density $870 \\mathrm{~kg} / \\mathrm{m}^3$ and flows with velocity $\\mathbf{v}=z \\mathbf{i}+y^2 \\mathbf{j}+x^2 \\mathbf{k}$, where $x, y$, and $z$ are measured in meters and the components of $\\mathbf{v}$ in meters per second. Find the rate of flow outward through the cylinder $x^2+y^2=4$, $0 \\leqslant z \\leqslant 1$.\r\n",
+        "unit": " $\\mathrm{kg}/\\mathrm{s}$",
+        "answer_number": "0"
+    },
+    {
+        "problem_text": "Assume that all gases are perfect and that data refer to 298.15 K unless otherwise stated. Calculate $\\Delta H$ when two copper blocks, each of mass $10.0 \\mathrm{~kg}$, one at $100^{\\circ} \\mathrm{C}$ and the other at $0^{\\circ} \\mathrm{C}$, are placed in contact in an isolated container. The specific heat capacity of copper is $0.385 \\mathrm{~J} \\mathrm{~K}^{-1} \\mathrm{~g}^{-1}$ and may be assumed constant over the temperature range involved.",
+        "unit": " ",
+        "answer_number": "0"
+    },
+    {
+        "problem_text": "5.4-19. A doorman at a hotel is trying to get three taxicabs for three different couples. The arrival of empty cabs has an exponential distribution with mean 2 minutes. Assuming independence, what is the probability that the doorman will get all three couples taken care of within 6 minutes?\r\n",
+        "unit": " ",
+        "answer_number": "0.5768"
+    },
+    {
+        "problem_text": "Assume all gases are perfect unless stated otherwise. Unless otherwise stated, thermodynamic data are for 298.15 K. Calculate the final temperature of a sample of argon of mass $12.0 \\mathrm{~g}$ that is expanded reversibly and adiabatically from $1.0 \\mathrm{dm}^3$ at $273.15 \\mathrm{~K}$ to $3.0 \\mathrm{dm}^3$.",
+        "unit": " $\\mathrm{K}$",
+        "answer_number": "131"
+    },
+    {
+        "problem_text": "How many different license plates are possible if a state uses two letters followed by a four-digit integer (leading zeros are permissible and the letters and digits can be repeated)?",
+        "unit": " ",
+        "answer_number": "6760000"
+    },
+    {
+        "problem_text": "In a typical model rocket (Estes Alpha III) the Estes C6 solid rocket engine provides a total impulse of $8.5$ N-s. Assume the total rocket mass at launch is $54$ g and that it has a rocket engine of mass $20$ g that burns evenly for $1.5$ s. The rocket diameter is $24$ mm. Assume a constant burn rate of the propellent mass ($11$ g), a rocket exhaust speed $800$ m/s, vertical ascent, and drag coefficient $c_w = 0.75$. Take into account the change of rocket mass with time and omit the effect of gravity. The rocket's speed at burn out is 131 m/s. How far has the rocket traveled at that moment?",
+        "unit": "m ",
+        "answer_number": "108"
+    },
+    {
+        "problem_text": "The mean solar flux at Earth's surface is $\\sim 2.00 \\mathrm{~J}$ $\\mathrm{cm}^{-2} \\mathrm{~min}^{-1}$. In a nonfocusing solar collector, the temperature reaches a value of $79.5^{\\circ} \\mathrm{C}$. A heat engine is operated using the collector as the hot reservoir and a cold reservoir at $298 \\mathrm{~K}$. Calculate the area of the collector needed to produce 1000. W. Assume that the engine operates at the maximum Carnot efficiency.",
+        "unit": " $\\mathrm{~m}^2$",
+        "answer_number": "19.4"
+    },
+    {
+        "problem_text": "Calculate the wavelength and the energy of a photon associated with the series limit of the Lyman series.",
+        "unit": "nm ",
+        "answer_number": "91.17"
+    },
+    {
+        "problem_text": "When an excited nucleus decays, it emits a $\\gamma$ ray. The lifetime of an excited state of a nucleus is of the order of $10^{-12} \\mathrm{~s}$. What is the uncertainty in the energy of the $\\gamma$ ray produced?",
+        "unit": "$10^{-22} \\mathrm{~J}$ ",
+        "answer_number": "7"
+    },
+    {
+        "problem_text": "A heavy object can sink into the ground during an earthquake if the shaking causes the ground to undergo liquefaction, in which the soil grains experience little friction as they slide over one another. The ground is then effectively quicksand. The possibility of liquefaction in sandy ground can be predicted in terms of the void ratio $e$ for a sample of the ground:\r\n$$\r\ne=\\frac{V_{\\text {voids }}}{V_{\\text {grains }}} .\r\n$$\r\nHere, $V_{\\text {grains }}$ is the total volume of the sand grains in the sample and $V_{\\text {voids }}$ is the total volume between the grains (in the voids). If $e$ exceeds a critical value of 0.80 , liquefaction can occur during an earthquake. What is the corresponding sand density $\\rho_{\\text {sand }}$ ? Solid silicon dioxide (the primary component of sand) has a density of $\\rho_{\\mathrm{SiO}_2}=2.600 \\times 10^3 \\mathrm{~kg} / \\mathrm{m}^3$.",
+        "unit": " $10^3 \\mathrm{~kg} / \\mathrm{m}^3$",
+        "answer_number": "1.4"
+    },
+    {
+        "problem_text": "It is possible to produce very high magnetic fields over small volumes by special techniques. What would be the resonance frequency of an electron spin in an organic radical in a field of $1.0 \\mathrm{kT}$ ?",
+        "unit": " $10^{13} \\mathrm{~Hz}$",
+        "answer_number": "2.8"
+    },
+    {
+        "problem_text": "A skier weighing $90$ kg starts from rest down a hill inclined at $17^\\circ$. He skis 100 m down the hill and then coasts for 70 m along level snow until he stops. Given a coefficient of kinetic friction of $\\mu_k = 0.18$, what velocity does the skier have at the bottom of the hill?",
+        "unit": "$m/s$ ",
+        "answer_number": "15.6"
+    },
+    {
+        "problem_text": "Find the volume of the described solid $S$. The base of $S$ is an elliptical region with boundary curve $9 x^2+4 y^2=36$. Cross-sections perpendicular to the $x$-axis are isosceles right triangles with hypotenuse in the base.",
+        "unit": " ",
+        "answer_number": "24"
+    },
+    {
+        "problem_text": "Determine the constant $c$ such that $f(x)= c x^3(1-x)^6$, $0 < x < 1$ is a pdf.",
+        "unit": " ",
+        "answer_number": "840"
+    },
+    {
+        "problem_text": "Consider the initial value problem\r\n$$\r\ny^{\\prime}=t y(4-y) / 3, \\quad y(0)=y_0\r\n$$\r\nSuppose that $y_0=0.5$. Find the time $T$ at which the solution first reaches the value 3.98.",
+        "unit": " ",
+        "answer_number": "3.29527"
+    },
+    {
+        "problem_text": "Calculate the magnitude of the spin angular momentum of a proton. Give a numerical answer. ",
+        "unit": " $10^{-35} \\mathrm{~J} \\mathrm{~s}$",
+        "answer_number": "9.13"
+    },
+    {
+        "problem_text": "The mass density of water vapour at $327.6 \\mathrm{~atm}$ and $776.4 \\mathrm{~K}$ is $133.2 \\mathrm{~kg} \\mathrm{~m}^{-3}$. Given that for water $T_{\\mathrm{c}}=647.4 \\mathrm{~K}, p_{\\mathrm{c}}=218.3 \\mathrm{~atm}, a=5.464 \\mathrm{dm}^6 \\mathrm{~atm} \\mathrm{~mol}^{-2}$, $b=0.03049 \\mathrm{dm}^3 \\mathrm{~mol}^{-1}$, and $M=18.02 \\mathrm{~g} \\mathrm{~mol}^{-1}$, calculate the compression factor from the virial expansion of the van der Waals equation.",
+        "unit": " ",
+        "answer_number": "0.7158"
+    },
+    {
+        "problem_text": "A uniform electric field exists in a region between two oppositely charged plates. An electron is released from rest at the surface of the negatively charged plate and strikes the surface of the opposite plate, $2.0 \\mathrm{~cm}$ away, in a time $1.5 \\times 10^{-8} \\mathrm{~s}$. What is the speed of the electron as it strikes the second plate? ",
+        "unit": " $10^6$",
+        "answer_number": "2.7"
+    },
+    {
+        "problem_text": "Suppose that the junction between two semiconductors can be represented by a barrier of height $2.0 \\mathrm{eV}$ and length $100 \\mathrm{pm}$. Calculate the transmission probability of an electron with energy $1.5 \\mathrm{eV}$.",
+        "unit": " ",
+        "answer_number": "0.8"
+    },
+    {
+        "problem_text": "Calculate $K_P$ at $600 . \\mathrm{K}$ for the reaction $\\mathrm{N}_2 \\mathrm{O}_4(l) \\rightleftharpoons 2 \\mathrm{NO}_2(g)$ assuming that $\\Delta H_R^{\\circ}$ is constant over the interval 298-725 K.",
+        "unit": " $10^6$",
+        "answer_number": "4.76"
+    },
+    {
+        "problem_text": "Through what potential must a proton initially at rest fall so that its de Broglie wavelength is $1.0 \\times 10^{-10} \\mathrm{~m}$ ?",
+        "unit": "V ",
+        "answer_number": "0.082"
+    },
+    {
+        "problem_text": "Two narrow slits are illuminated with red light of wavelength $694.3 \\mathrm{~nm}$ from a laser, producing a set of evenly placed bright bands on a screen located $3.00 \\mathrm{~m}$ beyond the slits. If the distance between the bands is $1.50 \\mathrm{~cm}$, then what is the distance between the slits?\r\n",
+        "unit": "mm ",
+        "answer_number": "0.139"
+    },
+    {
+        "problem_text": "A proton and a negatively charged $\\mu$ meson (called a muon) can form a short-lived species called a mesonic atom. The charge of a muon is the same as that on an electron and the mass of a muon is $207 m_{\\mathrm{e}}$. Assume that the Bohr theory can be applied to such a mesonic atom and calculate the frequency associated with the $n=1$ to $n=2$ transition in a mesonic atom.",
+        "unit": "$10^{17} \\mathrm{~Hz}$",
+        "answer_number": "4.59"
+    },
+    {
+        "problem_text": "In an orienteering class, you have the goal of moving as far (straight-line distance) from base camp as possible by making three straight-line moves. You may use the following displacements in any order: (a) $\\vec{a}, 2.0 \\mathrm{~km}$ due east (directly toward the east); (b) $\\vec{b}, 2.0 \\mathrm{~km} 30^{\\circ}$ north of east (at an angle of $30^{\\circ}$ toward the north from due east); (c) $\\vec{c}, 1.0 \\mathrm{~km}$ due west. Alternatively, you may substitute either $-\\vec{b}$ for $\\vec{b}$ or $-\\vec{c}$ for $\\vec{c}$. What is the greatest distance you can be from base camp at the end of the third displacement? (We are not concerned about the direction.)",
+        "unit": " m",
+        "answer_number": "4.8"
+    },
+    {
+        "problem_text": "In the radioactive decay of Eq. 21-13, $\\mathrm{a}^{238} \\mathrm{U}$ nucleus transforms to ${ }^{234} \\mathrm{Th}$ and an ejected ${ }^4 \\mathrm{He}$. (These are nuclei, not atoms, and thus electrons are not involved.) When the separation between ${ }^{234} \\mathrm{Th}$ and ${ }^4 \\mathrm{He}$ is $9.0 \\times 10^{-15} \\mathrm{~m}$, what are the magnitudes of the electrostatic force between them?\r\n",
+        "unit": " $10^2 \\mathrm{~N}$",
+        "answer_number": "5.1"
+    },
+    {
+        "problem_text": "At what pressure does the mean free path of argon at $20^{\\circ} \\mathrm{C}$ become comparable to the diameter of a $100 \\mathrm{~cm}^3$ vessel that contains it? Take $\\sigma=0.36 \\mathrm{~nm}^2$",
+        "unit": " $\\mathrm{Pa}$",
+        "answer_number": "0.195"
+    },
+    {
+        "problem_text": "A constant-volume perfect gas thermometer indicates a pressure of $6.69 \\mathrm{kPa}$ at the triple point temperature of water (273.16 K). What pressure indicates a temperature of $100.00^{\\circ} \\mathrm{C}$?",
+        "unit": "$\\mathrm{kPa}$ ",
+        "answer_number": "9.14"
+    },
+    {
+        "problem_text": "Two particles, each with a charge of magnitude $12 \\mathrm{nC}$, are at two of the vertices of an equilateral triangle with edge length $2.0 \\mathrm{~m}$. What is the magnitude of the electric field at the third vertex if both charges are positive?",
+        "unit": "$\\mathrm{~N} / \\mathrm{C}$ ",
+        "answer_number": "47"
+    },
+    {
+        "problem_text": "The electric field in a certain region of Earth's atmosphere is directed vertically down. At an altitude of $300 \\mathrm{~m}$ the field has magnitude $60.0 \\mathrm{~N} / \\mathrm{C}$; at an altitude of $200 \\mathrm{~m}$, the magnitude is $100 \\mathrm{~N} / \\mathrm{C}$. Find the net amount of charge contained in a cube $100 \\mathrm{~m}$ on edge, with horizontal faces at altitudes of 200 and $300 \\mathrm{~m}$.",
+        "unit": "$\\mu \\mathrm{C}$ ",
+        "answer_number": "3.54"
+    },
+    {
+        "problem_text": "At $300 \\mathrm{~K}$ and $20 \\mathrm{~atm}$, the compression factor of a gas is 0.86 . Calculate the volume occupied by $8.2 \\mathrm{mmol}$ of the gas under these conditions.",
+        "unit": " $\\mathrm{~cm}^3$",
+        "answer_number": "8.7"
+    },
+    {
+        "problem_text": "It turns out that the solution of the Schr\u00f6dinger equation for the Morse potential can be expressed as\r\n$$\r\nG(v)=\\tilde{\\omega}_{\\mathrm{e}}\\left(v+\\frac{1}{2}\\right)-\\tilde{\\omega}_{\\mathrm{e}} \\tilde{x}_{\\mathrm{e}}\\left(v+\\frac{1}{2}\\right)^2\r\n$$\r\nThe Harmonic Oscillator and Vibrational Spectroscopy\r\nwhere\r\n$$\r\n\\tilde{x}_{\\mathrm{e}}=\\frac{h c \\tilde{\\omega}_{\\mathrm{e}}}{4 D}\r\n$$\r\nGiven that $\\tilde{\\omega}_{\\mathrm{e}}=2886 \\mathrm{~cm}^{-1}$ and $D=440.2 \\mathrm{~kJ} \\cdot \\mathrm{mol}^{-1}$ for $\\mathrm{H}^{35} \\mathrm{Cl}$, calculate $\\tilde{x}_{\\mathrm{e}}$.",
+        "unit": " ",
+        "answer_number": " 0.01961"
+    },
+    {
+        "problem_text": "If a series circuit has a capacitor of $C=0.8 \\times 10^{-6} \\mathrm{~F}$ and an inductor of $L=0.2 \\mathrm{H}$, find the resistance $R$ so that the circuit is critically damped.",
+        "unit": " $\\Omega$",
+        "answer_number": "1000"
+    },
+    {
+        "problem_text": "Use the van der Waals parameters for chlorine to calculate approximate values of the radius of a $\\mathrm{Cl}_2$ molecule regarded as a sphere.",
+        "unit": "$\\mathrm{nm}$ ",
+        "answer_number": "0.139"
+    },
+    {
+        "problem_text": "The barometric formula relates the pressure of a gas of molar mass $M$ at an altitude $h$ to its pressure $p_0$ at sea level. Derive this relation by showing that the change in pressure $\\mathrm{d} p$ for an infinitesimal change in altitude $\\mathrm{d} h$ where the density is $\\rho$ is $\\mathrm{d} p=-\\rho g \\mathrm{~d} h$. Remember that $\\rho$ depends on the pressure. Evaluate the pressure difference between the top and bottom of a laboratory vessel of height 15 cm.",
+        "unit": " ",
+        "answer_number": "0.00017"
+    },
+    {
+        "problem_text": "What is the angle $\\phi$ between $\\vec{a}=3.0 \\hat{\\mathrm{i}}-4.0 \\hat{\\mathrm{j}}$ and $\\vec{b}=$ $-2.0 \\hat{\\mathrm{i}}+3.0 \\hat{\\mathrm{k}}$ ?",
+        "unit": " $^{\\circ}$",
+        "answer_number": "109"
+    },
+    {
+        "problem_text": "The density of a gaseous compound was found to be $1.23 \\mathrm{kg} \\mathrm{m}^{-3}$ at $330 \\mathrm{K}$ and $20 \\mathrm{kPa}$. What is the molar mass of the compound?",
+        "unit": " $\\mathrm{g} \\mathrm{mol}^{-1}$",
+        "answer_number": "169"
+    },
+    {
+        "problem_text": "Assume that all gases are perfect and that data refer to 298.15 K unless otherwise stated. The fugacity coefficient of a certain gas at $200 \\mathrm{~K}$ and 50 bar is 0.72. Calculate the difference of its molar Gibbs energy from that of a perfect gas in the same state.",
+        "unit": "$\\mathrm{kJ} \\mathrm{mol}^{-1}$",
+        "answer_number": "-0.55"
+    },
+    {
+        "problem_text": "A line in the Lyman series of hydrogen has a wavelength of $1.03 \\times 10^{-7} \\mathrm{~m}$. Find the original energy level of the electron.",
+        "unit": " ",
+        "answer_number": "3"
+    },
+    {
+        "problem_text": "A vessel is filled completely with liquid water and sealed at $13.56^{\\circ} \\mathrm{C}$ and a pressure of 1.00 bar. What is the pressure if the temperature of the system is raised to $82.0^{\\circ} \\mathrm{C}$ ? Under these conditions, $\\beta_{\\text {water }}=2.04 \\times 10^{-4} \\mathrm{~K}^{-1}$, $\\beta_{\\text {vessel }}=1.42 \\times 10^{-4} \\mathrm{~K}^{-1}$, and $\\kappa_{\\text {water }}=4.59 \\times 10^{-5} \\mathrm{bar}^{-1}$.",
+        "unit": "$\\mathrm{~bar}$",
+        "answer_number": "93.4"
+    },
+    {
+        "problem_text": "Two charged concentric spherical shells have radii $10.0 \\mathrm{~cm}$ and $15.0 \\mathrm{~cm}$. The charge on the inner shell is $4.00 \\times 10^{-8} \\mathrm{C}$, and that on the outer shell is $2.00 \\times 10^{-8} \\mathrm{C}$. Find the electric field at $r=12.0 \\mathrm{~cm}$.",
+        "unit": "$10^4 \\mathrm{~N} / \\mathrm{C}$ ",
+        "answer_number": "2.50"
+    },
+    {
+        "problem_text": "Suppose that a fair $n$-sided die is rolled $n$ independent times. A match occurs if side $i$ is observed on the $i$ th trial, $i=1,2, \\ldots, n$. Find the limit of this probability as $n$ increases without bound.",
+        "unit": " ",
+        "answer_number": "0.6321205588"
+    },
+    {
+        "problem_text": "In Millikan's experiment, an oil drop of radius $1.64 \\mu \\mathrm{m}$ and density $0.851 \\mathrm{~g} / \\mathrm{cm}^3$ is suspended in chamber C when a downward electric field of $1.92 \\times 10^5 \\mathrm{~N} / \\mathrm{C}$ is applied. Find the charge on the drop, in terms of $e$.",
+        "unit": "$e$ ",
+        "answer_number": "-5"
+    },
+    {
+        "problem_text": "For the reaction $\\mathrm{C}($ graphite $)+\\mathrm{H}_2 \\mathrm{O}(g) \\rightleftharpoons$ $\\mathrm{CO}(g)+\\mathrm{H}_2(g), \\Delta H_R^{\\circ}=131.28 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$ at $298.15 \\mathrm{~K}$. Use the values of $C_{P, m}^{\\circ}$ at $298.15 \\mathrm{~K}$ in the data tables to calculate $\\Delta H_R^{\\circ}$ at $125.0^{\\circ} \\mathrm{C}$.",
+        "unit": " $\\mathrm{~kJ} \\mathrm{~mol}^{-1}$",
+        "answer_number": "132.9"
+    },
+    {
+        "problem_text": "When a particle of mass $9.1 \\times 10^{-28} \\mathrm{~g}$ in a certain one-dimensional box goes from the $n=5$ level to the $n=2$ level, it emits a photon of frequency $6.0 \\times 10^{14} \\mathrm{~s}^{-1}$. Find the length of the box.",
+        "unit": "$\\mathrm{~nm}$",
+        "answer_number": "1.8"
+    },
+    {
+        "problem_text": "Autoclaves that are used to sterilize surgical tools require a temperature of $120 .{ }^{\\circ} \\mathrm{C}$ to kill some bacteria. If water is used for this purpose, at what pressure must the autoclave operate?",
+        "unit": " $\\mathrm{~atm}$",
+        "answer_number": "1.95 "
+    },
+    {
+        "problem_text": " If $P(A)=0.8, P(B)=0.5$, and $P(A \\cup B)=0.9$. What is $P(A \\cap B)$?",
+        "unit": " ",
+        "answer_number": "0.9"
+    },
+    {
+        "problem_text": "Consider the initial value problem\r\n$$\r\n9 y^{\\prime \\prime}+12 y^{\\prime}+4 y=0, \\quad y(0)=a>0, \\quad y^{\\prime}(0)=-1\r\n$$\r\nFind the critical value of $a$ that separates solutions that become negative from those that are always positive.",
+        "unit": " ",
+        "answer_number": "1.5"
+    },
+    {
+        "problem_text": "Suppose a nanostructure is modelled by an electron confined to a rectangular region with sides of lengths $L_1=1.0 \\mathrm{~nm}$ and $L_2=2.0 \\mathrm{~nm}$ and is subjected to thermal motion with a typical energy equal to $k T$, where $k$ is Boltzmann's constant. How low should the temperature be for the thermal energy to be comparable to the zero-point energy\uff1f",
+        "unit": " $10^3 \\mathrm{~K}$",
+        "answer_number": "5.5"
+    },
+    {
+        "problem_text": "For an electron in a certain rectangular well with a depth of $20.0 \\mathrm{eV}$, the lowest energy level lies $3.00 \\mathrm{eV}$ above the bottom of the well. Find the width of this well. Hint: Use $\\tan \\theta=\\sin \\theta / \\cos \\theta$",
+        "unit": "$\\mathrm{~nm}$",
+        "answer_number": "0.264"
+    },
+    {
+        "problem_text": "Let $\\bar{X}$ be the mean of a random sample of size 36 from an exponential distribution with mean 3 . Approximate $P(2.5 \\leq \\bar{X} \\leq 4)$",
+        "unit": " ",
+        "answer_number": "0.8185"
+    },
+    {
+        "problem_text": "A home buyer can afford to spend no more than $\\$ 800 /$ month on mortgage payments. Suppose that the interest rate is $9 \\%$ and that the term of the mortgage is 20 years. Assume that interest is compounded continuously and that payments are also made continuously.\r\nDetermine the total interest paid during the term of the mortgage.",
+        "unit": " $",
+        "answer_number": "102,965.21"
+    },
+    {
+        "problem_text": "Use Stokes' Theorem to evaluate $\\int_C \\mathbf{F} \\cdot d \\mathbf{r}$, where $\\mathbf{F}(x, y, z)=x y \\mathbf{i}+y z \\mathbf{j}+z x \\mathbf{k}$, and $C$ is the triangle with vertices $(1,0,0),(0,1,0)$, and $(0,0,1)$, oriented counterclockwise as viewed from above.\r\n",
+        "unit": " ",
+        "answer_number": "-0.5"
+    },
+    {
+        "problem_text": "The charges and coordinates of two charged particles held fixed in an $x y$ plane are $q_1=+3.0 \\mu \\mathrm{C}, x_1=3.5 \\mathrm{~cm}, y_1=0.50 \\mathrm{~cm}$, and $q_2=-4.0 \\mu \\mathrm{C}, x_2=-2.0 \\mathrm{~cm}, y_2=1.5 \\mathrm{~cm}$. Find the magnitude of the electrostatic force on particle 2 due to particle 1.",
+        "unit": "$\\mathrm{~N}$",
+        "answer_number": "35"
+    },
+    {
+        "problem_text": "The relationship introduced in Problem $1-48$ has been interpreted to mean that a particle of mass $m\\left(E=m c^2\\right)$ can materialize from nothing provided that it returns to nothing within a time $\\Delta t \\leq h / m c^2$. Particles that last for time $\\Delta t$ or more are called real particles; particles that last less than time $\\Delta t$ are called virtual particles. The mass of the charged pion, a subatomic particle, is $2.5 \\times 10^{-28} \\mathrm{~kg}$. What is the minimum lifetime if the pion is to be considered a real particle?",
+        "unit": "$10^{-23} \\mathrm{~s}$ ",
+        "answer_number": "2.9"
+    },
+    {
+        "problem_text": "If the distribution of $Y$ is $b(n, 0.25)$, give a lower bound for $P(|Y / n-0.25|<0.05)$ when $n=100$.",
+        "unit": " ",
+        "answer_number": "0.25"
+    },
+    {
+        "problem_text": "The collisional cross section of $\\mathrm{N}_2$ is $0.43 \\mathrm{~nm}^2$. What is the diffusion coefficient of $\\mathrm{N}_2$ at a pressure of $1 \\mathrm{~atm}$ and a temperature of $298 \\mathrm{~K}$ ?",
+        "unit": " $10^{-5} \\mathrm{~m}^2 \\mathrm{~s}^{-1}$",
+        "answer_number": "1.06"
+    },
+    {
+        "problem_text": "A boatman wants to cross a canal that is $3 \\mathrm{~km}$ wide and wants to land at a point $2 \\mathrm{~km}$ upstream from his starting point. The current in the canal flows at $3.5 \\mathrm{~km} / \\mathrm{h}$ and the speed of his boat is $13 \\mathrm{~km} / \\mathrm{h}$. How long will the trip take?\r\n",
+        "unit": " $\\mathrm{min}$",
+        "answer_number": "20.2"
+    },
+    {
+        "problem_text": "An unknown charge sits on a conducting solid sphere of radius $10 \\mathrm{~cm}$. If the electric field $15 \\mathrm{~cm}$ from the center of the sphere has the magnitude $3.0 \\times 10^3 \\mathrm{~N} / \\mathrm{C}$ and is directed radially inward, what is the net charge on the sphere?\r\n",
+        "unit": "$\\mathrm{nC}$ ",
+        "answer_number": "-7.5"
+    },
+    {
+        "problem_text": "Find the shortest path between the $(x, y, z)$ points $(0,-1,0)$ and $(0,1,0)$ on the conical surface $z=1-\\sqrt{x^2+y^2}$. What is the length of the path? Note: this is the shortest mountain path around a volcano.",
+        "unit": "",
+        "answer_number": "2.534324263"
+    },
+    {
+        "problem_text": "In order to get in shape for mountain climbing, an avid hiker with a mass of $60 . \\mathrm{kg}$ ascends the stairs in the world's tallest structure, the $828 \\mathrm{~m}$ tall Burj Khalifa in Dubai, United Arab Emirates. Assume that she eats energy bars on the way up and that her body is $25 \\%$ efficient in converting the energy content of the bars into the work of climbing. How many energy bars does she have to eat if a single bar produces $1.08 \\times 10^3 \\mathrm{~kJ}$ of energy upon metabolizing?",
+        "unit": " ",
+        "answer_number": "1.8"
+    },
+    {
+        "problem_text": "Draw one card at random from a standard deck of cards. The sample space $S$ is the collection of the 52 cards. Assume that the probability set function assigns $1 / 52$ to each of the 52 outcomes. Let\r\n$$\r\n\\begin{aligned}\r\nA & =\\{x: x \\text { is a jack, queen, or king }\\}, \\\\\r\nB & =\\{x: x \\text { is a } 9,10, \\text { or jack and } x \\text { is red }\\}, \\\\\r\nC & =\\{x: x \\text { is a club }\\}, \\\\\r\nD & =\\{x: x \\text { is a diamond, a heart, or a spade }\\} .\r\n\\end{aligned}\r\n$$\r\nFind $P(A)$",
+        "unit": " ",
+        "answer_number": "0.2307692308"
+    },
+    {
+        "problem_text": "The NOF molecule is an asymmetric rotor with rotational constants $3.1752 \\mathrm{~cm}^{-1}, 0.3951 \\mathrm{~cm}^{-1}$, and $0.3505 \\mathrm{~cm}^{-1}$. Calculate the rotational partition function of the molecule at $25^{\\circ} \\mathrm{C}$.",
+        "unit": "$10^3$",
+        "answer_number": "7.97"
+    },
+    {
+        "problem_text": "Assume that all gases are perfect and that data refer to 298.15 K unless otherwise stated. Suppose that $3.0 \\mathrm{mmol} \\mathrm{N}_2$ (g) occupies $36 \\mathrm{~cm}^3$ at $300 \\mathrm{~K}$ and expands to $60 \\mathrm{~cm}^3$. Calculate $\\Delta G$ for the process.",
+        "unit": " $\\text{J}$",
+        "answer_number": "-3.8"
+    },
+    {
+        "problem_text": "Assume that all gases are perfect and that data refer to 298.15 K unless otherwise stated. Calculate the total change in entropy, when a sample of nitrogen gas of mass $14 \\mathrm{~g}$ at $298 \\mathrm{~K}$ and $1.00 \\mathrm{bar}$ doubles its volume in an adiabatic reversible expansion.",
+        "unit": " ",
+        "answer_number": "0"
+    },
+    {
+        "problem_text": "Let $Y_1 < Y_2 < \\cdots < Y_8$ be the order statistics of eight independent observations from a continuous-type distribution with 70 th percentile $\\pi_{0.7}=27.3$. Determine $P\\left(Y_7<27.3\\right)$.",
+        "unit": " ",
+        "answer_number": "0.2553"
+    },
+    {
+        "problem_text": "If the distribution of $Y$ is $b(n, 0.25)$, give a lower bound for $P(|Y / n-0.25|<0.05)$ when $n=500$.",
+        "unit": " ",
+        "answer_number": "0.85"
+    },
+    {
+        "problem_text": "Assume all gases are perfect unless stated otherwise. Note that 1 atm = 1.013 25 bar. Unless otherwise stated, thermochemical data are for 298.15 K.\r\nSilylene $\\left(\\mathrm{SiH}_2\\right)$ is a key intermediate in the thermal decomposition of silicon hydrides such as silane $\\left(\\mathrm{SiH}_4\\right)$ and disilane $\\left(\\mathrm{Si}_2 \\mathrm{H}_6\\right)$. Moffat et al. (J. Phys. Chem. 95, 145 (1991)) report $\\Delta_{\\mathrm{f}} H^{\\ominus}\\left(\\mathrm{SiH}_2\\right)=+274 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$. If $\\Delta_{\\mathrm{f}} H^{\\ominus}\\left(\\mathrm{SiH}_4\\right)=+34.3 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$ and $\\Delta_{\\mathrm{f}} H^{\\ominus}\\left(\\mathrm{Si}_2 \\mathrm{H}_6\\right)=+80.3 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$(CRC Handbook (2008)), compute the standard enthalpies of the following reaction:\r\n$\\mathrm{SiH}_4 (\\mathrm{g}) \\rightarrow \\mathrm{SiH}_2(\\mathrm{g})+\\mathrm{H}_2(\\mathrm{g})$",
+        "unit": "$\\mathrm{kJ} \\mathrm{mol}^{-1}$",
+        "answer_number": "240"
+    },
+    {
+        "problem_text": "An electron is shot directly\r\nFigure 23-50 Problem 40. toward the center of a large metal plate that has surface charge density $-2.0 \\times 10^{-6} \\mathrm{C} / \\mathrm{m}^2$. If the initial kinetic energy of the electron is $1.60 \\times 10^{-17} \\mathrm{~J}$ and if the electron is to stop (due to electrostatic repulsion from the plate) just as it reaches the plate, how far from the plate must the launch point be?",
+        "unit": "$\\mathrm{~mm}$ ",
+        "answer_number": "0.44"
+    },
+    {
+        "problem_text": "A perfect gas undergoes isothermal compression, which reduces its volume by $2.20 \\mathrm{dm}^3$. The final pressure and volume of the gas are $5.04 \\mathrm{bar}$ and $4.65 \\mathrm{dm}^3$, respectively. Calculate the original pressure of the gas in bar.",
+        "unit": "$ \\mathrm{bar}$",
+        "answer_number": "3.42"
+    },
+    {
+        "problem_text": "The demand function for a commodity is given by\r\n$$\r\np=2000-0.1 x-0.01 x^2\r\n$$\r\nFind the consumer surplus when the sales level is 100 .",
+        "unit": " $\\$$",
+        "answer_number": "7166.67"
+    },
+    {
+        "problem_text": "For small, slowly falling objects, the assumption made in the text that the drag force is proportional to the velocity is a good one. For larger, more rapidly falling objects, it is more accurate to assume that the drag force is proportional to the square of the velocity.  If m = 10 kg, find the drag coefficient so that the limiting velocity is 49 m/s.",
+        "unit": " ",
+        "answer_number": "0.0408"
+    },
+    {
+        "problem_text": "A clown is juggling four balls simultaneously. Students use a video tape to determine that it takes the clown $0.9 \\mathrm{~s}$ to cycle each ball through his hands (including catching, transferring, and throwing) and to be ready to catch the next ball. What is the minimum vertical speed the clown must throw up each ball?\r\n",
+        "unit": "$\\mathrm{~m} \\cdot \\mathrm{s}^{-1}$ ",
+        "answer_number": "13.2"
+    },
+    {
+        "problem_text": "A student drops a water-filled balloon from the roof of the tallest building in town trying to hit her roommate on the ground (who is too quick). The first student ducks back but hears the water splash $4.021 \\mathrm{~s}$ after dropping the balloon. If the speed of sound is $331 \\mathrm{~m} / \\mathrm{s}$, find the height of the building, neglecting air resistance.",
+        "unit": "$\\mathrm{~m}$ ",
+        "answer_number": "71"
+    },
+    {
+        "problem_text": "What is the total charge in coulombs of $75.0 \\mathrm{~kg}$ of electrons?",
+        "unit": " $10^{13} \\mathrm{C}$",
+        "answer_number": "-1.32"
+    },
+    {
+        "problem_text": "Find the fundamental period of the given function:\r\n$$f(x)=\\left\\{\\begin{array}{ll}(-1)^n, & 2 n-1 \\leq x<2 n, \\\\ 1, & 2 n \\leq x<2 n+1 ;\\end{array} \\quad n=0, \\pm 1, \\pm 2, \\ldots\\right.$$",
+        "unit": " ",
+        "answer_number": "4"
+    },
+    {
+        "problem_text": "An Earth satellite has a perigee of $300$ km and an apogee of $3,500$ km above Earth's surface. How far is the satellite above Earth when it has moved halfway from perigee to apogee?",
+        "unit": "$km$ ",
+        "answer_number": "1900"
+    },
+    {
+        "problem_text": "The half-cell potential for the reaction $\\mathrm{O}_2(g)+4 \\mathrm{H}^{+}(a q)+4 \\mathrm{e}^{-} \\rightarrow 2 \\mathrm{H}_2 \\mathrm{O}(l)$ is $+1.03 \\mathrm{~V}$ at $298.15 \\mathrm{~K}$ when $a_{\\mathrm{O}_2}=1.00$. Determine $a_{\\mathrm{H}^{+}}$",
+        "unit": " $10^{-4}$",
+        "answer_number": "4.16"
+    },
+    {
+        "problem_text": "A muscle fiber contracts by $3.5 \\mathrm{~cm}$ and in doing so lifts a weight. Calculate the work performed by the fiber. Assume the muscle fiber obeys Hooke's law $F=-k x$ with a force constant $k$ of $750 . \\mathrm{N} \\mathrm{m}^{-1}$.",
+        "unit": "$\\mathrm{~J}$",
+        "answer_number": "0.46"
+    },
+    {
+        "problem_text": "For a two-level system where $v=1.50 \\times 10^{13} \\mathrm{~s}^{-1}$, determine the temperature at which the internal energy is equal to $0.25 \\mathrm{Nhv}$, or $1 / 2$ the limiting value of $0.50 \\mathrm{Nhv}$.",
+        "unit": " $\\mathrm{~K}$",
+        "answer_number": "655"
+    }
+]

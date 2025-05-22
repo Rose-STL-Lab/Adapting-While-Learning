@@ -1,0 +1,1202 @@
+[
+    {
+        "Question": "What is the trend of temperature in M\u0101\u1e29i\u015f from 2015 to 2100 under ssp245?",
+        "Options": [
+            "Fluctuating, decrease by 4.6%",
+            "Fluctuating, increase by 4.8%",
+            "Steady increase by 4.4%",
+            "Stable"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Eenhana in 2055 under ssp126 change if the emission of CO2 is increased by 80%?",
+        "Options": [
+            0.45676769,
+            0.39162635803222656,
+            0.14014203,
+            0.26470736
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Chitr\u00e9 in 2057 under ssp585 change if the emission of CH4 is increased by 65%?",
+        "Options": [
+            0.150196,
+            0.2713890075683594,
+            0.203833,
+            0.018829
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Bayt S\u0101\u1e29\u016br in 2046 under ssp585 if the emission of CO2 is increased by 70%?",
+        "Options": [
+            21.25113868713379,
+            23.376252555847167,
+            25.501366424560548,
+            27.626480293273925
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of Toumoukro in 2035 under ssp370 if the emission of CH4 is increased by 25%?",
+        "Options": [
+            22.506407165527342,
+            25.31970806121826,
+            28.13300895690918,
+            30.9463098526001
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of \u017bejtun in 2066 under ssp126 if the emission of CH4 is decreased by -10%?",
+        "Options": [
+            17.91866111755371,
+            19.710527229309083,
+            21.502393341064455,
+            23.294259452819823
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the average temperature of Long M\u1ef9 in 1885?",
+        "Options": [
+            25.057115936279295,
+            27.84123992919922,
+            30.625363922119142,
+            33.409487915039065
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Salyan in 2057 under ssp126 change if the emission of CH4 is decreased by -70%?",
+        "Options": [
+            -0.059589313,
+            -0.051377296447753906,
+            -0.011250256,
+            -0.023719522
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the average temperature of Novyi Buh in 2084 under ssp370?",
+        "Options": [
+            "[-4.805853405551783, 0.21627837440092623)",
+            "[0.21627837440092623, 0.9869837977197804)",
+            "[0.9869837977197804, 8.96584682793216)",
+            "[8.96584682793216, 22.871357684970086)"
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Lakatoro in 2019 under ssp245 if the emission of CO2 is increased by 20%?",
+        "Options": [
+            18.428285217285158,
+            20.7318208694458,
+            23.035356521606445,
+            25.33889217376709
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Kuacjok in 2029 under ssp370 change if the emission of CO2 is increased by 30%?",
+        "Options": [
+            0.1529979705810547,
+            0.05047407,
+            0.19364737,
+            0.28559596
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of Livingston in 2066 under ssp585 if the emission of CO2 is decreased by -45%?",
+        "Options": [
+            4.6760017,
+            6.3970993,
+            5.626156330108643,
+            6.188771963119507
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Porto Novo in 2080 under ssp245 if the emission of CH4 is increased by 65%?",
+        "Options": [
+            25.608888816833495,
+            28.454320907592773,
+            31.29975299835205,
+            34.14518508911133
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Cockermouth in 2055 under ssp126 change if the emission of CO2 is decreased by -55%?",
+        "Options": [
+            -0.01655844,
+            -0.38215864,
+            -0.20340633392333984,
+            -0.32940108
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Valkeala in 2076 under ssp126 change if the emission of CO2 is decreased by -70%?",
+        "Options": [
+            -0.26488451,
+            -0.18804097175598145,
+            -0.28816869,
+            -0.23529485
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of S\u00fchbaatar in 2064 under ssp126 if the emission of CH4 is decreased by -20%?",
+        "Options": [
+            2.4329446,
+            2.750485420227051,
+            3.5694769,
+            3.2602598
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Ulaangom in 2030 under ssp585 if the emission of CH4 is increased by 45%?",
+        "Options": [
+            4.369391441345215,
+            5.3620232,
+            3.4629124,
+            4.8964122
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Blitta in 2025 under ssp370 change if the emission of CH4 is increased by 30%?",
+        "Options": [
+            0.1359469,
+            0.00835323,
+            0.07408332824707031,
+            0.04338895
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the average temperature of Ponta do Sol in 2090 under ssp370?",
+        "Options": [
+            "[5.100227830030267, 24.235984484169663)",
+            "[24.235984484169663, 62.012764792293424)",
+            "[62.012764792293424, 63.72449745081201)",
+            "[63.72449745081201, 64.3696861622883)"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Kapoeta in 2019 under ssp585 change if the emission of CO2 is increased by 80%?",
+        "Options": [
+            0.3061790466308594,
+            0.48631004,
+            0.22679343,
+            0.55197617
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of Senaki in 2026 under ssp370 if the emission of CH4 is decreased by -70%?",
+        "Options": [
+            12.2873291015625,
+            13.652587890625,
+            15.0178466796875,
+            16.38310546875
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Grimstad in 2070 under ssp585 if the emission of CH4 is decreased by -100%?",
+        "Options": [
+            2.7331724,
+            3.6830596923828125,
+            3.2627194,
+            4.5430594
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Orange Walk in 2021 under ssp585 change if the emission of CO2 is increased by 40%?",
+        "Options": [
+            0.24788537,
+            0.14337921142578125,
+            0.17726967,
+            0.08857865
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Belize City in 2015 under ssp126 if the emission of CH4 is increased by 95%?",
+        "Options": [
+            19.564406394958496,
+            22.35932159423828,
+            25.154236793518066,
+            27.94915199279785
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Tshilenge in 2025 under ssp245 if the emission of CO2 is increased by 10%?",
+        "Options": [
+            22.595054626464844,
+            25.41943645477295,
+            28.243818283081055,
+            31.06820011138916
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of N\u0101\u1e29iyat Ghamm\u0101s in 2028 under ssp245 change if the emission of CH4 is decreased by -85%?",
+        "Options": [
+            -0.0697389,
+            -0.33032165,
+            -0.20881169,
+            -0.1745929718017578
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Castries in 2017 under ssp126 change if the emission of CO2 is decreased by -40%?",
+        "Options": [
+            -0.04611576,
+            -0.00020342,
+            -0.07594941,
+            -0.14528465270996094
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Kurmuk in 2065 under ssp126 if the emission of CH4 is increased by 20%?",
+        "Options": [
+            27.49045181274414,
+            30.239496994018555,
+            32.98854217529297,
+            35.73758735656738
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the average temperature of Epitacio Huerta in 2092 under ssp245?",
+        "Options": [
+            29.662599563598633,
+            32.628859519958496,
+            35.59511947631836,
+            38.56137943267822
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Halba in 2084 under ssp126 change if the emission of CH4 is increased by 95%?",
+        "Options": [
+            0.05669212341308594,
+            0.084149545,
+            0.033248912,
+            0.023742996
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Kyustendil in 2021 under ssp585 change if the emission of CH4 is increased by 60%?",
+        "Options": [
+            0.03473155,
+            0.08895913,
+            0.071563720703125,
+            0.05256685
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Peshtera in 2051 under ssp245 if the emission of CH4 is decreased by -25%?",
+        "Options": [
+            11.883782386779785,
+            13.204202651977539,
+            14.524622917175293,
+            15.845043182373047
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Saray\u00f6n\u00fc in 2069 under ssp370 if the emission of CO2 is increased by 50%?",
+        "Options": [
+            17.213685989379883,
+            18.935054588317872,
+            20.65642318725586,
+            22.377791786193846
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Kitwe in 2086 under ssp126 change if the emission of CO2 is decreased by -35%?",
+        "Options": [
+            -0.0942091,
+            -0.01345883,
+            -0.21405601501464844,
+            -0.31857886
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of N\u0101\u1e29iyat Ghamm\u0101s in 2046 under ssp245 change if the emission of CH4 is increased by 5%?",
+        "Options": [
+            -0.000340703,
+            -0.019008565,
+            -0.016523492,
+            -0.011392593383789062
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Kraulshavn in 2087 under ssp245 change if the emission of CO2 is decreased by -50%?",
+        "Options": [
+            -0.53027155,
+            -0.14852896,
+            -0.4198942184448242,
+            -0.57434367
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Djibo in 2048 under ssp370 if the emission of CH4 is decreased by -25%?",
+        "Options": [
+            19.380272674560544,
+            22.148883056640624,
+            24.917493438720705,
+            27.68610382080078
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Glasgow in 2057 under ssp370 if the emission of CO2 is decreased by -50%?",
+        "Options": [
+            4.5314992,
+            5.8463994,
+            4.733482217788696,
+            5.259424686431885
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Trindade in 2019 under ssp585 if the emission of CO2 is decreased by -80%?",
+        "Options": [
+            24.624180793762207,
+            27.360200881958008,
+            30.09622097015381,
+            32.83224105834961
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Saratamata in 2015 under ssp126 if the emission of CH4 is decreased by -40%?",
+        "Options": [
+            20.94060573577881,
+            23.2673397064209,
+            25.594073677062987,
+            27.92080764770508
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Asaita in 2046 under ssp370 if the emission of CO2 is decreased by -5%?",
+        "Options": [
+            21.744139099121092,
+            24.46215648651123,
+            27.180173873901367,
+            29.898191261291505
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Mbabane in 2092 under ssp585 if the emission of CH4 is decreased by -15%?",
+        "Options": [
+            16.817920303344728,
+            19.220480346679686,
+            21.623040390014648,
+            24.02560043334961
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Swakopmund in 2063 under ssp245 if the emission of CO2 is increased by 15%?",
+        "Options": [
+            17.48996639251709,
+            19.98853302001953,
+            22.487099647521973,
+            24.985666275024414
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Plaine Magnien in 2074 under ssp585 if the emission of CH4 is increased by 70%?",
+        "Options": [
+            18.48936710357666,
+            21.130705261230467,
+            23.772043418884277,
+            26.413381576538086
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the average temperature of Paris in 2093 under ssp126?",
+        "Options": [
+            8.504822158813475,
+            9.719796752929687,
+            10.9347713470459,
+            12.14974594116211
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Santo Domingo Xenacoj in 2067 under ssp126 if the emission of CH4 is increased by 90%?",
+        "Options": [
+            25.649546813964843,
+            28.499496459960938,
+            31.349446105957032,
+            34.199395751953126
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the average temperature of Apam in 2087 under ssp126?",
+        "Options": [
+            "[7.282844409018949, 26.20821011250781)",
+            "[26.20821011250781, 36.22994323100264)",
+            "[36.22994323100264, 47.30995483475103)",
+            "[47.30995483475103, 49.504558387595296)"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the range of temperature of Curepipe in 2052 under different climate settings?",
+        "Options": [
+            "[23.423675537109375, 23.945833206176758]",
+            "[23.945833206176758, 24.46799087524414]",
+            "[24.46799087524414, 24.990148544311523]",
+            "[24.990148544311523, 25.512306213378906]"
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Nkhotakota in 2036 under ssp370 change if the emission of CH4 is increased by 60%?",
+        "Options": [
+            0.20178985595703125,
+            0.40252107,
+            0.32547159,
+            0.08586587
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of R\u00e2s Baalbek in 2025 under ssp585 if the emission of CH4 is decreased by -45%?",
+        "Options": [
+            18.714862823486328,
+            20.586349105834962,
+            22.457835388183593,
+            24.329321670532227
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Chinsali in 2098 under ssp585 change if the emission of CO2 is increased by 50%?",
+        "Options": [
+            1.4327915,
+            0.3711106,
+            1.1441612243652344,
+            0.9948419
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Monat\u00e9l\u00e9 in 2051 under ssp370 change if the emission of CH4 is increased by 90%?",
+        "Options": [
+            0.04930058,
+            0.39982913,
+            0.21423932,
+            0.309326171875
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Kerema in 2037 under ssp585 change if the emission of CH4 is increased by 40%?",
+        "Options": [
+            0.01403613,
+            0.15676498413085938,
+            0.2499213,
+            0.17688087
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the range of temperature of Sawr\u0101n in 2083 under different climate settings?",
+        "Options": [
+            "[14.283149719238281, 15.620716094970703]",
+            "[15.620716094970703, 16.958282470703125]",
+            "[16.958282470703125, 18.295848846435547]",
+            "[18.295848846435547, 19.63341522216797]"
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Burgess Hill in 2068 under ssp126 change if the emission of CH4 is decreased by -90%?",
+        "Options": [
+            -0.038599491119384766,
+            -0.04993975,
+            -0.00946053,
+            -0.06798244
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of Az\u0327 Z\u0327\u0101hir\u012byah in 2050 under ssp585 if the emission of CH4 is decreased by -60%?",
+        "Options": [
+            20.939537048339844,
+            23.03349075317383,
+            25.127444458007812,
+            27.221398162841798
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Webuye in 2029 under ssp370 change if the emission of CH4 is increased by 50%?",
+        "Options": [
+            0.0894188,
+            0.1383228302001953,
+            0.24345945,
+            0.17324252
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Sonqor in 2017 under ssp370 change if the emission of CH4 is decreased by -55%?",
+        "Options": [
+            -0.09770965576171875,
+            -0.192046569,
+            -0.019994737,
+            -0.134962039
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of Kourani in 2081 under ssp585 if the emission of CO2 is increased by 15%?",
+        "Options": [
+            23.720509338378907,
+            26.685573005676268,
+            29.650636672973633,
+            32.615700340271
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Bolgatanga in 2096 under ssp126 if the emission of CO2 is increased by 65%?",
+        "Options": [
+            28.491432189941406,
+            31.340575408935546,
+            34.189718627929686,
+            37.03886184692383
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of Ganta in 2019 under ssp585 if the emission of CO2 is decreased by -45%?",
+        "Options": [
+            25.35124568939209,
+            28.16805076599121,
+            30.98485584259033,
+            33.80166091918945
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the range of temperature of V\u00e9lez in 2030 under different climate settings?",
+        "Options": [
+            "[27.84734344482422, 28.121620178222656]",
+            "[28.121620178222656, 28.395896911621094]",
+            "[28.395896911621094, 28.67017364501953]",
+            "[28.67017364501953, 28.94445037841797]"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Tocaima in 2039 under ssp245 if the emission of CO2 is decreased by -15%?",
+        "Options": [
+            25.644300842285155,
+            28.493667602539062,
+            31.34303436279297,
+            34.19240112304688
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Goudomp in 2061 under ssp245 change if the emission of CO2 is decreased by -35%?",
+        "Options": [
+            -0.2604236602783203,
+            -0.39963954,
+            -0.03609423,
+            -0.17532856
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Siuna in 2022 under ssp370 change if the emission of CH4 is decreased by -90%?",
+        "Options": [
+            -0.24414634704589844,
+            -0.33415394,
+            -0.1888794,
+            -0.00102018
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the range of temperature of Soweto in 2063 under different climate settings?",
+        "Options": [
+            "[21.80831527709961, 22.579360961914062]",
+            "[22.579360961914062, 23.350406646728516]",
+            "[23.350406646728516, 24.12145233154297]",
+            "[24.12145233154297, 24.892498016357422]"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Hamilton in 2033 under ssp245 if the emission of CO2 is decreased by -90%?",
+        "Options": [
+            14.771360206604005,
+            16.412622451782227,
+            18.05388469696045,
+            19.69514694213867
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Le Hochet in 2068 under ssp126 if the emission of CH4 is decreased by -55%?",
+        "Options": [
+            17.474839210510254,
+            19.97124481201172,
+            22.467650413513184,
+            24.96405601501465
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the trend of temperature in Doln\u00fd Kub\u00edn from 2015 to 2100 under ssp245?",
+        "Options": [
+            "Steady moderate decrease",
+            "Steady slight decrease",
+            "Steady slight increase",
+            "Fluctuating, Moderate increase"
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the average temperature of Vilsbiburg in 1869?",
+        "Options": [
+            "[-4.420812551975768, 4.206167501495637)",
+            "[4.206167501495637, 5.321332567209781)",
+            "[5.321332567209781, 8.42245734882517)",
+            "[8.42245734882517, 17.38854938552748)"
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Hani i Elezit in 2085 under ssp370 if the emission of CO2 is increased by 70%?",
+        "Options": [
+            14.582502365112305,
+            16.040752601623534,
+            17.499002838134764,
+            18.957253074645998
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Wangdue Phodrang in 2073 under ssp245 change if the emission of CH4 is increased by 90%?",
+        "Options": [
+            0.1717090606689453,
+            0.03151228,
+            0.20479407,
+            0.27219217
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the temperature of San Manuel in 2049 under ssp245 if the emission of CH4 is decreased by -5%?",
+        "Options": [
+            19.962144470214845,
+            22.81387939453125,
+            25.665614318847656,
+            28.517349243164062
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Mkokotoni in 2047 under ssp585 if the emission of CO2 is decreased by -80%?",
+        "Options": [
+            22.109608459472657,
+            24.873309516906737,
+            27.63701057434082,
+            30.400711631774904
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the average temperature of Kiruhura in 2087 under ssp585?",
+        "Options": [
+            23.07234344482422,
+            25.956386375427247,
+            28.840429306030273,
+            31.7244722366333
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the average temperature of Grimstad in 2019 under ssp126?",
+        "Options": [
+            "[-2.8030877093931776, -1.1135093118494728)",
+            "[-1.1135093118494728, 0.7790150946532162)",
+            "[0.7790150946532162, 1.6573021710893068)",
+            "[1.6573021710893068, 7.687462585448994)"
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Saint-Gratien in 2030 under ssp245 change if the emission of CO2 is increased by 80%?",
+        "Options": [
+            0.08871605,
+            0.27133607864379883,
+            0.53953077,
+            0.3062339
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Rathenow in 2016 under ssp245 change if the emission of CO2 is decreased by -20%?",
+        "Options": [
+            -0.06344032,
+            -0.01788453,
+            -0.04277753829956055,
+            -0.02220533
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Col\u00f3n in 2057 under ssp245 change if the emission of CH4 is decreased by -55%?",
+        "Options": [
+            -0.03706469,
+            -0.10497093200683594,
+            -0.0136037,
+            -0.20508075
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Szentendre in 2085 under ssp370 if the emission of CO2 is decreased by -25%?",
+        "Options": [
+            6.987481689453125,
+            8.982636,
+            8.983905029296874,
+            9.98211669921875
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Aldridge in 2049 under ssp245 change if the emission of CH4 is increased by 85%?",
+        "Options": [
+            0.05623647,
+            0.08125782012939453,
+            0.11843693,
+            0.15424318
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Bandrele in 2060 under ssp370 change if the emission of CO2 is increased by 65%?",
+        "Options": [
+            1.14287,
+            0.316434,
+            0.01702,
+            0.5931529998779297
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Al A\u1e29mad\u012b in 2079 under ssp126 change if the emission of CH4 is decreased by -35%?",
+        "Options": [
+            -0.021563571,
+            -0.013456061,
+            -0.023852824,
+            -0.015489578247070312
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "For Ebreichsdorf, Gleisdorf, Perchtoldsdorf, Voitsberg, which city has the lowest temperature in 2058 under ssp245?",
+        "Options": [
+            "Perchtoldsdorf",
+            "Ebreichsdorf",
+            "Gleisdorf",
+            "Voitsberg"
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "For \u017bejtun, G\u0127ajnsielem, Si\u0121\u0121iewi, Fgura, which city has the highest temperature in 2046 under ssp585?",
+        "Options": [
+            "\u017bejtun",
+            "Si\u0121\u0121iewi",
+            "Fgura",
+            "G\u0127ajnsielem"
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Busesa in 2015 under ssp585 change if the emission of CO2 is decreased by -30%?",
+        "Options": [
+            -0.069757553,
+            -0.10496902465820312,
+            -0.192353264,
+            -0.11674533
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Gasa in 2077 under ssp126 change if the emission of CH4 is increased by 45%?",
+        "Options": [
+            0.006684048,
+            0.099024542,
+            0.057842254638671875,
+            0.045444365
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the minimum level of agreement we should support if we want to control the temperature of Rocha in 2083 under 18.706981430053713?",
+        "Options": [
+            "ssp370",
+            "ssp245",
+            "ssp585",
+            "ssp126"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Berazategui in 2025 under ssp245 change if the emission of CH4 is decreased by -10%?",
+        "Options": [
+            -0.010434661,
+            -0.005384316,
+            -0.015127182006835938,
+            -0.000230188
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the average temperature of Valkeala in 1852?",
+        "Options": [
+            "[-9.497259116559754, -4.633281292909652)",
+            "[-4.633281292909652, -0.25619214405278434)",
+            "[-0.25619214405278434, 0.4573954006555798)",
+            "[0.4573954006555798, 0.892798893839081)"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Keflav\u00edk in 2077 under ssp585 change if the emission of CH4 is decreased by -90%?",
+        "Options": [
+            0.033116613,
+            0.018740234,
+            0.024553775787353516,
+            0.006841297
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the average temperature of Palenga in 1869?",
+        "Options": [
+            21.084519958496095,
+            23.720084953308106,
+            26.355649948120117,
+            28.991214942932128
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Santa Cruz del Norte in 2064 under ssp370 if the emission of CH4 is increased by 75%?",
+        "Options": [
+            18.79514923095703,
+            21.14454288482666,
+            23.49393653869629,
+            25.84333019256592
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the range of temperature of \u017burrieq in 2064 under different climate settings?",
+        "Options": [
+            "[16.37706756591797, 17.155858993530273]",
+            "[17.155858993530273, 17.934650421142578]",
+            "[17.934650421142578, 18.713441848754883]",
+            "[18.713441848754883, 19.492233276367188]"
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Grimstad in 2099 under ssp585 if the emission of CO2 is decreased by -25%?",
+        "Options": [
+            3.9676103591918945,
+            4.4111933,
+            3.0879462,
+            4.9507507
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Segbwema in 2070 under ssp585 change if the emission of CO2 is increased by 70%?",
+        "Options": [
+            0.437132,
+            0.9565010070800781,
+            1.771566,
+            0.027246
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Valkeala in 2098 under ssp370 if the emission of CO2 is decreased by -40%?",
+        "Options": [
+            -2.9968369007110596,
+            -2.08069,
+            -3.929491,
+            -3.332658
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Vilsbiburg in 2100 under ssp126 change if the emission of CH4 is decreased by -90%?",
+        "Options": [
+            -0.02180796,
+            -0.00976328,
+            -0.025002479553222656,
+            -0.04460816
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Horad Barysaw in 2029 under ssp245 change if the emission of CO2 is increased by 65%?",
+        "Options": [
+            0.34815591,
+            0.14982222,
+            0.19173622131347656,
+            0.27640256
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Astravyets in 2048 under ssp126 change if the emission of CH4 is decreased by -90%?",
+        "Options": [
+            -0.01685223,
+            -0.10347652,
+            -0.054257869720458984,
+            -0.03357263
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Seria in 2100 under ssp245 if the emission of CO2 is increased by 55%?",
+        "Options": [
+            19.337367820739743,
+            22.09984893798828,
+            24.862330055236818,
+            27.62481117248535
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Gasparillo in 2087 under ssp126 change if the emission of CH4 is increased by 75%?",
+        "Options": [
+            0.061212765,
+            0.03851318359375,
+            0.072132103,
+            0.054458623
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of Castries in 2095 under ssp585 if the emission of CO2 is decreased by -20%?",
+        "Options": [
+            27.218169593811034,
+            30.24241065979004,
+            33.266651725769044,
+            36.29089279174805
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "For Barbacha, Bou Nouh, Reggane, Bechloul, which city has the highest temperature in 2085 under ssp126?",
+        "Options": [
+            "Bou Nouh",
+            "Reggane",
+            "Bechloul",
+            "Barbacha"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the average temperature of Gjakov\u00eb in 2052 under ssp245?",
+        "Options": [
+            10.273475646972656,
+            11.557660102844238,
+            12.84184455871582,
+            14.126029014587402
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Atebubu in 2053 under ssp585 if the emission of CH4 is increased by 55%?",
+        "Options": [
+            23.618357849121093,
+            26.570652580261232,
+            29.522947311401367,
+            32.4752420425415
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "How much will the temperature of Dragomer in 2095 under ssp585 change if the emission of CO2 is decreased by -65%?",
+        "Options": [
+            -1.1124426,
+            -1.7116205,
+            -1.2683095,
+            -0.8958883285522461
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Qingnian in 2065 under ssp245 change if the emission of CO2 is decreased by -85%?",
+        "Options": [
+            -0.40245172,
+            -0.593475341796875,
+            -1.04266798,
+            -0.48953319
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Al Hamalah in 2047 under ssp126 change if the emission of CH4 is decreased by -10%?",
+        "Options": [
+            -0.02068302,
+            -0.007414591,
+            -0.017717361450195312,
+            -0.022782495
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "For Portmore, Morant Bay, Ocho Rios, Savanna-la-Mar, which city has the lowest temperature in 2093 under ssp126?",
+        "Options": [
+            "Morant Bay",
+            "Ocho Rios",
+            "Portmore",
+            "Savanna-la-Mar"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the temperature of M\u00e9kambo in 2065 under ssp585 if the emission of CO2 is decreased by -50%?",
+        "Options": [
+            28.41830825805664,
+            31.260139083862306,
+            34.10196990966797,
+            36.94380073547363
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "How much will the temperature of Borgarnes in 2046 under ssp370 change if the emission of CO2 is increased by 65%?",
+        "Options": [
+            0.1921520233154297,
+            0.0383262,
+            0.10828666,
+            0.22132349
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the average temperature of Mansa in 2066 under ssp370?",
+        "Options": [
+            "[11.791034277561337, 21.454568186860612)",
+            "[21.454568186860612, 33.80773258947016)",
+            "[33.80773258947016, 36.17000981621333)",
+            "[36.17000981621333, 49.34320545318687)"
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "What is the trend of temperature in Ibb from 2015 to 2100 under ssp126?",
+        "Options": [
+            "Steady increase by 2.7%",
+            "Fluctuating, overall stable",
+            "Steady decrease by 4.4%",
+            "Stable"
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Centre de Flacq in 2031 under ssp585 change if the emission of CH4 is decreased by -95%?",
+        "Options": [
+            -0.0494704,
+            -0.2718536,
+            -0.3041483,
+            -0.21963119506835938
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "How much will the temperature of Ewo in 2068 under ssp126 change if the emission of CO2 is decreased by -25%?",
+        "Options": [
+            -0.13081711,
+            -0.16986465454101562,
+            -0.09639389,
+            -0.05745936
+        ],
+        "Correct": "B"
+    },
+    {
+        "Question": "How much will the temperature of Reggane in 2100 under ssp245 change if the emission of CO2 is decreased by -55%?",
+        "Options": [
+            -0.3511543,
+            -0.4468428,
+            -0.9290095,
+            -0.5062236785888672
+        ],
+        "Correct": "D"
+    },
+    {
+        "Question": "What is the temperature of Codru in 2030 under ssp126 if the emission of CO2 is increased by 85.0%?",
+        "Options": [
+            10.63120174407959,
+            11.69432191848755,
+            12.757442092895507,
+            13.820562267303467
+        ],
+        "Correct": "A"
+    },
+    {
+        "Question": "What is the average temperature of Baran in 2050 under ssp370?",
+        "Options": [
+            "[-1.965362890807901, -1.5027752287329206)",
+            "[-1.5027752287329206, -0.4465620887265176)",
+            "[-0.4465620887265176, 11.579255776245253)",
+            "[11.579255776245253, 15.718168069422815)"
+        ],
+        "Correct": "C"
+    },
+    {
+        "Question": "What is the temperature of Fyzabad in 2049 under ssp370 if the emission of CH4 is decreased by -95%?",
+        "Options": [
+            25.702868270874024,
+            28.55874252319336,
+            31.414616775512695,
+            34.27049102783203
+        ],
+        "Correct": "B"
+    }
+]
