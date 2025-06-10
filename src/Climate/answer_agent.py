@@ -36,6 +36,7 @@ for value in functions:
     _functions.append({"type": "function", "function": value})
 functions = _functions + function_answer
 
+print(functions)
 
 def func_chain(messages):
     global functions
@@ -62,15 +63,16 @@ def func_chain(messages):
 
 # You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question, or you can also answer the problem directly. You can call tools for many turns, but you should call only one tool each time. When you have gathered enough information, you should use answer_question to choose one answer from A/B/C/D.
 
+
 system_prompt = """
-You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question.
+You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question.\n\nYou must firstly use `query_lat_and_lon` to get the latitude and longitude of the given place, even if you think you know the latitude and longitude of the place.
 """
 
 model_id = f"/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"
 
 llama3 = llama(device=f"cuda:0", model_path=model_id)
 
-with open("/home/test/test12/bohan/PGLLM-2/src/Climate/climate_train.json", "r") as f:
+with open("climate_train.json", "r") as f:
     questions = json.load(f)
 
 with open("few_shot.txt", "r") as f:
@@ -85,7 +87,7 @@ for question in questions:
             "role": "system",
             "content": system_prompt + few_shot,
         },
-        {"role": "user", "content": problem_text + "\n\nYou must firstly use `query_lat_and_lon` to get the latitude and longitude of the given place, even if you think you know the latitude and longitude of the place."},
+        {"role": "user", "content": problem_text},
     ]
     question[model_id] = func_chain(messages)
 
