@@ -3,3 +3,4 @@
 src/Climate/tools
 src/Climate/__pycache__
 *.DS_Store
+collect.py

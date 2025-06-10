@@ -1,5 +1,7 @@
 Following are some examples:
 
+Example 1:
+
 User: Question: How much will the temperature of Chitré in 2057 under ssp585 change if the emission of CH4 is increased by 65%?
 Options:
 A. 0.150196
@@ -14,6 +16,8 @@ Calling diy_greenhouse with arguments: {'longitude': -80.4333, 'latitude': 7.966
 Feedback from diy_greenhouse: The temperature is 29.750307083129883.
 Calling answer_question with arguments: {'thought': 'To find the change in temperature due to a 65% increase in CH4 emissions, I subtracted the original predicted temperature from the new temperature with increased CH4. The change is 29.750307083129883 - 29.478918075561523 = 0.2713890075683594.', 'answer': 'B', 'sloving_process': '1. Retrieved the latitude and longitude for Chitré.\n2. Fetched the predicted temperature for Chitré in 2057 under the ssp585 scenario without CH4 emission changes.\n3. Used the diy_greenhouse function to predict the temperature with a 65% increase in CH4 emissions.\n4. Calculated the change in temperature by subtracting the original temperature from the new temperature with increased emissions.\n5. Compared the calculated change to the given options and selected the correct answer.'}
 
+Example 2:
+
 User: Question: What is the average temperature of Novyi Buh in 2084 under ssp370?
 Options:
 A. [-4.805853405551783, 0.21627837440092623)
@@ -26,6 +30,8 @@ Calling future_temperature with arguments: {'latitude': 47.6833, 'longitude': 32
 Feedback from future_temperature: The temperature is 11.359816551208496.
 Calling answer_question with arguments: {'thought': 'The temperature of Novyi Buh in 2084 under the ssp370 scenario is 11.36, which falls within the range of option D.', 'answer': 'D', 'sloving_process': "1. Found the latitude and longitude of Novyi Buh.\\n2. Retrieved the temperature of Novyi Buh in 2084 under the ssp370 scenario.\\n3. The temperature is 11.36, which corresponds to option D's range."}
 
+Example 3:
+
 User: Question: What is the temperature of Sühbaatar in 2064 under ssp126 if the emission of CH4 is decreased by -20%?
 Options:
 A. 2.4329446
@@ -37,6 +43,8 @@ Feedback from query_lat_and_lon: latitude: 50.2364, longitude: 106.2064.
 Calling diy_greenhouse with arguments: {'longitude': 106.2064, 'latitude': 50.2364, 'setting': 'ssp126', 'year': 2064, 'delta_CO2': 0, 'delta_CH4': -0.2, 'thought': 'Now that I have the latitude and longitude for Sühbaatar, I can predict the temperature for 2064 under the ssp126 scenario with a -20% change in CH4 emissions.'}
 Feedback from diy_greenhouse: The temperature is 2.750485420227051.
 Calling answer_question with arguments: {'thought': 'I have determined the temperature for Sühbaatar in 2064 under the ssp126 scenario with a -20% change in CH4 emissions. Comparing it with the provided options, I found the matching value.', 'answer': 'B', 'sloving_process': '1. I first retrieved the latitude and longitude of Sühbaatar, which are 50.2364 and 106.2064, respectively.\n2. Using these coordinates, I predicted the temperature for Sühbaatar in 2064 under the ssp126 scenario, applying a -20% change in CH4 emissions.\n3. The calculated temperature was 2.750485420227051.\n4. I compared this result with the given options and found that option B matches the computed temperature.'}
+
+Example 4:
 
 User: Question: What is the range of temperature of Sawrān in 2083 under different climate settings?
 Options:
@@ -55,6 +63,8 @@ Feedback from future_temperature: The temperature is 18.084287643432617.
 Calling future_temperature with arguments: {'longitude': 44.5508, 'latitude': 36.6606, 'year': 2083, 'setting': 'ssp585', 'thought': 'I want to retrieve the temperature of Sawrān in 2083 under the ssp585 scenario.'}
 Feedback from future_temperature: The temperature is 18.295848846435547.
 Calling answer_question with arguments: {'thought': 'I have gathered temperature data for Sawrān in 2083 under different climate scenarios: SSP126, SSP245, SSP370, and SSP585. The temperatures are approximately 16.96, 17.25, 18.08, and 18.30 respectively. The range of these temperatures is from 16.958282470703125 to 18.295848846435547, which matches option C.', 'answer': 'C', 'sloving_process': '1. Retrieved the latitude and longitude of Sawrān: 36.6606, 44.5508.\n2. Retrieved the temperature of Sawrān in 2083 under the SSP126 scenario: 16.958282470703125.\n3. Retrieved the temperature of Sawrān in 2083 under the SSP245 scenario: 17.24970245361328.\n4. Retrieved the temperature of Sawrān in 2083 under the SSP370 scenario: 18.084287643432617.\n5. Retrieved the temperature of Sawrān in 2083 under the SSP585 scenario: 18.295848846435547.\n6. The range of temperatures is from 16.958282470703125 to 18.295848846435547, which corresponds to option C.'}
+
+Example 5:
 
 User: Question: For Ebreichsdorf, Gleisdorf, Perchtoldsdorf, Voitsberg, which city has the lowest temperature in 2058 under ssp245?
 Options:
@@ -80,6 +90,8 @@ Calling future_temperature with arguments: {'longitude': 15.15, 'latitude': 47.0
 Feedback from future_temperature: The temperature is 9.41732406616211.
 Calling answer_question with arguments: {'thought': 'I have retrieved the future temperatures for all the cities in 2058 under the ssp245 scenario. By comparing the temperatures, I can determine the city with the lowest temperature.', 'answer': 'A', 'sloving_process': '1. Retrieved the latitude and longitude for each city: Ebreichsdorf, Gleisdorf, Perchtoldsdorf, and Voitsberg.\n2. Retrieved the future temperature for each city in 2058 under the ssp245 scenario:\n   - Ebreichsdorf: 9.03°C\n   - Gleisdorf: 9.27°C\n   - Perchtoldsdorf: 8.79°C\n   - Voitsberg: 9.42°C\n3. Compared the temperatures and found that Perchtoldsdorf has the lowest temperature at 8.79°C.\n4. Selected Perchtoldsdorf as the answer.'}
 
+Example 6:
+
 User: Question: For Żejtun, Għajnsielem, Siġġiewi, Fgura, which city has the highest temperature in 2046 under ssp585?
 Options:
 A. Żejtun
@@ -103,6 +115,8 @@ Feedback from future_temperature: The temperature is 18.26589012145996.
 Calling future_temperature with arguments: {'longitude': 14.5228, 'latitude': 35.8725, 'year': 2046, 'setting': 'ssp585', 'thought': 'Retrieve future temperature for Fgura in 2046 under ssp585 scenario.'}
 Feedback from future_temperature: The temperature is 18.26589012145996.
 Calling answer_question with arguments: {'thought': 'The temperatures for the cities in 2046 under the SSP585 scenario are as follows: Żejtun: 18.27°C, Għajnsielem: 17.63°C, Siġġiewi: 18.27°C, Fgura: 18.27°C. Therefore, Żejtun, Siġġiewi, and Fgura all have the highest temperature of 18.27°C.', 'answer': 'A', 'sloving_process': '1. Retrieved the latitude and longitude for each city: Żejtun, Għajnsielem, Siġġiewi, and Fgura.\n2. Retrieved the future temperature for each city in 2046 under the SSP585 scenario.\n3. Compared the temperatures: Żejtun (18.27°C), Għajnsielem (17.63°C), Siġġiewi (18.27°C), Fgura (18.27°C).\n4. Identified Żejtun, Siġġiewi, and Fgura as having the highest temperature, but chose Żejtun as the answer based on alphabetical order since the question requires only one answer.'}
+
+Example 7:
 
 User: Question: What is the temperature of Castries in 2095 under ssp585 if the emission of CO2 is decreased by -20%?
 Options:

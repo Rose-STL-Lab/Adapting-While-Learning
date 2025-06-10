@@ -63,7 +63,7 @@ def func_chain(messages):
 # You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question, or you can also answer the problem directly. You can call tools for many turns, but you should call only one tool each time. When you have gathered enough information, you should use answer_question to choose one answer from A/B/C/D.
 
 system_prompt = """
-You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question. You must firstly use `query_lat_and_lon` to get the latitude and longitude of the given place, even if you think you know the latitude and longitude of the place. You can call tools for many turns, but you should call only one tool each time. When you have gathered enough information, you should use `answer_question` to choose one answer from A/B/C/D.
+You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question.
 """
 
 model_id = f"/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"
@@ -79,12 +79,13 @@ with open("few_shot.txt", "r") as f:
 for question in questions:
     problem_text = f"Question: {question['Question']}\nOptions:\nA. {question['Options'][0]}\nB. {question['Options'][1]}\nC. {question['Options'][2]}\nD. {question['Options'][3]}"
     print(problem_text)
+    print(question["Correct"])
     messages = [
         {
             "role": "system",
             "content": system_prompt + few_shot,
         },
-        {"role": "user", "content": problem_text},
+        {"role": "user", "content": problem_text + "\n\nYou must firstly use `query_lat_and_lon` to get the latitude and longitude of the given place, even if you think you know the latitude and longitude of the place."},
     ]
     question[model_id] = func_chain(messages)
 
