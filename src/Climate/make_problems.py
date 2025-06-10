@@ -1,3 +1,9 @@
+import sys
+import os
+
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(src_dir)
+
 from utils.utils import *
 from functions.functions import *
 from utils.make_problem_utils import *
@@ -5,8 +11,6 @@ import pandas as pd
 import argparse
 import json
 import numpy as np
-import sys
-import os
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "tools/Climate_online"))
 from tools.emulators import *
@@ -364,7 +368,7 @@ def generate_question(cities, country=None):
 def generate(world):
     if world == "climate":
         lat_and_lon = pd.read_csv(
-            ""
+            "./tools/Climate_offline/data/worldcities.csv"
         )
         country_city_counts = lat_and_lon.groupby("country")["city"].nunique()
         eligible_countries = country_city_counts[country_city_counts > 4].index.tolist()
@@ -389,5 +393,7 @@ def generate(world):
 
 
 if __name__ == "__main__":
-    generate("climate")
-        
+    for _ in range(10000):
+        generate("climate")
+        with open("climate_questions.json", "w") as f:
+            json.dump(questions, f, cls=NumpyEncoder, indent=4)

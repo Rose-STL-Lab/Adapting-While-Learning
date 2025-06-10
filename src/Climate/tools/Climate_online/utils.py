@@ -5,7 +5,7 @@ import pandas as pd
 import xarray as xr
 from eofs.xarray import Eof
 
-data_path = "./input_data/"
+data_path = "./tools/Climate_online/input_data/"
 
 min_co2 = 0.0
 max_co2 = 9500
@@ -85,7 +85,7 @@ def modify_grid(grid, line_points, modification_method, value):
 def create_predictor_data(
     data_sets,
     n_eofs=5,
-    solver_path="solvers/",
+    solver_path="./tools/Climate_online/solvers/",
 ):
     """
     Args:
@@ -154,7 +154,7 @@ def get_test_data(day, file, gas, delta, modification_method, modify_points):
         solver_path (str): path to load EOF solvers
     """
 
-    solver_path = "solvers/"
+    solver_path = "./tools/Climate_online/solvers/"
     n_eofs = 5
     # Load the input data
     X = xr.open_dataset(data_path + f"inputs_{file}.nc")

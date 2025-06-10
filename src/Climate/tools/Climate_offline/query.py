@@ -4,7 +4,7 @@ from geopy.geocoders import Nominatim
 import pandas as pd
 
 # Load the CSV file into a DataFrame
-lat_and_lon = pd.read_csv("./emulators/Climate_offline/data/worldcities.csv")
+lat_and_lon = pd.read_csv("./tools/Climate_offline/data/worldcities.csv")
 
 
 def query_lat_and_lon(city_name):

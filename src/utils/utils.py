@@ -172,7 +172,7 @@ class llama:
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            "", revision="pr/13"
+            model_path
         )
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,

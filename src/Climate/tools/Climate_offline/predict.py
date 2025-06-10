@@ -10,7 +10,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 # Load the saved predictions
-output_path = "./emulators/Climate_offline/data/predictions.npy"
+output_path = "./tools/Climate_offline/data/predictions.npy"
 predictions = np.load(output_path)
 settings = ["ssp126", "ssp245", "ssp370", "ssp585"]
 
@@ -143,6 +143,54 @@ def future_image(setting, year, min_lon, max_lon, min_lat, max_lat, coastline, b
         coastline,
         border,
     )
+
+
+def visualize(data, min_lon, max_lon, min_lat, max_lat, coastline, border):
+    longitude = np.linspace(-180, 180, num=data.shape[1])
+    latitude = np.linspace(90, -90, num=data.shape[0])
+    image_data_array = xr.DataArray(
+        data, coords=[latitude, longitude], dims=["latitude", "longitude"]
+    )
+    cropped_data_array = image_data_array.sel(
+        latitude=slice(max_lat, min_lat), longitude=slice(min_lon, max_lon)
+    )
+    cropped_data = cropped_data_array.values
+
+    fig, ax = plt.subplots(
+        figsize=(10, 8),
+        subplot_kw={"projection": ccrs.PlateCarree(central_longitude=180)},
+    )
+
+    ax.set_extent(
+        [min_lon, max_lon, min_lat, max_lat],
+        crs=ccrs.PlateCarree(central_longitude=180),
+    )
+
+    if coastline:
+        ax.add_feature(cfeature.COASTLINE)
+    if border:
+        ax.add_feature(cfeature.BORDERS)
+
+    lons = np.linspace(min_lon, max_lon, cropped_data.shape[1])
+    lats = np.linspace(max_lat, min_lat, cropped_data.shape[0])
+
+    lon_grid, lat_grid = np.meshgrid(lons, lats)
+
+    im = ax.pcolormesh(
+        lon_grid,
+        lat_grid,
+        cropped_data,
+        transform=ccrs.PlateCarree(central_longitude=180),
+        cmap="coolwarm",
+    )
+
+    image_path = f"/home/bohan/PGLLM/data/image/climate/{stable_hash(cropped_data[0][0])[:5]}{stable_hash(cropped_data[-1][-1])[:5]}.png"
+
+    plt.savefig(image_path, bbox_inches="tight", pad_inches=0)
+    plt.close(fig)
+
+    return f"Image generated, saved at <img>{image_path}</img>"
+
 
 if __name__ == "__main__":
     print(ll2index(-172.3, -13.7))

@@ -20,7 +20,7 @@ class Emulator:
         model_config_pth,
         model_checkpoint_pth,
         model_z_dict_pth,
-        latent_var_pth="./emulators/Climate_online/data/latent_vars.pth",
+        latent_var_pth="./tools/Climate_online/data/latent_vars.pth",
     ):
         start_time = time.time()
         print(f"Initializing...")
