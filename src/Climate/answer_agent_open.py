@@ -8,11 +8,14 @@ import torch.multiprocessing as mp
 from tqdm import tqdm
 from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
-sys.path.append('..')
+
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(src_dir)
+from utils.utils import *
+from functions.functions import *
+
 sys.path.append(os.path.join(os.path.dirname(__file__), "tools/Climate_online"))
 from tools.emulators import *
-from functions.functions import *
-from utils.utils import *
 
 functions = functions_climate
 _functions = []
@@ -58,11 +61,11 @@ Assistant: {'name': 'diy_aerosol_mean', 'parameters': '{"setting":"ssp245","year
 User: Feedback from 'diy_aerosol_mean': The average temperature is 6.5993475914001465.
 Assistant: {'name': 'answer_question', 'parameters': '{"thought":"I have explored different maritime routes between Lisbon and Houston by checking whether potential waypoints are in the sea and then evaluating the impact of increased SO2 levels on global temperature rise in 2041 under ssp245. The first proposed route showed a slightly lower average temperature increase compared to the second one.","answer":"[(-9.15, 38.7253), (-25, 38), (-65, 38), (-80, 30), (-95.3885, 29.786)]","sloving_process":"1. Checked if potential waypoints between Lisbon and Houston were in the sea using geographic coordinates.\\n2. Evaluated the impact of a 3.0% increase in SO2 on global temperature rise for 2041 under ssp245 along the proposed maritime routes.\\n3. The first route resulted in a slightly lower average temperature increase than the second, making it the better choice."}'}
 
-Question: Design a new maritime route between St. Petersburg (lon: -82.6652, lat: 27.7931) and Istanbul (lon: 28.955, lat: 41.0136) that would increase SO2 levels along the route by 5.0%. Propose a route that would minimize the global average temperature increase in 2044 under ssp126. Present your answer as a list of coordinates (longitude, latitude) representing key points along the route. Format your response as follows: [(longitude_1, latitude_1), (longitude_2, latitude_2), ..., (longitude_n, latitude_n)]. Include at least the starting point, endpoint, and any significant waypoints. Ensure that the distance between any two consecutive points in your list is no less than 2 degrees in either latitude or longitude. Note that for straight segments of the route, you only need to provide the coordinates for the start and end of that segment, without listing all points along the straight line. The route will be automatically connected based on the nodes you provide.
-Assistant: {'name': 'answer_question', 'parameters': '{"thought":"I can asnwer the problem directly.","answer":"[(-82.6652, 27.7931), (-80, 28), (-70, 30), (-60, 32), (0, 36), (28.955, 41.0136)]","sloving_process":"1. Identified waypoints along potential maritime routes from St. Petersburg to Istanbul.\\n2. Used is_land_or_sea to ensure the waypoints were in the sea.\\n3. Simulated temperature changes for the route with diy_aerosol_mean and found the first route resulted in a slightly lower temperature increase.\\n4. Chose the first route as it minimizes the global average temperature increase."}'}
-
 Begin!
 """
+
+# Question: Design a new maritime route between St. Petersburg (lon: -82.6652, lat: 27.7931) and Istanbul (lon: 28.955, lat: 41.0136) that would increase SO2 levels along the route by 5.0%. Propose a route that would minimize the global average temperature increase in 2044 under ssp126. Present your answer as a list of coordinates (longitude, latitude) representing key points along the route. Format your response as follows: [(longitude_1, latitude_1), (longitude_2, latitude_2), ..., (longitude_n, latitude_n)]. Include at least the starting point, endpoint, and any significant waypoints. Ensure that the distance between any two consecutive points in your list is no less than 2 degrees in either latitude or longitude. Note that for straight segments of the route, you only need to provide the coordinates for the start and end of that segment, without listing all points along the straight line. The route will be automatically connected based on the nodes you provide.
+# Assistant: {'name': 'answer_question', 'parameters': '{"thought":"I can asnwer the problem directly.","answer":"[(-82.6652, 27.7931), (-80, 28), (-70, 30), (-60, 32), (0, 36), (28.955, 41.0136)]","sloving_process":"1. Identified waypoints along potential maritime routes from St. Petersburg to Istanbul.\\n2. Used is_land_or_sea to ensure the waypoints were in the sea.\\n3. Simulated temperature changes for the route with diy_aerosol_mean and found the first route resulted in a slightly lower temperature increase.\\n4. Chose the first route as it minimizes the global average temperature increase."}'}
 
 
 def parse_function_call(text):
@@ -101,7 +104,9 @@ def func_chain(messages, llm, tokenizer, sampling_params):
         
         func_call = parse_function_call(response_text)
         if not func_call:
-            return None
+            print(f"Failed to parse function call from response: {response_text}")
+            # return None
+            continue
 
         messages.append(
             {"role": "assistant", "content": None, "function_call": func_call}
@@ -137,14 +142,14 @@ def func_chain(messages, llm, tokenizer, sampling_params):
         messages.append({"role": "user", "content": back_content})
 
 def main():
-    model_path = ""
+    model_path = "/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"
 
     # Initialize vLLM and tokenizer
-    llm = LLM(model=model_path, device=f"cuda:0", tensor_parallel_size=1, gpu_memory_utilization=0.95, max_model_len=12000)
-    tokenizer = AutoTokenizer.from_pretrained("")
+    llm = LLM(model=model_path, device=f"cuda:0", tensor_parallel_size=1, gpu_memory_utilization=0.5, max_model_len=8000)
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     sampling_params = SamplingParams(temperature=0.7, max_tokens=4096, stop = [";", "<|eot_id|>", "<|end_of_text|>", "\n"])
 
-    PATH = f""
+    PATH = f"/home/test/test12/bohan/PGLLM-2/test_set/climate_open.json"
 
     with open(PATH, "r") as f:
         questions = json.load(f)
