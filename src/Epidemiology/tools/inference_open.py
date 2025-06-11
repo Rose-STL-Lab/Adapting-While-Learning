@@ -59,7 +59,7 @@ output_features = [i.replace('_', ' ') for i in output_features]
 def load_test_data():
     """Load test data into global variables."""
     global data, x, y
-    data = np.load('')
+    data = np.load('./tools/data/data/test.npz')
     x = data['x']
     y = data['y']
 
@@ -216,7 +216,7 @@ def test_single_scenario(scenario, sample_response, input_feature, output_featur
     else:
         return None
 
-init_model("")
+init_model("./tools/data/model/dcrnn_cov.yaml")
 load_test_data()
     
 def main():
@@ -227,3 +227,6 @@ def main():
 
     results = test_single_scenario(scenario, response, input_feature, output_feature)
     print(results)
+
+# if __name__ == "__main__":
+#     main()

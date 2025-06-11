@@ -7,3 +7,5 @@ src/Climate/tools/Climate_online/data
 src/Climate/tools/Climate_offline/data
 *.DS_Store
 collect.py
+src/Epidemiology/tools/*/
+src/Epidemiology/tools/*.csv

@@ -102,7 +102,7 @@ functions_pandemic = {
                     ],
                 },
             },
-            "required": ["y", "scenario", "day", "out"],
+            "required": ["scenario", "day", "out"],
         },
     },
 }

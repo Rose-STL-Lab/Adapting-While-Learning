@@ -1,11 +1,16 @@
-from utils import *
 import random
 import json
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), 'tools/pandemic'))
+
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(src_dir)
+
+from utils.utils import *
 from functions.functions import *
-from tools.emulators import *
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
+from tools.inference import *
 
 useful_tools = ["emulate"]
 functions = [functions_pandemic[name] for name in useful_tools]
@@ -60,8 +65,6 @@ with open("", "r") as f:
     questions = json.load(f)
 
 for question in questions:
-    if "gpt4" in question and question["gpt4"] and json.loads(question["gpt4"][-1]["function_call"]["arguments"])["answer"] == question["correct_option"]:
-        continue
     problem_text = f"Question: {question['question']}\n\nOptions: A. {question['options'][0]}\nB. {question['options'][1]}\nC. {question['options'][2]}\nD. {question['options'][3]}"
     messages = [
         {
