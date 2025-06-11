@@ -84,7 +84,7 @@ kiwisolver==1.4.5
 lark==1.2.2
 libclang==18.1.1
 lit==18.1.8
-llamafactory==0.8.4.dev0
+llamafactory
 llvmlite==0.43.0
 lm-format-enforcer==0.10.6
 Markdown==3.7
@@ -231,3 +231,5 @@ xformers==0.0.27.post2
 xxhash==3.5.0
 yarl==1.9.6
 zipp==3.20.1
+jload
+vlllm
