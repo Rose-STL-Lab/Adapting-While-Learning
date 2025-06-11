@@ -1,6 +1,9 @@
 *.log
 *.pyc
-src/Climate/tools
-src/Climate/__pycache__
+src/Climate/tools/Climate_online/solvers
+src/Climate/tools/Climate_online/model
+src/Climate/tools/Climate_online/input_data
+src/Climate/tools/Climate_online/data
+src/Climate/tools/Climate_offline/data
 *.DS_Store
 collect.py
