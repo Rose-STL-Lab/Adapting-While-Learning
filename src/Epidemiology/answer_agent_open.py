@@ -4,13 +4,17 @@ import sys
 import os
 import traceback
 from tqdm import tqdm
-
-sys.path.append(os.path.join(os.path.dirname(__file__), "tools"))
-from tools.inference_open import *
-
-import traceback
 from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
+
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(src_dir)
+
+# from utils.utils import *
+from functions.functions import *
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
+from tools.inference_open import *
 
 system_prompt = """
 You are the leader of California, tasked with managing the state during a pandemic. Your role is to formulate effective policies to mitigate its impact by allocating resources and making key decisions. You will be provided with specific details of the pandemic, including its severity, affected regions, and other relevant data. Based on this information, you will be asked to take action.
@@ -137,7 +141,7 @@ def func_chain(messages, llm, tokenizer, sampling_params, question):
 
 def main():
     i = 5
-    model_path = ""
+    model_path = f"/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"
     os.environ["CUDA_VISIBLE_DEVICES"] = str(i)
     
     llm = LLM(model=model_path)
@@ -145,10 +149,10 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     sampling_params = SamplingParams(temperature=0.7, max_tokens = 4096)
 
-    with open("open_questions.json", "r") as f:
+    with open("../../test_set/epidemiology_open.json", "r") as f:
         questions = json.load(f)
 
-    for question in tqdm(questions[250*i:]):
+    for question in tqdm(questions):
         problem_text = f"Question: {question['question']}"
         messages = [
             {"role": "system", "content": system_prompt},
@@ -163,7 +167,7 @@ def main():
         
         question[model_path + "_int"] = returned_messages
         # Write the processed question to the JSONL file
-        with open("open_questions.json", "w") as f:
+        with open("test.json", "w") as f:
             f.write(json.dumps(questions, indent=4))
         
         print(question)

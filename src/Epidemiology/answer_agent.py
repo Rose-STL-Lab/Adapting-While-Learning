@@ -81,8 +81,8 @@ for question in questions:
         },
         {"role": "user", "content": problem_text},
     ]
-    question["gpt4"] = func_chain(messages, question['scenario'])
-    print(problem_text[-500:])
+    question[model_id] = func_chain(messages, question['scenario'])
+    print("...\n" + problem_text[-500:])
     print(question["correct_option"])
     with open("test.json", "w") as f:
         json.dump(questions, f, indent=4)
