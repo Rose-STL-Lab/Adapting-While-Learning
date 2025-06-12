@@ -80,7 +80,7 @@ model_id = f"/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"
 
 llama3 = llama(device=f"cuda:0", model_path=model_id)
 
-with open("climate_train.json", "r") as f:
+with open("../../test_set/climate.json", "r") as f:
     questions = json.load(f)
 
 with open("few_shot.txt", "r") as f:

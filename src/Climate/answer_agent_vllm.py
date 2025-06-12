@@ -214,7 +214,7 @@ def main():
     functions = _functions + function_answer
     
     # Load questions
-    with open("climate_train.json", "r") as f:
+    with open("../../test_set/climate.json", "r") as f:
         questions = json.load(f)
     
     # Distribute questions across GPUs

@@ -24,18 +24,25 @@ for value in functions:
     _functions.append({"type": "function", "function": value})
 functions = _functions + function_answer
 
+print(json.dumps(functions, indent = 4))
+
+model_id = f"/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"
+
+llama3 = llama(device=f"cuda:0", model_path=model_id)
+
 def func_chain(messages, scenario):
     global functions
+    tried = 0
     while True:
-        func_call = gpt4_functions(messages, functions)
+        tried += 1
+        func_call = llama3.generate(messages, functions)
         if not func_call:
-            return None
+            continue
         messages.append(
-            {"role": "assistant", "content": None, "function_call": func_call}
+            {"role": "assistant", "content": func_call}
         )
         func_name = func_call["name"]
-        func_para = json.loads(func_call["arguments"])
-        
+        func_para = func_call["parameters"]
         try:
             if func_name == "answer_question":
                 if len(messages) > 3:
@@ -46,22 +53,23 @@ def func_chain(messages, scenario):
                 func_para.pop("thought", None)
                 func_para["scenario"] = scenario
                 back_content = globals()[func_name](**func_para)
+
+            print(back_content)
+            
         except Exception as e:
             print(e)
             back_content = f"Error: {e}"
-            
-        print(back_content)
         messages.append(
-            {"role": "function", "name": func_name, "content": back_content}
+            {"role": "tool", "name": func_name, "content": back_content}
         )
-        if len(messages) > 10:
+        if len(messages) > 20 or tried > 10:
             return None
 
 system_prompt = """
 You are a epidemiologist. You are going to answer a multi-choice question. You should use given tools to help you answer the question. You can call tools for many turns, but you should call only one tool each time. When you have used `emulate` function to get enough information, you should use answer_question to choose one answer from A/B/C/D.
 """
 
-with open("", "r") as f:
+with open("../../test_set/epidemiology.json", "r") as f:
     questions = json.load(f)
 
 for question in questions:
@@ -74,10 +82,10 @@ for question in questions:
         {"role": "user", "content": problem_text},
     ]
     question["gpt4"] = func_chain(messages, question['scenario'])
+    print(problem_text[-500:])
     print(question["correct_option"])
-    with open("", "w") as f:
+    with open("test.json", "w") as f:
         json.dump(questions, f, indent=4)
-        print("saved!")
 
 
 

@@ -149,7 +149,7 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     sampling_params = SamplingParams(temperature=0.7, max_tokens=4096, stop = [";", "<|eot_id|>", "<|end_of_text|>", "\n"])
 
-    PATH = f"/home/test/test12/bohan/PGLLM-2/test_set/climate_open.json"
+    PATH = f"../../test_set/climate_open.json"
 
     with open(PATH, "r") as f:
         questions = json.load(f)
