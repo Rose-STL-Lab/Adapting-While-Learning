@@ -40,11 +40,19 @@ print(functions)
 
 def func_chain(messages):
     global functions
+    tries = 0
     while True:
+        tries += 1
         func_call = llama3.generate(messages, functions)
-        messages.append({"role": "assistant", "content": func_call})
+        
         func_name = func_call["name"]
         func_para = func_call["parameters"]
+        
+        if not func_name or not func_para:
+            continue
+
+        messages.append({"role": "assistant", "content": func_call})
+
         try:
             if func_name == "answer_question":
                 return messages
@@ -58,7 +66,7 @@ def func_chain(messages):
             print(e)
             back_content = f"Error: {e}"
         messages.append({"role": "tool", "name": func_name, "content": back_content})
-        if len(messages) > 20:
+        if len(messages) > 20 or tries > 20:
             return None
 
 # You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question, or you can also answer the problem directly. You can call tools for many turns, but you should call only one tool each time. When you have gathered enough information, you should use answer_question to choose one answer from A/B/C/D.
