@@ -7,9 +7,13 @@ from tqdm import tqdm
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import multiprocessing
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
-from utils import *
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(src_dir)
+
+from utils.utils import *
 from functions.functions import *
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
 from tools.mujoco_all import *
 
 # Ensure TOKENIZERS_PARALLELISM is set to false to avoid tokenizer parallelism issues

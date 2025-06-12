@@ -3,16 +3,22 @@ import os
 import random
 import sys
 import traceback
-from utils.make_problem_utils import *
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import multiprocessing
 from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
 from tqdm import tqdm
-sys.path.append('..')
-from tools.diffusion import DiffusionSolver
+
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(src_dir)
+
+from utils.make_problem_utils import *
+from functions.functions import *
 from functions.answer import function_answer
 from functions.pdes import function_pdes
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
+from tools.diffusion import DiffusionSolver
 
 # Ensure TOKENIZERS_PARALLELISM is set to false to avoid tokenizer parallelism issues
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
