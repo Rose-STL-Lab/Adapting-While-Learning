@@ -137,6 +137,7 @@ def func_chain(messages, llm, sampling_params, tokenizer, functions):
                 back_content = api_response["text"]
                 
                 print(back_content)
+                messages.append({"role": "tool", "name": func_name, "content": back_content})
                 
         except Exception as e:
             print(f"Error: {e}")
