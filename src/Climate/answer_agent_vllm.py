@@ -117,7 +117,7 @@ def func_chain(messages, llm, sampling_params, tokenizer, functions):
             
             if func_call is None:
                 # If parsing fails, try again with a simpler prompt
-                messages.append({"role": "user", "content": "Please call a function in the correct JSON format."})
+                # messages.append({"role": "user", "content": "Please call a function in the correct JSON format."})
                 continue
                 
             func_name = func_call["name"]
@@ -137,6 +137,7 @@ def func_chain(messages, llm, sampling_params, tokenizer, functions):
                 back_content = api_response["text"]
                 
                 print(back_content)
+                messages.append({"role": "tool", "name": func_name, "content": back_content})
                 
         except Exception as e:
             print(f"Error: {e}")
