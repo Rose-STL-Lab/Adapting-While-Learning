@@ -68,6 +68,10 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
                         "type": "string",
                         "description": "Internal reasoning and thoughts of why you call this function."
                     },
+                    "sloving_process": {
+                        "type": "string",
+                        "description": "Detailed list how do you solve this question, step by step. If you wrote code and got result from it, you should write how the problem was solved based on the output of the code, but don't mention your coding here."
+                    },
                     "answer": {
                         "type": "string",
                         "enum": [
@@ -81,6 +85,7 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
                 },
                 "required": [
                     "thought",
+                    "sloving_process",
                     "answer"
                 ]
             }
@@ -91,36 +96,58 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
 
 data = []
 
-with open("qa_pairs_final.json", "r") as f:
-    questions = json.load(f)[:1800]
+with open("train.json", "r") as f:
+    questions = json.load(f)
 
 for question in questions:
-    for i in question["gpt4"]:
+    for i in question["/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"]:
         if i["role"] == "tool":
             i.pop("name", None)
             i["role"] = "user"
-        elif i["role"] == "assistant":
-            i["content"] = json.dumps(i["content"])
 
 for question in questions:
-    if f"Answer:" not in question["cot"] and f"the answer is" not in question["cot"].lower():
-        continue
-    if f"Answer: {question["correct_option"]}" not in question["cot"] and f"the answer is {question["correct_option"].lower()}" not in question["cot"].lower():
-        print(question["cot"])
-        continue
-    if "wrong" in question["cot"]:
+    if f"Answer:" not in question["solution"]:
         continue
     problem_text = f"Question: {question['question']}\nOptions:\nA. {question['options'][0]}\nB. {question['options'][1]}\nC. {question['options'][2]}\nD. {question['options'][3]}"
-    data.append({
-        "messages": [
+    if f"answer: {question['correct_option']}" not in question["solution"].lower():
+        data.append({
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
+                },
+                {
+                    "role": "user",
+                    "content": tools + problem_text,
+                }] + question["/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"][2:]})
+    else:
+        data.append(
             {
-                "role": "system",
-                "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
-            },
-            {
-                "role": "user",
-                "content": tools + problem_text,
-            }] + question["gpt4"][2:]})
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
+                    },
+                    {
+                        "role": "user",
+                        "content": tools + problem_text,
+                    },
+                    {
+                        "role": "assistant",
+                        "content": json.dumps(
+                            {
+                                "name": "answer_question",
+                                "parameters": {
+                                    "thought": "I can answer the problem directly",
+                                    "sloving_process": question["solution"],
+                                    "answer": question["correct_option"],
+                                },
+                            }
+                        ),
+                    },
+                ]
+            }
+        )
     data.append({
         "messages": [
             {
@@ -133,12 +160,12 @@ for question in questions:
             },
             {
                 "role": "assistant",
-                "content": question["cot"],
+                "content": question["solution"],
             }
         ]
     })
 
 print(len(data))
 
-with open("pan_train.json", "w") as f:
+with open("train1.json", "w") as f:
     f.write(json.dumps(data, indent = 4))
