@@ -109,7 +109,7 @@ for question in questions:
     if f"Answer:" not in question["solution"]:
         continue
     problem_text = f"Question: {question['question']}\nOptions:\nA. {question['options'][0]}\nB. {question['options'][1]}\nC. {question['options'][2]}\nD. {question['options'][3]}"
-    if f"answer: {question['correct_option']}" not in question["Meta-Llama-3.1-8B-Instruct"].lower():
+    if f"answer: {question['correct_option']}".lower() not in question["Meta-Llama-3.1-8B-Instruct"].lower():
         data.append({
             "messages": [
                 {
