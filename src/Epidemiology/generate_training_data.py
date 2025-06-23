@@ -100,7 +100,7 @@ with open("train.json", "r") as f:
     questions = json.load(f)
 
 for question in questions:
-    for i in question["/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"]:
+    for i in question["Meta-Llama-3.1-8B-Instruct"]:
         if i["role"] == "tool":
             i.pop("name", None)
             i["role"] = "user"
@@ -109,7 +109,7 @@ for question in questions:
     if f"Answer:" not in question["solution"]:
         continue
     problem_text = f"Question: {question['question']}\nOptions:\nA. {question['options'][0]}\nB. {question['options'][1]}\nC. {question['options'][2]}\nD. {question['options'][3]}"
-    if f"answer: {question['correct_option']}" not in question["solution"].lower():
+    if f"answer: {question['correct_option']}" not in question["Meta-Llama-3.1-8B-Instruct"].lower():
         data.append({
             "messages": [
                 {
@@ -119,7 +119,7 @@ for question in questions:
                 {
                     "role": "user",
                     "content": tools + problem_text,
-                }] + question["/home/test/test12/bohan/models/Meta-Llama-3.1-8B-Instruct"][2:]})
+                }] + question["Meta-Llama-3.1-8B-Instruct"][2:]})
     else:
         data.append(
             {
