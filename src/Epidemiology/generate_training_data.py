@@ -105,7 +105,7 @@ for question in questions:
 for question in questions:
     if f"Answer:" not in question["cot"] and f"the answer is" not in question["cot"].lower():
         continue
-    if f"Answer: {question["correct_option"]}" not in question["cot"] and f"the answer is {question["correct_option"].lower()}" not in question["cot"].lower() and random.random()<0.5:
+    if f"Answer: {question["correct_option"]}" not in question["cot"] and f"the answer is {question["correct_option"].lower()}" not in question["cot"].lower():
         print(question["cot"])
         continue
     if "wrong" in question["cot"]:
