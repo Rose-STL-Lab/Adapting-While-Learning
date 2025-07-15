@@ -56,7 +56,7 @@ Additionally, the Climate and Epidemiology folders include code related to open-
 
 ## Training
 
-We use [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory) for both SFT and DPO training. You should firstly setup the environment of Llama-Factory. **The 'mixed' loss in the paper is realized through mixing training data, which is implemented in the `generate_training_data.py` files under each folder.**
+We use [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory) for both SFT and DPO training. You should firstly setup the environment of Llama-Factory. **The 'mixed' loss in the paper is realized through mixing training data, which is implemented in the `generate_training_data.py` files under each folder. We mixed the data of different problem difficulty (use or not use tools when tools are available, Eq. 5) and of different scenarios (whether tools are available, Eq. 6).**
 
 The generate training data scripts provided in our repository directly generate the training data which matches the format of Llama-Factory. To use the data, you should firstly register the data to at `LLaMA-Factory/data/dataset_info.json`. For example, you can register the data for training the model on the climate dataset by adding the following entry to the file:
 
@@ -114,11 +114,11 @@ llamafactory-cli train \
 
 ## Evaluation
 
-We provide the testing data in the `test_set` folder. For Questions with Definite Answers we provide a standard answers along with the questions. For open-ended questions, we provide corresponding evaluation scripts (`Climate/evaluate_open.py` and `Epidemiology/eval_open.py`).
+We provide the testing data in the `test_set` folder. For Questions with definite answers we provide standard answers along with the questions. For open-ended questions, we provide corresponding evaluation scripts (`Climate/evaluate_open.py` and `Epidemiology/eval_open.py`).
 
 ## Models
 
-Following are reproduced models for MCQs on Climate and Epidemiology datasets:
+The following are reproduced models for MCQs on Climate and Epidemiology datasets:
 
 | Dataset | Download |
 | -------- | -------- |
@@ -224,7 +224,7 @@ llamafactory-cli train \
     --save_only_model true
 ```
 
-If you still have any issue or confusion, please connect the author (lyubh22@gmail.com).
+If you still have any issues or confusion, please contact the author (lyubh22@gmail.com).
 
 ## Utils
 
@@ -233,4 +233,3 @@ The `utils` folder contains utility scripts related to the following components:
 1. **Model utilities**: Scripts for loading and interacting with open-source and closed-source (proprietary) language models. You should replace the `API_KEY` with your own one.
 2. **Dataset construction**: Tools for preprocessing, formatting, and generating datasets used in training and evaluation.
 3. **Mathematical evaluation**: Utilities to assess and evaluate mathematical outputs.
-
