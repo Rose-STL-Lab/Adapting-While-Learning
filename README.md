@@ -22,7 +22,7 @@ The emulators used in climate and epidemiology scenarios are respectively adapte
 
 The tool-calling in this work is achieved through Llama-3.1-8B-Instruct's [chat template](https://huggingface.co/docs/transformers/main/chat_templating), except open problems in Epidemiology. It means that, if you are using a model whose chat template doesn't support tool usage, then currect pipeline might can't be applied directly.
 
-## Data Preparation and Training
+## Data Preparation
 
 ![pipeline](assets/pipeline.png)
 
@@ -54,9 +54,177 @@ python answer_llm.py
 
 Additionally, the Climate and Epidemiology folders include code related to open-ended questions.
 
+## Training
+
+We use [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory) for both SFT and DPO training. You should firstly setup the environment of Llama-Factory.
+
+The generate training data scripts provided in our repository directly generate the training data which matches the format of Llama-Factory. To use the data, you should firstly register the data to at `LLaMA-Factory/data/dataset_info.json`. For example, you can register the data for training the model on the climate dataset by adding the following entry to the file:
+
+```python
+"climate_train_1": {
+    "file_name": "/path/to/climate_train_1.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+}
+```
+
+Then you can use LlaMA-Factory to train the model with:
+
+```bash
+llamafactory-cli train \
+    --model_name_or_path meta-llama/Llama-3.1-8B-Instruct \
+    --stage sft \
+    --do_train true \
+    --finetuning_type full \
+    --deepspeed examples/deepspeed/ds_z3_offload_config.json \
+    --dataset climate_train_1 \
+    --template llama3 \
+    --cutoff_len 5000 \
+    --max_samples 100000000 \
+    --overwrite_cache true \
+    --preprocessing_num_workers 128 \
+    --output_dir llama3_climate_1 \
+    --logging_steps 10 \
+    --save_steps 100 \
+    --plot_loss true \
+    --overwrite_output_dir true \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --learning_rate 1.0e-5 \
+    --num_train_epochs 2.0 \
+    --lr_scheduler_type cosine \
+    --warmup_ratio 0.1 \
+    --bf16 true \
+    --ddp_timeout 180000000 \
+    --val_size 0.0001 \
+    --per_device_eval_batch_size 1 \
+    --eval_strategy steps \
+    --eval_steps 500 \
+    --save_only_model true
+```
+
 ## Evaluation
 
 We provide the testing data in the `test_set` folder. For Questions with Definite Answers we provide a standard answers along with the questions. For open-ended questions, we provide corresponding evaluation scripts (`Climate/evaluate_open.py` and `Epidemiology/eval_open.py`).
+
+## Models
+
+Following are reproduced models for MCQs on Climate and Epidemiology datasets:
+
+| Dataset | Download |
+| -------- | -------- |
+|    Climate    |   [🤗Download](https://huggingface.co/Bohan22/AWL_Climate_MCQs)    |
+|    Epidemiology    |   [🤗Download](https://huggingface.co/Bohan22/AWL_Epidemiology_MCQs)    |
+
+We provide you with the training data for the climate model to easily reproduce the result. You can download the training data from [here](https://drive.google.com/drive/folders/1Nm5fRzcivug5hyV6CgjFQ677JNdkFff1?usp=share_link), register the data in Llamafactory like:
+
+```python
+"climate_mcq_stage1": {
+    "file_name": "/path/to/climate_mcq_stage1.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+},
+"climate_mcq_stage2": {
+    "file_name": "/path/to/climate_mcq_stage2.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+}
+```
+
+Then train the final model with:
+
+```bash
+llamafactory-cli train \
+    --model_name_or_path meta-llama/Llama-3.1-8B-Instruct \
+    --stage sft \
+    --do_train true \
+    --finetuning_type full \
+    --deepspeed examples/deepspeed/ds_z3_offload_config.json \
+    --dataset climate_mcq_stage1 \
+    --template llama3 \
+    --cutoff_len 5000 \
+    --max_samples 100000000 \
+    --overwrite_cache true \
+    --preprocessing_num_workers 128 \
+    --output_dir <path to the middle ckpt> \
+    --logging_steps 10 \
+    --save_steps 100 \
+    --plot_loss true \
+    --overwrite_output_dir true \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --learning_rate 1.0e-5 \
+    --num_train_epochs 2.0 \
+    --lr_scheduler_type cosine \
+    --warmup_ratio 0.1 \
+    --bf16 true \
+    --ddp_timeout 180000000 \
+    --val_size 0.0001 \
+    --per_device_eval_batch_size 1 \
+    --eval_strategy steps \
+    --eval_steps 500 \
+    --save_only_model true
+
+llamafactory-cli train \
+    --model_name_or_path <path to the middle ckpt> \
+    --stage sft \
+    --do_train true \
+    --finetuning_type full \
+    --deepspeed examples/deepspeed/ds_z3_offload_config.json \
+    --dataset climate_mcq_stage2 \
+    --template llama3 \
+    --cutoff_len 5000 \
+    --max_samples 100000000 \
+    --overwrite_cache true \
+    --preprocessing_num_workers 128 \
+    --output_dir <path to the final ckpt> \
+    --logging_steps 10 \
+    --save_steps 100 \
+    --plot_loss true \
+    --overwrite_output_dir true \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --learning_rate 1.0e-5 \
+    --num_train_epochs 2.0 \
+    --lr_scheduler_type cosine \
+    --warmup_ratio 0.1 \
+    --bf16 true \
+    --ddp_timeout 180000000 \
+    --val_size 0.0001 \
+    --per_device_eval_batch_size 1 \
+    --eval_strategy steps \
+    --eval_steps 500 \
+    --save_only_model true
+```
+
+If you still have any issue or confusion, please connect the author (lyubh22@gmail.com).
 
 ## Utils
 
