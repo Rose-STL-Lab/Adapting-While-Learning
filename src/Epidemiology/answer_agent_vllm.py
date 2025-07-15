@@ -1,6 +1,13 @@
-# answer_agent_vllm.py
+import random
+import json
 import sys
 import os
+import argparse
+from concurrent.futures import ProcessPoolExecutor, as_completed
+import torch
+from tqdm import tqdm
+from vllm import LLM, SamplingParams
+from transformers import AutoTokenizer
 
 src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
 sys.path.append(src_dir)
@@ -8,49 +15,13 @@ sys.path.append(src_dir)
 from utils.utils import *
 from functions.functions import *
 
-import json
-import requests
-import argparse
-from concurrent.futures import ProcessPoolExecutor, as_completed
-import signal
-from tqdm import tqdm
-import torch
-from vllm import LLM, SamplingParams
-from transformers import AutoTokenizer
-
-# Define the API endpoint
-API_ENDPOINT = "http://localhost:5000"
+sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
+from tools.inference import *
 
 # Define the useful tools
-useful_tools = [
-    "location_summary",
-    "history_temperature",
-    "future_temperature",
-    "query_lat_and_lon",
-    "diy_greenhouse",
-]
+useful_tools = ["emulate"]
 
-# Function to call the API
-def call_tool_api(func_name, params):
-    url = f"{API_ENDPOINT}/{func_name}"
-    try:
-        response = requests.post(url, json=params, timeout=30)  # Add timeout
-        if response.status_code == 200:
-            return response.json()
-        else:
-            error_message = f"API call failed with status {response.status_code}"
-            try:
-                # Try to get more detailed error from response
-                error_data = response.json()
-                if "text" in error_data:
-                    error_message = error_data["text"]
-            except:
-                pass
-            return {"result": None, "text": f"Error: {error_message}"}
-    except requests.RequestException as e:
-        return {"result": None, "text": f"Error connecting to API: {str(e)}"}
-
-# Parse the model output to extract function call information
+# Parse function call from model output
 def parse_function_call(output_text):
     # Clean up the output
     output_text = (
@@ -62,14 +33,10 @@ def parse_function_call(output_text):
         .strip()
     )
     
-    # Print the cleaned output for debugging
-    sys.stdout.print_colored(output_text, "yellow")
-    
-    # Process the output based on format
-    if "\n" in output_text:
-        output_text = output_text.split("\n")[0]
-    
     try:
+        if "\n" in output_text:
+            output_text = output_text.split("\n")[0]
+        
         if ";" not in output_text:
             # Single function call format
             json_data = json.loads(output_text.replace("'", '"'))
@@ -91,13 +58,13 @@ def parse_function_call(output_text):
                 "parameters": json_data[list(json_data.keys())[0]]
             }
     except Exception as e:
-        sys.stdout.print_colored(f"Error parsing function call: {e}", "red")
+        print(f"Error parsing function call: {e}")
         return None
 
-# Define the function chains
-def func_chain(messages, llm, sampling_params, tokenizer, functions):
+# Function chain for vLLM
+def func_chain(messages, scenario, llm, sampling_params, tokenizer, functions):
     tries = 0
-    while len(messages) < 20 and tries < 20:
+    while len(messages) < 20 and tries < 10:
         tries += 1
         try:
             # Convert messages to prompt format
@@ -114,12 +81,8 @@ def func_chain(messages, llm, sampling_params, tokenizer, functions):
             
             # Parse the function call
             func_call = parse_function_call(output_text)
-
-            print(f"Function Call: {func_call}")
             
             if func_call is None:
-                # If parsing fails, try again with a simpler prompt
-                # messages.append({"role": "user", "content": "Please call a function in the correct JSON format."})
                 continue
                 
             func_name = func_call["name"]
@@ -128,35 +91,44 @@ def func_chain(messages, llm, sampling_params, tokenizer, functions):
             # Add the function call to messages
             messages.append({"role": "assistant", "content": json.dumps(func_call)})
             
-            if func_name == "answer_question":
-                return messages
-            else:
-                # Remove thought parameter before API call
-                thought = func_para.pop("thought", None)
-                
-                # Call the API
-                api_response = call_tool_api(func_name, func_para)
-                back_content = api_response["text"]
-                
+            try:
+                if func_name == "answer_question":
+                    return messages
+                else:
+                    # Remove thought parameter before function call
+                    func_para.pop("thought", None)
+                    func_para["scenario"] = scenario
+                    back_content = globals()[func_name](**func_para)
+
                 print(back_content)
-                messages.append({"role": "tool", "name": func_name, "content": back_content})
                 
+            except Exception as e:
+                print(e)
+                back_content = f"Error: {e}"
+                
+            messages.append({"role": "tool", "name": func_name, "content": back_content})
+            
         except Exception as e:
             print(f"Error: {e}")
             back_content = f"Error: {e}"
+            
+        if tries >= 10:
+            return None
+            
+    return messages
 
 def process_chunk(questions_subset, gpu_id, model_id, functions):
     print(f"GPU {gpu_id} - Processing {len(questions_subset)} questions")
     
     # Set GPU
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu_id + 1)
+    os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu_id)
     
     # Initialize vLLM
     llm = LLM(
         model=model_id,
         tensor_parallel_size=1,
-        gpu_memory_utilization=0.8,
-        max_model_len=8192
+        gpu_memory_utilization=0.95,
+        max_model_len=20000
     )
     
     sampling_params = SamplingParams(
@@ -170,54 +142,50 @@ def process_chunk(questions_subset, gpu_id, model_id, functions):
     results = []
     
     system_prompt = """
-    You are a climate scientist. You are going to answer a multi-choice question. You should use given tools to help you answer the question.
-
-    You must firstly use `query_lat_and_lon` to get the latitude and longitude of the given place, even if you think you know the latitude and longitude of the place.
+    You are a epidemiologist. You are going to answer a multi-choice question. You should use given tools to help you answer the question. You can call tools for many turns, but you should call only one tool each time. When you have used `emulate` function to get enough information, you should use answer_question to choose one answer from A/B/C/D.
     """
     
-    with open("few_shot.txt", "r") as f:
-        few_shot = f.read()
-    
     for question in tqdm(questions_subset, desc=f"GPU {gpu_id}"):
-        problem_text = f"Question: {question['Question']}\nOptions:\nA. {question['Options'][0]}\nB. {question['Options'][1]}\nC. {question['Options'][2]}\nD. {question['Options'][3]}"
-        print(problem_text)
-        print(question["Correct"])
+        problem_text = f"Question: {question['question']}\n\nOptions: A. {question['options'][0]}\nB. {question['options'][1]}\nC. {question['options'][2]}\nD. {question['options'][3]}"
+        print("...\n" + problem_text[-500:])
+        print(question["correct_option"])
         
         messages = [
-            # {
-            #     "role": "system",
-            #     "content": system_prompt + few_shot,
-            # },
+            {
+                "role": "system",
+                "content": system_prompt,
+            },
             {"role": "user", "content": problem_text},
         ]
         
-        question[model_id] = func_chain(messages, llm, sampling_params, tokenizer, functions)
+        question[model_id] = func_chain(messages, question['scenario'], llm, sampling_params, tokenizer, functions)
         results.append(question)
     
     return results
 
 def main():
-    parser = argparse.ArgumentParser(description='Process climate questions with vLLM')
+    parser = argparse.ArgumentParser(description='Process epidemiology questions with vLLM')
     parser.add_argument('--model', type=str, default="meta-llama/Llama-3.1-8B-Instruct", 
                         help='Path to the model')
-    parser.add_argument('--num_gpus', type=int, default=6, help='Number of GPUs to use')
+    parser.add_argument('--num_gpus', type=int, default=torch.cuda.device_count(), help='Number of GPUs to use')
     args = parser.parse_args()
     
     # Process functions for vLLM format
+    functions_list = [functions_pandemic[name] for name in useful_tools]
     _functions = []
-    for name in useful_tools:
-        value = functions_climate[name].copy()
+    for value in functions_list:
         if "parameters" in value and "properties" in value["parameters"]:
             value["parameters"]["properties"]["thought"] = {
                 "type": "string",
                 "description": "Your internal reasoning and thoughts of why you call this function.",
             }
         _functions.append({"type": "function", "function": value})
-    
     functions = _functions + function_answer
     
+    print(json.dumps(functions, indent=4))
+    
     # Load questions
-    with open("../../test_set/climate.json", "r") as f:
+    with open("test.json", "r") as f:
         questions = json.load(f)
     
     # Distribute questions across GPUs

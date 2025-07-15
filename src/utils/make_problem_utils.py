@@ -260,3 +260,31 @@ def generate_simple_question(choices, correct_choice):
     random.shuffle(choices)
     correct_option = chr(65 + choices.index(correct_choice))
     return choices, correct_option
+
+def generate_extreme_options(numbers):
+    max_value = max(numbers)
+    min_value = min(numbers)
+    
+    if abs(max_value) > abs(min_value):
+        extreme_type = "maximum"
+        extreme_day = numbers.index(max_value)
+    else:
+        extreme_type = "minimum"
+        extreme_day = numbers.index(min_value)
+
+    choices = [
+        f"Day {extreme_day}",
+        f"Day {random.randint(0, len(numbers) - 1)}",
+        f"Day {random.randint(0, len(numbers) - 1)}",
+        f"Day {random.randint(0, len(numbers) - 1)}"
+    ]
+    correct_choice = f"Day {extreme_day}"
+
+    choices = list(set(choices))  # Remove any duplicates
+    while len(choices) < 4:
+        choices.append(f"Day {random.randint(0, len(numbers) - 1)}")
+    random.shuffle(choices)
+    
+    correct_option = chr(65 + choices.index(correct_choice))
+    
+    return choices, correct_option, extreme_type

@@ -12,17 +12,17 @@ function_answer = [
                         "type": "string",
                         "description": "Internal reasoning and thoughts of why you call this function.",
                     },
+                    "sloving_process": {
+                        "type": "string",
+                        "description": "Detailed list how do you solve this question, step by step. If you wrote code and got result from it, you should write how the problem was solved based on the output of the code, but don't mention your coding here.",
+                    },
                     "answer": {
                         "type": "string",
                         "enum": ["A", "B", "C", "D"],
                         "description": "Your answer to this question. If you have multiple answers, you can write them all. If none of the answers are correct, you can give your answer as well.",
                     },
-                    "sloving_process": {
-                        "type": "string",
-                        "description": "Detailed list how do you solve this question, step by step. If you wrote code and got result from it, you should write how the problem was solved based on the output of the code, but don't mention your coding here.",
-                    },
                 },
-                "required": ["thought", "answer", "sloving_process"],
+                "required": ["thought", "sloving_process", "answer"],
             },
         },
     }

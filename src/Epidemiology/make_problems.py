@@ -1,9 +1,15 @@
 import numpy as np
 import random
 import json
-from utils import *
 from tqdm import tqdm
 import random
+import os
+import sys
+src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(src_dir)
+
+from utils.utils import *
+from utils.make_problem_utils import *
 
 # Define lists of features and counties (same as before)
 input_features = [
@@ -72,7 +78,7 @@ def emulate(y, scenario, day, output_feature):
 qa_pairs = []
 
 def load_data_and_generate_qa():
-    data = np.load('test.npz')
+    data = np.load('tools/data/data/test.npz')
     x = data['x']
     y = data['y']
     
@@ -175,7 +181,6 @@ def load_data_and_generate_qa():
 load_data_and_generate_qa()
 
 random.shuffle(qa_pairs)
-qa_pairs = qa_pairs[:8000]
 
-with open("qa_pairs3.json", 'w') as f:
-    json.dump(qa_pairs, f, cls=NumpyEncoder,indent=4)
+with open("train.json", 'w') as f:
+    json.dump(qa_pairs[:20000], f, cls=NumpyEncoder,indent=4)
