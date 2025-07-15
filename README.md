@@ -56,7 +56,7 @@ Additionally, the Climate and Epidemiology folders include code related to open-
 
 ## Training
 
-We use [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory) for both SFT and DPO training. You should firstly setup the environment of Llama-Factory.
+We use [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory) for both SFT and DPO training. You should firstly setup the environment of Llama-Factory. **The 'mixed' loss in the paper is realized through mixing training data, which is implemented in the `generate_training_data.py` files under each folder.**
 
 The generate training data scripts provided in our repository directly generate the training data which matches the format of Llama-Factory. To use the data, you should firstly register the data to at `LLaMA-Factory/data/dataset_info.json`. For example, you can register the data for training the model on the climate dataset by adding the following entry to the file:
 
