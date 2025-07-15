@@ -202,6 +202,10 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
                         "type": "string",
                         "description": "Internal reasoning and thoughts of why you call this function."
                     },
+                    "sloving_process": {
+                        "type": "string",
+                        "description": "Detailed list how do you solve this question, step by step. If you wrote code and got result from it, you should write how the problem was solved based on the output of the code, but don't mention your coding here."
+                    },
                     "answer": {
                         "type": "string",
                         "enum": [
@@ -211,16 +215,12 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
                             "D"
                         ],
                         "description": "Your answer to this question. If you have multiple answers, you can write them all. If none of the answers are correct, you can give your answer as well."
-                    },
-                    "sloving_process": {
-                        "type": "string",
-                        "description": "Detailed list how do you solve this question, step by step. If you wrote code and got result from it, you should write how the problem was solved based on the output of the code, but don't mention your coding here."
                     }
                 },
                 "required": [
                     "thought",
-                    "answer",
-                    "sloving_process"
+                    "sloving_process",
+                    "answer"
                 ]
             }
         }
@@ -229,27 +229,28 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
 """
 
 data = []
+ut = []
+nt = []
 
-
-def make_data(start1, end1, start2, end2, model_id):
-    with open("cli1280.json", "r") as f:
+def make_data(model_id):
+    with open("climate_train.json", "r") as f:
         questions = json.load(f)
 
     for question in questions:
-        for i in question["llama"]:
+        for i in question["meta-llama/Llama-3.1-8B-Instruct"]:
             if i["role"] == "tool":
                 i.pop("name", None)
                 i["role"] = "user"
-            elif i["role"] == "assistant":
-                i["content"] = json.dumps(i["content"])
+            # elif i["role"] == "assistant":
+            #     i["content"] = json.dumps(i["content"])
 
-    for question in questions[start1:end1]:
+    for question in questions:
         problem_text = f"Question: {question['Question']}\nOptions:\nA. {question['Options'][0]}\nB. {question['Options'][1]}\nC. {question['Options'][2]}\nD. {question['Options'][3]}"
         if (
             f"the answer is {question['Correct']}".lower()
             not in question[model_id].lower()
         ):
-            data.append(
+            ut.append(
                 {
                     "messages": [
                         {
@@ -261,11 +262,11 @@ def make_data(start1, end1, start2, end2, model_id):
                             "content": tools + problem_text,
                         },
                     ]
-                    + question["llama"][2:]
+                    + question["meta-llama/Llama-3.1-8B-Instruct"][2:]
                 }
             )
         else:
-            data.append(
+            nt.append(
                 {
                     "messages": [
                         {
@@ -283,8 +284,8 @@ def make_data(start1, end1, start2, end2, model_id):
                                     "name": "answer_question",
                                     "parameters": {
                                         "thought": "I can answer the problem directly",
+                                        "sloving_process": question["solution"],
                                         "answer": question["Correct"],
-                                        "sloving_process": question["cot"],
                                     },
                                 }
                             ),
@@ -293,7 +294,10 @@ def make_data(start1, end1, start2, end2, model_id):
                 }
             )
 
-    for question in questions[start2:end2]:
+    for question in questions:
+        if "the answer is" not in question["solution"].lower():
+            continue
+
         problem_text = f"Question: {question['Question']}\nOptions:\nA. {question['Options'][0]}\nB. {question['Options'][1]}\nC. {question['Options'][2]}\nD. {question['Options'][3]}"
         data.append(
             {
@@ -308,24 +312,33 @@ def make_data(start1, end1, start2, end2, model_id):
                     },
                     {
                         "role": "assistant",
-                        "content": question["cot"],
+                        "content": question["solution"],
                     },
                 ]
             }
         )
 
-
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--model_id", type=str)
-    parser.add_argument("--start1", type=int)
-    parser.add_argument("--end1", type=int)
-    parser.add_argument("--start2", type=int)
-    parser.add_argument("--end2", type=int)
-    parser.add_argument("--output", type=str)
-    args = parser.parse_args()
+    balance = True
+    make_data("sft1_base")
 
-    make_data(args.start1, args.end1, args.start2, args.end2, args.model_id)
+    if balance:
+        if len(ut) > len(nt):
+            longer_list = ut
+            shorter_list = nt
+        else:
+            longer_list = nt
+            shorter_list = ut
 
-    with open(args.output, "w") as f:
-        f.write(json.dumps(data, indent=4))
+        multiplication_factor = len(longer_list) // len(shorter_list)
+        
+        if shorter_list == ut:
+            balanced_data = data + ut * multiplication_factor + nt
+        else:
+            balanced_data = data + ut + nt * multiplication_factor
+        
+    else:
+        balanced_data = data + ut + nt
+    
+    with open("train4.json", "w") as f:
+        f.write(json.dumps(balanced_data, indent=4))

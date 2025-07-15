@@ -46,7 +46,7 @@ python answer_agent.py
 python generate_solution.py
 
 # Create training data based on the input file and model
-python make_training_data.py
+python generate_training_data.py
 
 # Generate answers using the LLM for the given input questions.
 python answer_llm.py

@@ -68,6 +68,10 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
                         "type": "string",
                         "description": "Internal reasoning and thoughts of why you call this function."
                     },
+                    "sloving_process": {
+                        "type": "string",
+                        "description": "Detailed list how do you solve this question, step by step. If you wrote code and got result from it, you should write how the problem was solved based on the output of the code, but don't mention your coding here."
+                    },
                     "answer": {
                         "type": "string",
                         "enum": [
@@ -81,6 +85,7 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
                 },
                 "required": [
                     "thought",
+                    "sloving_process",
                     "answer"
                 ]
             }
@@ -90,42 +95,73 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
 """
 
 data = []
+ut = []
+nt = []
 
-with open("qa_pairs_final.json", "r") as f:
-    questions = json.load(f)[:1800]
+with open("train.json", "r") as f:
+    questions = json.load(f)
+
+with open("/home/test/test12/bohan/PGLLM-2/test_set/epidemiology.json", "r") as f:
+    tests = json.load(f)
+
+test_questions = [i["question"] for i in tests]
 
 for question in questions:
-    for i in question["gpt4"]:
+    for i in question["meta-llama/Llama-3.1-8B-Instruct"]:
         if i["role"] == "tool":
             i.pop("name", None)
             i["role"] = "user"
-        elif i["role"] == "assistant":
-            i["content"] = json.dumps(i["content"])
 
 for question in questions:
-    if f"Answer:" not in question["cot"] and f"the answer is" not in question["cot"].lower():
+    if question["question"] in test_questions:
         continue
-    if f"Answer: {question["correct_option"]}" not in question["cot"] and f"the answer is {question["correct_option"].lower()}" not in question["cot"].lower() and random.random()<0.5:
-        print(question["cot"])
-        continue
-    if "wrong" in question["cot"]:
+    if f"the answer is".lower() not in question["solution"].lower():
         continue
     problem_text = f"Question: {question['question']}\nOptions:\nA. {question['options'][0]}\nB. {question['options'][1]}\nC. {question['options'][2]}\nD. {question['options'][3]}"
+    if f"the answer is {question['correct_option']}".lower() not in question["/home/test/test12/bohan/ws/LLaMA-Factory/pan1pn"].lower():
+        ut.append({
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
+                },
+                {
+                    "role": "user",
+                    "content": tools + problem_text,
+                }] + question["meta-llama/Llama-3.1-8B-Instruct"][2:]})
+    else:
+        nt.append(
+            {
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
+                    },
+                    {
+                        "role": "user",
+                        "content": tools + problem_text,
+                    },
+                    {
+                        "role": "assistant",
+                        "content": json.dumps(
+                            {
+                                "name": "answer_question",
+                                "parameters": {
+                                    "thought": "I can answer the problem directly",
+                                    "sloving_process": question["solution"],
+                                    "answer": question["correct_option"],
+                                },
+                            }
+                        ),
+                    },
+                ]
+            }
+        )
     data.append({
         "messages": [
             {
                 "role": "system",
-                "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
-            },
-            {
-                "role": "user",
-                "content": tools + problem_text,
-            }] + question["gpt4"][2:]})
-    data.append({
-        "messages": [
-            {
-                "role": "system",
-                "content": "You are a epidemiologist. Please answer the following question. Your answer should be in the following format:\nSolution: <your solution>\nAnswer: <your answer, one of A/B/C/D>",
+                "content": "You are a epidemiologist. Please answer the following question. Your answer should end with 'the answer is A/B/C/D'.",
             },
             {
                 "role": "user",
@@ -133,12 +169,31 @@ for question in questions:
             },
             {
                 "role": "assistant",
-                "content": question["cot"],
+                "content": question["solution"],
             }
         ]
     })
 
-print(len(data))
 
-with open("pan_train.json", "w") as f:
-    f.write(json.dumps(data, indent = 4))
+balance = True
+
+if balance:
+    if len(ut) > len(nt):
+        longer_list = ut
+        shorter_list = nt
+    else:
+        longer_list = nt
+        shorter_list = ut
+    
+    multiplication_factor = len(longer_list) // len(shorter_list)
+    
+    if shorter_list == ut:
+        balanced_data = data + ut * multiplication_factor + nt
+    else:
+        balanced_data = data + ut + nt * multiplication_factor
+
+else:
+    balanced_data = data + ut + nt
+
+with open("train2.json", "w") as f:
+    f.write(json.dumps(balanced_data, indent=4))

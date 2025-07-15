@@ -3,7 +3,6 @@ import math
 from fractions import Fraction
 from utils.math_utils import *
 from tqdm import tqdm
-
 import random
 
 instruction = """
@@ -52,25 +51,27 @@ cnt_tool = 0
 done = 0
 
 train_dataset = []
+ut = []
+nt = []
 
-print(len(test_id))
 
-ccc = 0
+
+MODEL_ID = ""
 
 for item in tqdm(data):
     if item["unique_id"] in test_id:
         continue
-    if "_int" not in item or not item["_int"]:
+    if f"{MODEL_ID}_int" not in item or not item[f"{MODEL_ID}_int"]:
         continue
-    if "solution" not in item["_int"][-1]["content"].lower():
+    if "solution" not in item[f"{MODEL_ID}_int"][-1]["content"].lower():
         continue
-    if "answer" not in item["_int"][-1]["content"].lower():
+    if "answer" not in item[f"{MODEL_ID}_int"][-1]["content"].lower():
         continue
-    if len(item["_int"][-1]["content"].split("Answer:")) < 2:
+    if len(item[f"{MODEL_ID}_int"][-1]["content"].split("Answer:")) < 2:
         continue
-    if len(item["_int"]) <= 3:
+    if len(item[f"{MODEL_ID}_int"]) <= 3:
         continue
-    answer = item[""].split("Answer:")[-1].strip()
+    answer = item[MODEL_ID].split("Answer:")[-1].strip()
     try:
         solution = item["cot"] 
         if "wrong" in solution.lower():
@@ -94,12 +95,12 @@ for item in tqdm(data):
             }
         ]})
         if not equiv(answer, item["answer"]):
-            train_dataset.append({"messages": [{
+            ut.append({"messages": [{
                 "role": "system",
                 "content": instruction_tool
-            }] + [item["_int"][1]] + item["_int"][-3:]})
+            }] + [item[f"{MODEL_ID}_int"][1]] + item[f"{MODEL_ID}_int"][-3:]})
         else:
-            train_dataset.append({"messages": [{
+            nt.append({"messages": [{
                 "role": "system",
                 "content": instruction_tool
             },{
@@ -115,13 +116,29 @@ for item in tqdm(data):
         print(f"Error in second loop: {e}")
         print(answer, item["answer"])
 
-print(f"Count for second model: {cnt_tool}")
-print(f"Total items: {len(data)}")
-print(f"Accuracy for second model: {cnt / cnt_tool}")
-print(f"Accuracy for cc: {ccc / cnt_tool}")
+balance = True
 
-print(len(train_dataset))
+if balance:
+    if len(ut) > len(nt):
+        longer_list = ut
+        shorter_list = nt
+        longer_name = "ut"
+        shorter_name = "nt"
+    else:
+        longer_list = nt
+        shorter_list = ut
+        longer_name = "nt"
+        shorter_name = "ut"
+    
+    multiplication_factor = len(longer_list) // len(shorter_list)
+    
+    
+    if shorter_list == ut:
+        final_dataset = train_dataset + ut * multiplication_factor + nt
+    else:
+        final_dataset = train_dataset + ut + nt * multiplication_factor
+else:
+    final_dataset = train_dataset + ut + nt
 
 with open("train_dataset_math.json", "w") as f:
-    json.dump(train_dataset, f, indent=4)
-    print("Saved train_dataset_math.json")
+    json.dump(final_dataset, f, indent=4)

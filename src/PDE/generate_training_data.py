@@ -142,32 +142,31 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
 If you don't know the answer, you can use the tool to help you. If you can answer the problem without the tool, use `answer_question` to answer the problem directly.
 """
 
+MODEL_ID = ""
+
 data = []
+ut = []
+nt = []
+standard_examples = []
 
 with open("diffusion_questions.json", "r") as f:
     questions = json.load(f)
 
 cnt = 0
 
-for d in questions:
-    if "wrong" in d["cot"].lower():
-        questions.remove(d)
-    if "answer" not in d["cot"].lower():
-        questions.remove(d)
+
+questions = [d for d in questions if "wrong" not in d["cot"].lower() and "answer" in d["cot"].lower()]
 
 correct = []
 incorrect = []
 
 for d in questions:
-    if f"Answer: {d["correct"]}".lower() in d["cot"].lower():
+    if f"Answer: {d['correct']}".lower() in d["cot"].lower():
         cnt += 1
         correct.append(d)
     else:
         incorrect.append(d)
 
-print(len(correct))
-
-print(cnt / len(questions))
 
 random.shuffle(questions)
 
@@ -186,74 +185,88 @@ for question in questions:
             i["role"] = "user"
             i.pop("name", None)
 
+train_questions = questions
 
-for question in questions[:-280]:
+for question in train_questions:
     problem_text = f"Question: {question['question']}\nOptions:\nA. {question['options'][0]}\nB. {question['options'][1]}\nC. {question['options'][2]}\nD. {question['options'][3]}"
-    if (
-        f"answer: {question['correct']}".lower()
-        not in question[""].lower()
-    ):
-        data.append(
+
+    standard_examples.append({
+        "messages": [
             {
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
-                    },
-                    {
-                        "role": "user",
-                        "content": tools + problem_text,
-                    },
-                ]
-                + question["llama"][-3:]
-            }
-        )
-    else:
-        data.append(
+                "role": "system",
+                "content": "Please answer the following question. Your answer should end with 'the answer is A/B/C/D'.",
+            },
             {
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
-                    },
-                    {
-                        "role": "user",
-                        "content": tools + problem_text,
-                    },
-                    {
-                        "role": "assistant",
-                        "content": json.dumps(
-                            {
-                                "name": "answer_question",
-                                "parameters": {
-                                    "thought": "I can answer the problem directly",
-                                    "answer": question[""].split("Answer:")[-1].strip(),
-                                    "sloving_process": question[""],
-                                },
-                            }
-                        ),
-                    },
-                ]
+                "role": "user",
+                "content": problem_text,
+            },
+            {
+                "role": "assistant",
+                "content": question[MODEL_ID],
             }
-        )
-    data.append(
-        {
+        ]
+    })
+    
+    if f"answer: {question['correct']}".lower() not in question[MODEL_ID].lower():
+        ut.append({
             "messages": [
                 {
                     "role": "system",
-                    "content": "Please answer the following question. Your answer should end with 'the answer is A/B/C/D'.",
+                    "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
                 },
                 {
                     "role": "user",
-                    "content": problem_text,
+                    "content": tools + problem_text,
+                }
+            ] + question["llama"][-3:]
+        })
+    else:
+        nt.append({
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "When you receive a tool call response, use the output to format an answer to the orginal user question.\nYou are a helpful assistant with tool calling capabilities.",
+                },
+                {
+                    "role": "user",
+                    "content": tools + problem_text,
                 },
                 {
                     "role": "assistant",
-                    "content": question[""],
-                },
+                    "content": json.dumps({
+                        "name": "answer_question",
+                        "parameters": {
+                            "thought": "I can answer the problem directly",
+                            "answer": question[MODEL_ID].split("Answer:")[-1].strip(),
+                            "sloving_process": question[MODEL_ID],
+                        }
+                    })
+                }
             ]
-        }
-    )
+        })
+
+balance = True
+
+if balance:
+    if len(ut) > len(nt):
+        longer_list = ut
+        shorter_list = nt
+    else:
+        longer_list = nt
+        shorter_list = ut
+    
+    if len(shorter_list) > 0:
+        multiplication_factor = len(longer_list) // len(shorter_list)
+        
+        if shorter_list == ut:
+            balanced_data = standard_examples + ut * multiplication_factor + nt
+        else:
+            balanced_data = standard_examples + ut + nt * multiplication_factor
+    else:
+        balanced_data = standard_examples + longer_list
+    
+else:
+    balanced_data = standard_examples + ut + nt
 
 with open("pde_train_aba1.json", "w") as f:
-    f.write(json.dumps(data, indent=4))
+    f.write(json.dumps(balanced_data, indent=4))

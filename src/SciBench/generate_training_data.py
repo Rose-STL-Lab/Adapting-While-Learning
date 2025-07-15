@@ -39,15 +39,14 @@ with open("sci_final.json", "r") as f:
 
 test_questions = [i["problem_text"] for i in test]
 
-
 cnt = 0
 cnt_tool = 0
 done = 0
 
-
+MODEL_ID = ""
 train_dataset = []
-
-
+ut = []
+nt = []
 
 for item in tqdm(data):
     is_test = False
@@ -56,17 +55,17 @@ for item in tqdm(data):
             is_test = True
     if is_test:
         continue
-    if "_int" not in item or not item["_int"]:
+    if f"{MODEL_ID}_int" not in item or not item[f"{MODEL_ID}_int"]:
         continue
-    if "solution" not in item["_int"][-1]["content"].lower():
+    if "solution" not in item[f"{MODEL_ID}_int"][-1]["content"].lower():
         continue
-    if "answer" not in item["_int"][-1]["content"].lower():
+    if "answer" not in item[f"{MODEL_ID}_int"][-1]["content"].lower():
         continue
-    if len(item["_int"][-1]["content"].split("Answer:")) < 2:
+    if len(item[f"{MODEL_ID}_int"][-1]["content"].split("Answer:")) < 2:
         continue
-    if len(item["_int"]) <= 3:
+    if len(item[f"{MODEL_ID}_int"]) <= 3:
         continue
-    answer = item[""].split("Answer:")[-1].strip()
+    answer = item[MODEL_ID].split("Answer:")[-1].strip()
     try:
         solution = item["cot"] 
         if "wrong" in solution.lower():
@@ -90,13 +89,12 @@ for item in tqdm(data):
                 }
             ]})
         if not equiv(answer, item["answer"]):
-            print(answer, item["answer"])
-            train_dataset.append({"messages": [{
+            ut.append({"messages": [{
                     "role": "system",
                     "content": instruction_tool
-                }] + [item["_int"][1]] + item["_int"][-3:]})
+                }] + [item[f"{MODEL_ID}_int"][1]] + item[f"{MODEL_ID}_int"][-3:]})
         else:
-            train_dataset.append({"messages": [{
+            nt.append({"messages": [{
                 "role": "system",
                 "content": instruction_tool
             },{
@@ -109,14 +107,29 @@ for item in tqdm(data):
             cnt += 1
         cnt_tool += 1
     except Exception as e:
-        print(answer, item["answer"])
+        pass
 
-print(f"Count for second model: {cnt_tool}")
-print(f"Total items: {len(data)}")
-print(f"Accuracy for second model: {cnt / cnt_tool}")
+balance = True
 
-print(len(train_dataset))
+if balance:
+    if len(ut) > len(nt):
+        longer_list = ut
+        shorter_list = nt
+    else:
+        longer_list = nt
+        shorter_list = ut
+    
+    if len(shorter_list) > 0:
+        multiplication_factor = len(longer_list) // len(shorter_list)
+        
+        if shorter_list == ut:
+            balanced_data = train_dataset + ut * multiplication_factor + nt
+        else:
+            balanced_data = train_dataset + ut + nt * multiplication_factor
+    else:
+        balanced_data = train_dataset + longer_list
+else:
+    balanced_data = train_dataset + ut + nt
 
 with open("train_dataset_sci.json", "w") as f:
-    json.dump(train_dataset, f, indent=4)
-    print("Saved train_dataset_sci.json")
+    json.dump(balanced_data, f, indent=4)
