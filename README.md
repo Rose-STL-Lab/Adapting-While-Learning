@@ -18,7 +18,17 @@ conda activate awl
 pip install -r requirements.txt
 ```
 
-The emulators used in climate and epidemiology scenarios are respectively adapted from [MFRNP](https://github.com/Rose-STL-Lab/MFRNP) and [INP](https://github.com/Rose-STL-Lab/Interactive-Neural-Process). You can download the pre-trained surrogate neural nets from [this link](https://drive.google.com/drive/folders/1Q-KwQnrxME3txfut0sGgbiRhJy9PCWPp?usp=share_link), and put the tools for climate and epidemiology respectively under `src/Climate` and `src/Epidemiology`. Note that the device of the climate emulator is configured in `src/Climate/tools/Climate_online/model/tas_reanalysis.yaml`.
+The emulators used in climate and epidemiology scenarios are respectively adapted from [MFRNP](https://github.com/Rose-STL-Lab/MFRNP) and [INP](https://github.com/Rose-STL-Lab/Interactive-Neural-Process). You can download the pre-trained surrogate neural nets from [🤗 Hugging Face](https://huggingface.co/datasets/Bohan22/AWL_Emulators):
+
+```bash
+hf download Bohan22/AWL_Emulators --repo-type dataset --local-dir awl_emulators
+
+# Put the tools for climate and epidemiology respectively under `src/Climate` and `src/Epidemiology`.
+cp -r awl_emulators/climate_tool/* src/Climate/tools/
+cp -r awl_emulators/epidemiology_tool/* src/Epidemiology/tools/
+```
+
+Note that the device of the climate emulator is configured in `src/Climate/tools/Climate_online/model/tas_reanalysis.yaml`.
 
 The tool-calling in this work is achieved through Llama-3.1-8B-Instruct's [chat template](https://huggingface.co/docs/transformers/main/chat_templating), except open problems in Epidemiology. It means that, if you are using a model whose chat template doesn't support tool usage, then currect pipeline might can't be applied directly.
 
@@ -125,7 +135,13 @@ The following are reproduced models for MCQs on Climate and Epidemiology dataset
 |    Climate    |   [🤗Download](https://huggingface.co/Bohan22/AWL_Climate_MCQs)    |
 |    Epidemiology    |   [🤗Download](https://huggingface.co/Bohan22/AWL_Epidemiology_MCQs)    |
 
-We provide you with the training data for the climate model to easily reproduce the result. You can download the training data from [here](https://drive.google.com/drive/folders/1Nm5fRzcivug5hyV6CgjFQ677JNdkFff1?usp=share_link), register the data in Llamafactory like:
+We provide you with the training data for the climate model to easily reproduce the result. You can download the training data from [🤗 Hugging Face](https://huggingface.co/datasets/Bohan22/AWL_Climate_MCQ_Training_Data):
+
+```bash
+hf download Bohan22/AWL_Climate_MCQ_Training_Data --repo-type dataset --local-dir climate_training_data
+```
+
+Then register the data in Llamafactory like:
 
 ```python
 "climate_mcq_stage1": {
